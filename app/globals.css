@@ -6,7 +6,7 @@
   --orange: #fb7236;
   --pink: #d82099;
   --white: #f4ede8;
-  --black: #313131;
+  --bg-black: #313131;
   --bg-pink: #c9408f;
   --bg-button: #6737cc;
 }
@@ -14,8 +14,10 @@
 @theme inline {
   --color-foreground: var(--foreground);
   --color-bg-pink: var(--bg-pink);
-  --color-bg-black: var(--black);
+  --color-bg-black: var(--bg-black);
+  --color-bg-white: var(--white);
   --color-bg-button: var(--bg-button);
+  --color-text-pink: var(--pink);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
