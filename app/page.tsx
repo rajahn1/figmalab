@@ -3,6 +3,8 @@ import Button from "./components/Button";
 import Bubble from "./components/Bubble";
 import Card from "./components/Card";
 import ModulesBar from "./components/ModulesBar";
+import ModuleCard from "./components/ModulesCard";
+import Separator from "./components/Separator";
 
 export default function Home() {
   const negativePoints = [
@@ -132,7 +134,14 @@ export default function Home() {
           <Image src="/icons/icon-arrow-right.svg" width={32} height={32} alt="icon arrow left" />
         </div>
         <ModulesBar />
+        <ModuleCard
+          classes={["aula 1: xpto", "aula 2: piti"]}
+          module={1}
+          title="Boas vindas e o seu compromisso como designer"
+        />
+        <Button label="Eu quero fazer parte" />
       </section>
+      <Separator />
     </div>
   );
 }
