@@ -1,20 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const ppEditorial = localFont({
+  src: [
+    { path: "./fonts/PPEditorialNew-Regular.otf", weight: "400", style: "normal" },
+    { path: "./fonts/PPEditorialNew-Italic.otf", weight: "400", style: "italic" },
+  ],
+  variable: "--font-editorial",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const articulatCF = localFont({
+  src: [
+    { path: "./fonts/ArticulatCF-Normal.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/ArticulatCF-Medium.ttf", weight: "500", style: "normal" },
+    { path: "./fonts/ArticulatCF-DemiBold.ttf", weight: "600", style: "normal" },
+    { path: "./fonts/ArticulatCF-Bold.ttf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-articulat",
 });
 
 export const metadata: Metadata = {
-  title: "FigmaLAB",
-  description: "Landing page do curso FigmaLab por Studio Emi Design. Todos os direitos reservados",
+  title: "Figma Lab",
+  description: "Landing page do curso FigmaLab",
 };
 
 export default function RootLayout({
@@ -24,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-bg-white`}>
+      <body className={`${ppEditorial.variable} ${articulatCF.variable} antialiased`}>
         {children}
       </body>
     </html>

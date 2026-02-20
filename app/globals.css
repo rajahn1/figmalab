@@ -20,6 +20,8 @@
   --color-text-pink: var(--pink);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-articulat: var(--font-articulat);
+  --font-editorial: var(--font-editorial);
 }
 
 @media (prefers-color-scheme: dark) {

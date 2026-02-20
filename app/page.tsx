@@ -1,12 +1,12 @@
-import Image from "next/image";
+"use client";
+
+import React, { useState } from "react";
 import Button from "./components/Button";
+import Image from "next/image";
 import Bubble from "./components/Bubble";
 import Card from "./components/Card";
-import ModulesBar from "./components/ModulesBar";
-import ModuleCard from "./components/ModulesCard";
-import Separator from "./components/Separator";
 
-export default function Home() {
+export default function LandingPage() {
   const negativePoints = [
     "Continuar criando no improviso",
     "Travar no frame me branco",
@@ -23,46 +23,88 @@ export default function Home() {
     "Dominar o Figma com fluidez",
   ];
 
+  const skills = [
+    "Pensar estrategicamente antes de abrir o Figma;",
+    "Analisar o briefing com olhar de especialista;",
+    "Construir repertório e moodboards inteligentes;",
+    "Aumentar seu repertório de estilos de design;",
+    "Dominar o Figma do zero ao avançado;",
+    "Transformar qualquer referência em arte autoral;",
+    "Evoluir junto a uma comunidade de designers criativos.",
+  ];
+
+  const benefits = [
+    "1 ano de acesso ao FigmaLab",
+    "Treinamento de Figma do zero ao avançado",
+    "Comunidade de networking no WhatsApp",
+    "Atualizações do Figma e aulas práticas",
+    "7 dias de garantia para se adaptar",
+    "Certificado de conclusão",
+    "Modelo de briefing de design de post",
+    "PDF de curadoria de sites que uso",
+    "Aulas práticas criando carrosséis",
+  ];
+
+  const [activeModule, setActiveModule] = useState(1);
+  const [activeFaq, setActiveFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setActiveFaq(activeFaq === index ? null : index);
+  };
+
   return (
-    <div className="flex flex-col">
-      <main className="flex bg-bg-pink p-32">
-        <section className="flex flex-col gap-16 w-1/2">
-          <h1 className="text-4xl font-bold">
-            Organize suas ideias e destrave seu processo criativo.
-          </h1>
-          <p>
-            Aprenda a pensar como designer e use o Figma com inteligência. O FigmaLab transforma o
-            seu caos criativo em clareza, a cópia em autoria e a tentativa em método, mesmo que hoje
-            você dependa 100% de referências prontas.
-          </p>
-          <Button label="Eu quero fazer parte" />
-        </section>
-        <section className="w-1/2">
-          <Image
-            alt="Uma mulher jovem de cabelos pretos e casaco rosa com uma blusa branca"
-            src="/images/foto-emi.png"
-            width={750}
-            height={750}
-          />
-        </section>
-      </main>
-      <section>
-        <h2 className="text-bg-black my-8">
-          Hoje existem dois caminhos para quem trabalha com design:
-        </h2>
-        <div className="flex">
-          <div className="flex flex-col gap-2">
-            {negativePoints.map((point, index) => (
-              <Bubble key={index} label={point} type="negative" />
-            ))}
+    <div className="w-full font-articulat text-[#313131]">
+      {/* Seção 1 - Fundo Rosa */}
+      <section className="bg-[#c9408f] text-[#ffffff] py-20 px-8">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+          <div className="flex-1 flex flex-col items-start gap-6">
+            <h1 className="font-editorial text-5xl">
+              Organize suas ideias e destrave <span className="italic">seu</span> processo criativo
+              no design de post.
+            </h1>
+            <h2 className="text-xl">
+              Aprenda a <span className="font-bold">pensar como designer</span> e use o Figma com
+              inteligência. O FigmaLab transforma o seu caos criativo em{" "}
+              <span className="font-bold">clareza</span>, a cópia em{" "}
+              <span className="font-bold">autoria</span> e a tentativa em{" "}
+              <span className="font-bold">método</span>, mesmo que hoje você dependa 100% de
+              referências prontas.
+            </h2>
+            <Button label="Quero entrar para o Lab" />
           </div>
-          <div className="flex flex-col gap-2">
-            {positivePoints.map((point, index) => (
-              <Bubble key={index} label={point} type="positive" />
-            ))}
+          <div className="flex-1 relative w-full h-80 bg-black/20 rounded-lg flex items-center justify-center">
+            <Image
+              src="/images/foto-emi.png"
+              alt="Descrição da imagem"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
-        <div className="">
+      </section>
+
+      {/* Seção 2 - Fundo Branco */}
+      <section className="bg-[#f4ede8] py-20 px-8">
+        <div className="max-w-6xl mx-auto flex flex-col items-center gap-12">
+          <h2 className="font-['PP_Editorial_New'] text-4xl font-bold text-center">
+            Hoje existem dois caminhos para quem trabalha com design:
+          </h2>
+          <div className="w-full flex flex-col md:flex-row gap-8 justify-center">
+            <div className="flex-1 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+              <ul className="list-disc pl-5 space-y-2">
+                {negativePoints.map((point, index) => (
+                  <Bubble key={index} label={point} type="negative" />
+                ))}
+              </ul>
+            </div>
+            <div className="flex-1 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+              <ul className="list-disc pl-5 space-y-2">
+                {positivePoints.map((point, index) => (
+                  <Bubble key={index} label={point} type="positive" />
+                ))}
+              </ul>
+            </div>
+          </div>
           <h2 className="text-bg-black text-5xl font-bold">
             Qual caminho{" "}
             <span className="relative inline-block">
@@ -84,64 +126,261 @@ export default function Home() {
           </h2>
         </div>
       </section>
-      <section className="relative p-32">
-        <Image
-          src="/images/section-bg-feedbacks.png"
-          alt=""
-          fill
-          className="object-cover -z-10"
-          priority
-        />
-        <div className="flex gap-16">
-          <Image src="/images/emi-foto-ia.png" width={320} height={320} alt="Feedbacks" />
-          <div className="flex flex-col">
-            <h2 className="text-6xl">
-              O problema não é talento, é falta de <span className="text-text-pink">método</span>.
-            </h2>
-            <span>
-              Design não é dom, é processo. O FigmaLab é o resultado de anos organizando meu próprio
-              método criativo, validado em projetos reais. Aqui, você para de copiar e aprende a
-              analisar, decidir e criar com consciência.
-            </span>
-            <span>
-              Saia do amadorismo e domine o método que transforma criatividade travada em design
-              estratégico.
-            </span>
+
+      {/* Seção 3 - Fundo Preto */}
+      <section className="bg-[url('/images/section-bg-feedbacks.png')] bg-cover bg-center text-[#ffffff] py-20 px-8">
+        <div className="max-w-6xl mx-auto flex flex-col gap-12">
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="flex-1 relative w-full h-80 bg-white/10 rounded-lg flex items-center justify-center">
+              <Image
+                src="/images/foto-emi.png"
+                alt="Descrição da imagem"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="flex-1 flex flex-col items-start gap-4">
+              <h2 className="font-['PP_Editorial_New'] text-4xl font-bold">
+                O problema não é talento, é falta de <span className="text-text-pink">método</span>.
+              </h2>
+              <span className="text-lg">
+                Design não é dom, é processo. O FigmaLab é o resultado de anos organizando meu
+                próprio método criativo, validado em projetos reais. Aqui, você para de copiar e
+                aprende a analisar, decidir e criar com consciência.
+              </span>
+              <span className="text-lg">
+                Saia do amadorismo e domine o método que transforma criatividade travada em design
+                estratégico.
+              </span>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            <Button label="Quero entrar para o Lab" />
           </div>
         </div>
-        <div className="absolute left-1/2 -translate-x-1/2 mt-16">
-          <Button label="Quero entrar no Lab" />
-        </div>
-      </section>
-      <section className="bg-bg-pink flex">
-        <Image src="icons/icon-down.svg" width={32} height={32} alt="icon arrow down" />
-        <div>
-          <h2 className="text-5xl">O que você vai dominar no FigmaLab:</h2>
-          <Card />
-          <Button label="Eu quero isso" />
-        </div>
-        <Image width={700} alt="mockups" height={700} src="/images/emi-foto-ia.png" />
       </section>
 
-      <section className="bg-bg-black">
-        <h2 className="text-5xl">Veja tudo que você vai aprender:</h2>
-        <div className="flex">
-          <Image src="/icons/icon-arrow-left.svg" width={32} height={32} alt="icon arrow left" />
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <Image src="/icons/icon-arrow-right.svg" width={32} height={32} alt="icon arrow left" />
+      {/* Seção 4 */}
+      <section className="bg-[#f4ede8] py-20 px-8">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+          <div className="flex-1 flex flex-col items-start gap-6">
+            <h2 className="font-['PP_Editorial_New'] text-4xl font-bold">
+              O que você vai dominar no FigmaLab:
+            </h2>
+            <Card
+              data={skills}
+              icon="/icons/icon-check-pink.svg"
+              bgColor="bg-black"
+              textColor="white"
+            />
+            <Button label="Eu quero fazer parte" />
+          </div>
+          <div className="flex-1 relative w-full h-80 bg-[#313131]/10 rounded-lg flex items-center justify-center">
+            <Image
+              src="/images/foto-emi.png"
+              alt="Descrição da imagem"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
-        <ModulesBar />
-        <ModuleCard
-          classes={["aula 1: xpto", "aula 2: piti"]}
-          module={1}
-          title="Boas vindas e o seu compromisso como designer"
-        />
-        <Button label="Eu quero fazer parte" />
       </section>
-      <Separator />
+
+      {/* Seção 5 - Módulos */}
+      <section className="bg-bg-black py-20 px-8">
+        <div className="max-w-6xl mx-auto flex flex-col items-center gap-10">
+          <h2 className="font-['PP_Editorial_New'] text-4xl font-bold text-white">
+            Veja tudo que você vai aprender:
+          </h2>
+
+          {/* Carrossel Falso */}
+          <div className="w-full flex items-center justify-between bg-gray-100 p-4 rounded-lg h-40">
+            <button className="p-2 bg-white rounded-full shadow">←</button>
+            <span>[Fotos do Carrossel]</span>
+            <button className="p-2 bg-white rounded-full shadow">→</button>
+          </div>
+
+          {/* Barra de Módulos */}
+          <div className="flex gap-4 bg-bg-white rounded-full px-8 py-4 text-bg-blacK w-max overflow-x-auto">
+            {[1, 2, 3, 4, 5].map((mod) => (
+              <button
+                key={mod}
+                onClick={() => setActiveModule(mod)}
+                className={`px-6 py-2 rounded-full font-bold transition ${activeModule === mod ? "bg-[#c9408f] text-white" : "bg-gray-200 text-[#313131]"}`}
+              >
+                Módulo {mod}
+              </button>
+            ))}
+          </div>
+
+          {/* Card do Módulo Ativo */}
+          <div className="w-full flex flex-col md:flex-row bg-[#f4ede8] rounded-xl shadow-lg overflow-hidden border border-gray-200">
+            <div className="flex-1 p-8 bg-[#313131] text-white flex flex-col justify-center items-start">
+              <span className="text-5xl mb-4">📦</span>
+              <h3 className="text-2xl font-bold">Módulo {activeModule}</h3>
+              <p>Título descritivo do módulo.</p>
+            </div>
+            <div className="flex-1 p-8">
+              <h4 className="font-bold mb-4 text-lg">Aulas:</h4>
+              <ul className="space-y-3">
+                <li className="p-3 bg-white rounded shadow-sm">Aula 1 - Introdução</li>
+                <li className="p-3 bg-white rounded shadow-sm">Aula 2 - Conceitos</li>
+                <li className="p-3 bg-white rounded shadow-sm">Aula 3 - Prática</li>
+              </ul>
+            </div>
+          </div>
+
+          <Button label="Eu quero fazer parte" />
+        </div>
+      </section>
+
+      {/* Seção 6 */}
+      <section className="bg-[#f4ede8] py-20 px-8">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+          <div className="flex-1 flex flex-col items-start gap-4">
+            <h2 className="font-['PP_Editorial_New'] text-4xl font-bold">
+              Certificado de conclusão
+            </h2>
+            <p className="text-lg">
+              Valide sua evolução e conquiste o reconhecimento oficial do seu domínio no Figma. Ao
+              concluir sua jornada no Lab, você recebe certificações que comprovam seu nível técnico
+              e sua autoridade como designer estrategista no mercado.
+            </p>
+          </div>
+          <div className="flex-1 relative w-full h-80 bg-[#313131]/10 rounded-lg flex items-center justify-center">
+            <Image
+              src="/images/foto-emi.png"
+              alt="Descrição da imagem"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Seção 7 - Galeria */}
+      <section className="bg-white py-20 px-8">
+        <div className="max-w-7xl mx-auto flex flex-col items-center gap-8">
+          <div className="text-center">
+            <h2 className="font-['PP_Editorial_New'] text-4xl font-bold">
+              Eu vou te mostrar o caminho. Mas a execução é sua.
+            </h2>
+            <p className="mt-2 text-lg underline">
+              Veja alguns carrosséis que eu vou te ensinar durante o curso:
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 w-full">
+            {/* 3 linhas x 6 cards = 18 itens */}
+            {Array.from({ length: 18 }).map((_, i) => (
+              <div
+                key={i}
+                className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center shadow-sm"
+              >
+                [Img {i + 1}]
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Seção 8 - Preço e Bônus */}
+      <section className="bg-[#f4ede8] py-20 px-8">
+        <div className="max-w-5xl mx-auto flex flex-col items-center gap-12">
+          <h2 className="font-['PP_Editorial_New'] text-4xl font-bold text-center">
+            Garantindo sua vaga hoje você terá acesso:
+          </h2>
+          <div className="w-full flex flex-col md:flex-row gap-8">
+            <div className="flex-1 bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+              <h3 className="font-bold text-2xl mb-6 text-[#c9408f]">Bônus Exclusivos</h3>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-2">✅ Bônus 1: Mentoria</li>
+                <li className="flex items-center gap-2">✅ Bônus 2: E-book</li>
+                <li className="flex items-center gap-2">✅ Bônus 3: Comunidade</li>
+              </ul>
+            </div>
+            <div className="flex-1 bg-[#313131] text-white p-8 rounded-2xl shadow-lg flex flex-col justify-center items-center text-center">
+              <h3 className="font-bold text-xl mb-2">Oferta Especial</h3>
+              <p className="line-through text-gray-400">De R$ 997,00</p>
+              <p className="text-5xl font-bold font-['PP_Editorial_New'] my-4 text-[#c9408f]">
+                12x R$ 49,90
+              </p>
+              <button className="bg-[#6737cc] text-[#ffffff] w-full py-4 rounded-md font-bold mt-4 hover:opacity-90 transition">
+                Comprar Agora
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção 9 */}
+      <section className="bg-white py-20 px-8">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+          <div className="flex-1 flex flex-col items-start gap-4">
+            <h2 className="font-['PP_Editorial_New'] text-4xl font-bold">
+              Quem vai te ensinar tudo isso?
+            </h2>
+            <h3 className="text-xl font-semibold">
+              Hello, eu sou a Emi, fundadora do Studio Emi e designer há 4 anos.
+            </h3>
+            <p>
+              Por muito tempo, acreditei que meu maior obstáculo era a falta de criatividade, quando
+              na verdade o que me faltava era um método claro. O FigmaLab nasceu da organização do
+              meu próprio processo criativo, validado em projetos reais que hoje me permitem faturar
+              5 dígitos mensais com design para social media. Aqui, eu te ensino a pensar como
+              designer estrategista, dominando a técnica para criar com total autoria e segurança.
+              Minha missão é que o design transforme sua realidade assim como mudou a minha, tirando
+              você da dependência de referências para conquistar autoridade. No meu lab criativo,
+              você domina o processo lógico por trás de grandes criações no Figma. O objetivo é ir
+              além de "posts bonitos" e alcançar o posicionamento necessário para ser uma
+              profissional devidamente valorizada pelo mercado.
+            </p>
+          </div>
+          <div className="flex-1 relative w-full h-80 bg-gray-200 rounded-lg flex items-center justify-center">
+            <Image
+              src="/images/foto-emi.png"
+              alt="Descrição da imagem"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Seção 10 - FAQ e Card Final */}
+      <section className="bg-[#313131] text-white py-20 px-8">
+        <div className="max-w-3xl mx-auto flex flex-col items-center gap-12">
+          <h2 className="font-['PP_Editorial_New'] text-4xl font-bold">
+            Perguntas Frequentes (FAQ)
+          </h2>
+
+          <div className="w-full flex flex-col gap-4">
+            {[1, 2, 3, 4].map((faq) => (
+              <div key={faq} className="bg-white/10 rounded-lg overflow-hidden transition-all">
+                <button
+                  onClick={() => toggleFaq(faq)}
+                  className="w-full p-6 text-left flex justify-between items-center font-bold hover:bg-white/5"
+                >
+                  Pergunta número {faq}?
+                  <span className="text-xl">{activeFaq === faq ? "▲" : "▼"}</span>
+                </button>
+                {activeFaq === faq && (
+                  <div className="p-6 pt-0 text-gray-300">
+                    Resposta detalhada para a pergunta {faq}.
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="w-full bg-[#c9408f] p-10 rounded-2xl flex flex-col items-center text-center gap-6 mt-10">
+            <h2 className="font-['PP_Editorial_New'] text-4xl font-bold">Pronto para começar?</h2>
+            <p className="text-lg">Subtítulo final de encerramento.</p>
+            <button className="bg-[#6737cc] text-[#ffffff] px-10 py-5 rounded-md font-bold text-lg hover:opacity-90 transition shadow-xl">
+              Quero Garantir Minha Vaga
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
