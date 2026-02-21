@@ -17,8 +17,10 @@ export default function Bubble({ type, label }: Props) {
 
   const variant = variants[type];
   return (
-    <div className={`rounded-full ${variant.className} p-3 flex items-center gap-4`}>
-      <Image src={variant.icon} alt="Icon" width={32} height={32} />
+    <div
+      className={`rounded-full lg:text-lg xl:text-xl ${variant.className} px-4 pr-14 py-5 flex items-center gap-4`}
+    >
+      <Image className="lg:w-5" src={variant.icon} alt="Icon" width={16} height={16} />
       <span>{label}</span>
     </div>
   );

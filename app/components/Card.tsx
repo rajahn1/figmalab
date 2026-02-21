@@ -10,7 +10,7 @@ export interface Props {
 export default function Card({ icon, data, bgColor, textColor }: Props) {
   const className = `bg-${bgColor} text-${textColor}`;
   return (
-    <div className={`flex flex-col gap-8 rounded-2xl p-12 mt-16 w-max ${className}`}>
+    <div className={`flex flex-col gap-8 rounded-2xl p-12 xl:pr-44 ${className}`}>
       {data.map((skill, idx) => (
         <Skill icon={icon} key={idx} label={skill} />
       ))}
