@@ -1,12 +1,29 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState, useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 import Button from "./components/Button";
 import Image from "next/image";
 import Bubble from "./components/Bubble";
 import Card from "./components/Card";
+gsap.registerPlugin(useGSAP);
 
 export default function LandingPage() {
+  const iconFigmaRef = useRef(null);
+  useGSAP(() => {
+    gsap.to(iconFigmaRef.current, {
+      y: -30,
+      opacity: 0.9,
+      scale: 1.05,
+      duration: 2,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+  });
+
   const negativePoints = [
     "Continuar criando no improviso",
     "Travar no frame me branco",
@@ -55,16 +72,31 @@ export default function LandingPage() {
   return (
     <div className="w-full font-articulat text-[#313131]">
       {/* Seção 1 - Fundo Rosa */}
-      <section className="bg-[#c9408f] text-[#ffffff] py-20 px-8">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <section className="relative bg-text-pink text-[#ffffff] pt-20 px-8">
+        <Image
+          className="mix-blend-lighten absolute top-0 left-0 rotate-180"
+          src="/images/barra-ferramentas-vertical.png"
+          alt="barra de ferramentas do figma"
+          height={9.73}
+          width={51.67}
+        />
+        <Image
+          className="mix-blend-lighten absolute bottom-0 right-0"
+          src="/images/barra-ferramentas-vertical.png"
+          alt="barra de ferramentas do figma"
+          height={9.73}
+          width={51.67}
+        />
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8">
           <div className="flex-1 flex flex-col items-start gap-6">
-            <h1 className="font-editorial text-5xl">
-              Organize suas ideias e destrave <span className="italic">seu</span> processo criativo
-              no design de post.
+            <h1 className="font-editorial text-7xl">
+              Organize suas <br /> ideias e destrave seu
+              <br /> processo criativo no <br />
+              design de post.
             </h1>
             <h2 className="text-xl">
-              Aprenda a <span className="font-bold">pensar como designer</span> e use o Figma com
-              inteligência. O FigmaLab transforma o seu caos criativo em{" "}
+              Aprenda a <span className="font-bold">pensar como designer</span> e use o <br />
+              Figma com inteligência. O FigmaLab transforma o seu caos criativo em{" "}
               <span className="font-bold">clareza</span>, a cópia em{" "}
               <span className="font-bold">autoria</span> e a tentativa em{" "}
               <span className="font-bold">método</span>, mesmo que hoje você dependa 100% de
@@ -72,12 +104,29 @@ export default function LandingPage() {
             </h2>
             <Button label="Quero entrar para o Lab" />
           </div>
-          <div className="flex-1 relative w-full h-80 bg-black/20 rounded-lg flex items-center justify-center">
+          <div className="relative flex-1 flex items-center justify-center">
             <Image
-              src="/images/foto-emi.png"
-              alt="Descrição da imagem"
-              fill
-              className="object-cover"
+              src="/images/section-hero-img.png"
+              alt="Mulher branca de cabelos pretos segurando um ipad "
+              width={700}
+              height={800}
+              priority
+              className="z-10"
+            />
+            <Image
+              src="/images/print-interface.png"
+              alt="Interface do figma"
+              width={178}
+              height={184.5}
+              className="absolute z-0 -right-11 top-45 mix-blend-soft-light"
+            />
+            <Image
+              ref={iconFigmaRef}
+              src="/icons/icon-figma.png"
+              alt="Icone do Figma"
+              width={300}
+              height={225}
+              className="absolute -right-15 bottom-50 z-20"
             />
           </div>
         </div>
@@ -86,18 +135,20 @@ export default function LandingPage() {
       {/* Seção 2 - Fundo Branco */}
       <section className="bg-[#f4ede8] py-20 px-8">
         <div className="max-w-6xl mx-auto flex flex-col items-center gap-12">
-          <h2 className="font-['PP_Editorial_New'] text-4xl font-bold text-center">
-            Hoje existem dois caminhos para quem trabalha com design:
+          <h2 className="font-articulat text-5xl text-center">
+            Hoje existem <span className="font-bold">dois caminhos</span> para
+            <br /> quem trabalha com
+            <span className="font-bold"> design de post:</span>
           </h2>
           <div className="w-full flex flex-col md:flex-row gap-8 justify-center">
-            <div className="flex-1 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <div className="flex-1">
               <ul className="list-disc pl-5 space-y-2">
                 {negativePoints.map((point, index) => (
                   <Bubble key={index} label={point} type="negative" />
                 ))}
               </ul>
             </div>
-            <div className="flex-1 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <div className="flex-1">
               <ul className="list-disc pl-5 space-y-2">
                 {positivePoints.map((point, index) => (
                   <Bubble key={index} label={point} type="positive" />
@@ -105,8 +156,8 @@ export default function LandingPage() {
               </ul>
             </div>
           </div>
-          <h2 className="text-bg-black text-5xl font-bold">
-            Qual caminho{" "}
+          <h2 className="text-bg-black text-7xl font-extrabold">
+            Qual caminho <br />
             <span className="relative inline-block">
               {/* você → atrás */}
               <span className="relative z-20">você</span>
@@ -114,14 +165,14 @@ export default function LandingPage() {
               {/* imagem → meio */}
               <Image
                 src="/images/mao.png"
-                width={72}
-                height={80}
+                width={100}
+                height={100}
                 alt="dedo indicador"
-                className="absolute right-47 -top-2 z-10 pointer-events-none"
+                className="absolute right-68 -top-2 z-10 pointer-events-none"
               />
 
               {/* escolhe → frente */}
-              <span className="relative z-0 text-text-pink ml-8">escolhe?</span>
+              <span className="relative z-0 text-text-pink ml-10">escolhe?</span>
             </span>
           </h2>
         </div>
@@ -140,17 +191,25 @@ export default function LandingPage() {
               />
             </div>
             <div className="flex-1 flex flex-col items-start gap-4">
-              <h2 className="font-['PP_Editorial_New'] text-4xl font-bold">
-                O problema não é talento, é falta de <span className="text-text-pink">método</span>.
+              <h2 className="font-editorial text-6xl">
+                O problema não <br /> é talento, é falta
+                <br /> de <span className="text-text-pink">método</span>.
               </h2>
               <span className="text-lg">
-                Design não é dom, é processo. O FigmaLab é o resultado de anos organizando meu
-                próprio método criativo, validado em projetos reais. Aqui, você para de copiar e
-                aprende a analisar, decidir e criar com consciência.
+                Design não é dom, é processo. O<br /> FigmaLab é o resultado de anos
+                <br /> organizando meu próprio método
+                <br /> criativo de design para social media
+                <br />, validado em projetos reais. Aqui, você
+                <br /> para de copiar e aprende a analisar,
+                <br /> decidir e criar com consciência.
               </span>
               <span className="text-lg">
-                Saia do amadorismo e domine o método que transforma criatividade travada em design
-                estratégico.
+                Saia do amadorismo e domine o método
+                <br /> que{" "}
+                <span className="font-bold">
+                  transforma criatividade travada
+                  <br /> em design de post estratégico.
+                </span>
               </span>
             </div>
           </div>
