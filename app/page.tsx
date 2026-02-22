@@ -656,7 +656,7 @@ export default function LandingPage() {
               Hello, eu sou a Emi, fundadora do
               <br /> Studio Emi e designer há 4 anos.
             </h3>
-            <div className="flex flex-col gap-4 2xl:text-xl xl:text-lg text-xs text-center">
+            <div className="flex flex-col gap-4 2xl:text-xl xl:text-lg text-xs text-center md:text-start">
               <p>
                 Por muito tempo, acreditei que meu maior obstáculo era a<br /> falta de
                 criatividade, quando na verdade o que me faltava
