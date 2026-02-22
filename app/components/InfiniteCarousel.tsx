@@ -23,11 +23,10 @@ export default function InfiniteCarousel({
     const ctx = gsap.context(() => {
       gsap.to(".slide", {
         xPercent: direction === "forward" ? -100 : 100,
-        duration: 10, // ajuste a velocidade
+        duration: 20, // ajuste a velocidade
         ease: "linear",
         repeat: -1,
         modifiers: {
-          // wrap sempre entre -100 e 0 para garantir continuidade
           xPercent: gsap.utils.wrap(-100, 0),
         },
       });
@@ -40,17 +39,17 @@ export default function InfiniteCarousel({
     <div ref={containerRef} className="relative w-full overflow-hidden flex">
       <Image
         src={pathImage}
-        alt="carrossel 1"
+        alt=""
         width={width}
         height={height}
-        className="slide flex-shrink-0 w-full h-[352px] object-cover"
+        className="slide flex-shrink-0 w-full h-auto"
       />
       <Image
         src={pathImage}
-        alt="carrossel 2"
+        alt=""
         width={width}
         height={height}
-        className="slide flex-shrink-0 w-full h-[352px] object-cover"
+        className="slide flex-shrink-0 w-full h-auto"
       />
     </div>
   );

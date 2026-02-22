@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="bg-bg-black py-4 flex justify-between lg:px-24 xl:px-60">
+    <header id="header" className="bg-bg-black py-4 flex justify-between xl:px-24 2xl:px-60">
       <Image
         className="h-auto w-24"
         src="/images/logo-figmalab.png"

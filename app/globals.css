@@ -34,14 +34,5 @@
 body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.embla__container {
-  display: flex;
-  will-change: transform;
-}
-
-/* Força a transição linear para o efeito de "esteira" */
-.embla {
-  --embla-speed: 20s; /* Ajuste a velocidade aqui */
+  overflow-x: hidden;
 }
