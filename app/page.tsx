@@ -652,11 +652,11 @@ export default function LandingPage() {
               <span className="text-text-pink">Quem</span> vai te
               <br /> ensinar tudo isso?
             </h2>
-            <h3 className="xl:text-xl 2xl:text-3xl font-bold md:text-start text-center">
+            <h3 className="xl:text-xl 2xl:text-3xl font-bold md:text-start text-center leading-4 md:leading-8">
               Hello, eu sou a Emi, fundadora do
               <br /> Studio Emi e designer há 4 anos.
             </h3>
-            <div className="flex flex-col gap-4 2xl:text-xl xl:text-lg text-sm text-center">
+            <div className="flex flex-col gap-4 2xl:text-xl xl:text-lg text-xs text-center">
               <p>
                 Por muito tempo, acreditei que meu maior obstáculo era a<br /> falta de
                 criatividade, quando na verdade o que me faltava
@@ -700,7 +700,7 @@ export default function LandingPage() {
       <section className="bg-[url('/images/bg-faq.png')] bg-cover bg-no-repeat bg-center text-white md:py-20 py-8">
         <div className="md:max-w-6xl md:mx-auto flex flex-col items-center gap-6 md:gap-12">
           <h2 className="font-articulat 2xl:text-9xl xl:text-8xl font-extrabold text-4xl">FAQ</h2>
-          <div className="md:w-full w-[400px] flex flex-col gap-8">
+          <div className="md:w-full w-[380px] flex flex-col gap-8">
             {faq.map((faq, idx) => (
               <div
                 key={idx}
@@ -729,7 +729,7 @@ export default function LandingPage() {
             ))}
           </div>
 
-          <div className="md:w-full bg-[#454545] py-10 px-8 md:p-10 md:py-20 rounded-2xl flex flex-col items-center text-center gap-4 md:gap-6 mt-10 font-articulat">
+          <div className="md:w-full bg-[#454545] py-10 px-5 md:p-10 md:py-20 rounded-2xl flex flex-col items-center text-center gap-4 md:gap-6 mt-10 font-articulat">
             <h2 className="xl:text-6xl lg:text-5xl font-bold text-3xl">Ainda com dúvidas?</h2>
             <p className="md:text-lg text-center text-xs">
               Se tiver qualquer dúvida sobre sua inscrição no FigmaLab,
