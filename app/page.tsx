@@ -612,7 +612,7 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 9 */}
-      <section className="md:bg-white md:bg-none bg-[url('/images/bg-quem-vai-te-ensinar-mobile.png')] bg-cover bg-no-repeat bg-center py-20 px-8 relative overflow-hidden">
+      <section className="md:bg-white md:bg-none bg-[url('/images/bg-quem-vai-te-ensinar-mobile.png')] bg-cover bg-no-repeat bg-center py-8 md:py-20 px-8 relative overflow-hidden">
         <svg
           className="hidden md:block absolute right-30 bottom-80"
           width="104"
