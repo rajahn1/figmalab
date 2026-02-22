@@ -21,6 +21,10 @@ gsap.registerPlugin(useGSAP);
 export default function LandingPage() {
   const iconFigmaRef = useRef(null);
   const barFigmaHorizontalRef = useRef(null);
+
+  const iconFigmaRefMobile = useRef(null);
+  const barFigmaHorizontalRefMobile = useRef(null);
+
   const image1ref = useRef(null);
   const image2ref = useRef(null);
 
@@ -37,6 +41,26 @@ export default function LandingPage() {
 
     gsap.to(barFigmaHorizontalRef.current, {
       y: -30,
+      opacity: 0.9,
+      scale: 1.05,
+      duration: 3,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
+    gsap.to(barFigmaHorizontalRefMobile.current, {
+      y: -15,
+      opacity: 0.9,
+      scale: 1.05,
+      duration: 3,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
+    gsap.to(iconFigmaRefMobile.current, {
+      y: -15,
       opacity: 0.9,
       scale: 1.05,
       duration: 3,
@@ -223,13 +247,50 @@ export default function LandingPage() {
       {/* Seção 1 - Fundo Rosa */}
       <section className="relative bg-text-pink text-[#ffffff] 2xl:pt-12 xl:pt-0  px-8">
         <div className="max-w-7xl mx-auto bg-text-pink flex flex-col md:flex-row xl:items-center xl:pt-8 2xl:pt-8 justify-center">
-          <div className="flex flex-col gap-6">
-            <h1 className="font-editorial text-4xl xl:text-5xl 2xl:text-6xl leading-[92%] tracking-[-5%]">
-              Organize suas <br /> ideias e destrave seu
-              <br /> processo criativo no <br />
-              design de post.
+          {/*  MOBILE */}
+          <div className="xl:pr-0 pr-12 sm:w-[400px] xl:w-[500px] 2xl:w-[610px] aspect-[498/455] xl:hidden relative xl:items-center xl:justify-center">
+            <Image
+              src="/images/hero-section-mobile.png"
+              alt="Mulher branca de cabelos pretos segurando um ipad"
+              width={1000}
+              height={913.65}
+              className="z-10 w-full h-auto"
+            />
+            {/* <img src="/images/section-hero-img.png" className="w-[400px]" alt="teste" />*/}
+            <Image
+              src="/images/print-interface.png"
+              alt="Interface do figma"
+              width={178}
+              height={184.5}
+              className=" w-16 top-21.5 right-8 z-0 absolute mix-blend-soft-light"
+            />
+            <Image
+              ref={iconFigmaRefMobile}
+              src="/icons/icon-figma.png"
+              alt="Icone do Figma"
+              width={300}
+              height={225}
+              className="w-32 h-auto top-30 right-2 absolute z-20"
+            />
+            <Image
+              ref={barFigmaHorizontalRefMobile}
+              src="/images/barra-ferramentas-horizontal.png"
+              alt="barra do figma horizontal"
+              width={250}
+              height={35}
+              className="w-32 bottom-25 left-10 absolute mix-blend-luminosity z-20"
+            />
+          </div>
+          <div className="flex flex-col gap-6 xl:items-start items-center">
+            <h1 className="font-editorial xl:text-start text-center text-3xl xl:text-5xl 2xl:text-6xl leading-[92%] tracking-[-5%]">
+              Organize suas
+              <br className="hidden md:block" /> ideias e<br className="md:hidden" /> destrave seu
+              <br className="hidden md:block" /> processo criativo
+              <br className="md:hidden" />
+              <br className="hidden md:block" />
+              no design de post.
             </h1>
-            <h2 className="2xl:text-xl xl:text-base font-normal">
+            <h2 className="2xl:text-xl xl:text-base text-sm font-normal xl:text-start text-center">
               Aprenda a <span className="font-bold">pensar como designer</span> e use o <br />
               Figma com inteligência. O FigmaLab transforma
               <br /> o seu caos criativo em <span className="font-bold">clareza</span>, a cópia em
@@ -237,9 +298,13 @@ export default function LandingPage() {
               <span className="font-bold">método</span>, mesmo que <br />
               hoje você dependa 100% de referências prontas.
             </h2>
-            <Button label="Eu quero fazer parte" />
+            <div className="xl:mb-0 mb-12">
+              <Button label="Eu quero fazer parte" />
+            </div>
           </div>
-          <div className="sm:w-[400px] xl:w-[500px] 2xl:w-[610px] aspect-[2040/1900] relative flex xl:items-center xl:justify-center">
+
+          {/* DESKTOP */}
+          <div className="sm:w-[400px] xl:w-[500px] 2xl:w-[610px] aspect-[2040/1900] xl:flex hidden relative xl:items-center xl:justify-center">
             <Image
               src="/images/section-hero-img.png"
               alt="Mulher branca de cabelos pretos segurando um ipad "
@@ -276,30 +341,32 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 2 - Fundo Branco */}
-      <section className="bg-[#f4ede8] py-20 px-8 leading-[94%]">
-        <div className="max-w-6xl mx-auto flex flex-col items-center gap-12">
-          <h2 className="font-articulat text-5xl text-center">
+      <section className="bg-[#f4ede8] py-8 md:py-20 px-8 leading-[94%]">
+        <div className="max-w-6xl md:mx-auto flex flex-col items-center gap-6 md:gap-12">
+          <h2 className="font-articulat text-xl xl:text-5xl text-center md:leading-12 leading-5">
             Hoje existem <span className="font-bold">dois caminhos</span> para
             <br /> quem trabalha com
             <span className="font-bold"> design de post:</span>
           </h2>
-          <div className="w-full flex flex-col md:flex-row gap-8 justify-center">
+
+          <div className="w-full flex flex-col md:flex-row gap-4 md:gap-8 items-center md:items-start justify-center">
             <div className="">
-              <ul className="list-disc pl-5 space-y-2">
+              <ul className="space-y-2">
                 {negativePoints.map((point, index) => (
                   <Bubble key={index} label={point} type="negative" />
                 ))}
               </ul>
             </div>
             <div className="">
-              <ul className="list-disc pl-5 space-y-2">
+              <ul className="space-y-2">
                 {positivePoints.map((point, index) => (
                   <Bubble key={index} label={point} type="positive" />
                 ))}
               </ul>
             </div>
           </div>
-          <h2 className="text-center text-bg-black text-7xl font-extrabold leading-14 tracking-tighter">
+
+          <h2 className="text-center text-bg-black text-4xl md:text-7xl font-extrabold leading-8 md:leading-14 tracking-tighter">
             Qual caminho <br />
             <span className="relative inline-block">
               {/* você → atrás */}
@@ -311,51 +378,63 @@ export default function LandingPage() {
                 width={100}
                 height={100}
                 alt="dedo indicador"
-                className="absolute right-60 -top-4 z-10 pointer-events-none"
+                className="absolute -bottom-4 md:w-25 w-15 right-30 md:right-60 md:-top-4 z-10 pointer-events-none"
               />
 
               {/* escolhe → frente */}
-              <span className="relative z-0 text-text-pink ml-10">escolhe?</span>
+              <span className="relative z-0 text-text-pink ml-7 md:ml-10">escolhe?</span>
             </span>
           </h2>
         </div>
       </section>
 
       {/* Seção 3 - Fundo Imagem Emilize */}
-      <section className="2xl:h-240 bg-[url('/images/section-bg-feedbacks.png')] xl:bg-cover 2xl:bg-cover bg-no-repeat bg-center text-black py-20 px-8">
-        <div className="max-w-6xl mx-auto flex flex-col gap-12">
-          <div className="flex 2xl:mt-16 flex-col md:flex-row justify-end xl:px-32 2xl:mr-24">
-            <div className="flex flex-col items-start gap-4 justify-center">
-              <h2 className="font-editorial text-4xl xl:text-5xl 2xl:text-6xl tracking-tighter">
-                O problema não <br /> é talento, é falta
-                <br /> de <span className="text-text-pink">método</span>.
+
+      <section className="2xl:h-240 bg-[url('/images/section-bg-feedbacks-mobile.png')] md:bg-[url('/images/section-bg-feedbacks.png')] py-4 xl:bg-cover bg-cover bg-no-repeat bg-center text-black md:py-20 md:px-8">
+        <div className="max-w-6xl mx-auto flex flex-col gap-12 md:pt-0 pt-70">
+          <div className="flex 2xl:mt-16 flex-col md:flex-row justify-end xl:px-32 2xl:mr-0">
+            <div className="flex flex-col items-center md:items-start gap-3 md:gap-4 md:justify-center md:mt-8 md:pt-0 pt-10">
+              <h2 className="md:text-start text-center font-editorial text-3xl xl:text-5xl 2xl:text-6xl tracking-tighter">
+                O problema não <br className="hidden md:block" /> é <br className="md:hidden" />{" "}
+                talento, é falta
+                <br className="hidden md:block" /> de <span className="text-text-pink">método</span>
+                .
               </h2>
-              <span className="xl:text-lg 2xl:text-xl">
-                Design não é dom, é processo. O<br /> FigmaLab é o resultado de anos
-                <br /> organizando meu próprio método
-                <br /> criativo de design para social media,
-                <br /> validado em projetos reais. Aqui, você
-                <br /> para de copiar e aprende a analisar,
-                <br /> decidir e criar com consciência.
+              <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-xl">
+                Design não é dom, é processo. O<br className="hidden md:block" /> FigmaLab é o
+                resultado de <br className="md:hidden" /> anos
+                <br className="hidden md:block" /> organizando meu próprio método
+                <br className="hidden md:block" /> criativo de design para{" "}
+                <br className="md:hidden" /> social media,
+                <br className="hidden md:block" /> validado em projetos reais. Aqui, você
+                <br className="hidden md:block" /> para de
+                <br className="md:hidden" /> copiar e aprende a analisar,
+                <br className="hidden md:block" /> decidir e criar com consciência.
               </span>
-              <span className="xl:text-lg 2xl:text-xl xl:mb-4 mb-8">
+              <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-xl xl:mb-4 md:mb-8">
                 Saia do amadorismo e domine o método
-                <br /> que{" "}
+                <br className="hidden md:block" /> que{" "}
                 <span className="font-bold">
-                  transforma criatividade travada
-                  <br /> em design de post estratégico.
+                  transforma
+                  <br className="md:hidden" /> criatividade travada
+                  <br className="hidden md:block" /> em design de post estratégico.
                 </span>
               </span>
-              <Button label="Quero entrar no Lab" />
+              <div className="hidden md:block">
+                <Button label="Eu quero fazer parte" />
+              </div>
+              <div className="md:hidden py-4">
+                <Button size="md" label="Eu quero fazer parte" />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Seção 4 */}
-      <section className="bg-text-pink py-20 px-8 flex flex-col items-center">
-        <div className="max-w-6xl flex xl:flex-col lg:flex-col md:flex-row xl:justify-center xl:items-center gap-3">
-          <h2 className="font-articulat 2xl:text-7xl xl:text-5xl font-bold text-white text-center">
+      <section className="bg-text-pink py-8 md:py-20 px-8 flex flex-col items-center">
+        <div className="max-w-6xl flex flex-col items-center xl:justify-center gap-5">
+          <h2 className="font-articulat text-2xl 2xl:text-7xl xl:text-5xl font-bold text-white text-center md:leading-14 leading-6">
             O que você vai
             <br /> dominar no FigmaLab
           </h2>
@@ -373,7 +452,7 @@ export default function LandingPage() {
               className="2xl:w-260 absolute 2xl:-top-10 2xl:left-30
                 xl:w-200 xl:-top-10 xl:left-25
                 md:top-16 md:left-20
-                top-20 left-10"
+                -bottom-50 w-108 -left-32"
             >
               <Image
                 src="/images/mockup-notebooks.png"
@@ -386,40 +465,42 @@ export default function LandingPage() {
               />
             </div>
           </div>
-          <div className="mt-8">
+          <div className="md:mt-8 mt-48 md:mb-0 mb-6">
             <Button label="Eu quero isso" size="xl" />
           </div>
         </div>
       </section>
 
       {/* Seção 5 - Módulos */}
-      <section className="bg-bg-black py-20 px-8">
+      <section className="bg-bg-black py-8 md:py-20 px-8">
         <div className="max-w-6xl mx-auto flex flex-col items-center gap-4">
-          <h2 className="font-articulat 2xl:text-6xl xl:text-5xl font-bold text-white text-center">
+          <h2 className="font-articulat text-2xl leading-7 md:leading-16 2xl:text-6xl xl:text-5xl font-bold text-white text-center">
             Veja tudo que <br /> você vai aprender:
           </h2>
 
           <Carousel />
 
-          {/* Barra de Módulos */}
-          <div className="flex gap-4 bg-bg-white rounded-full px-8 py-4 text-bg-blacK w-max overflow-x-auto 2xl:text-xl">
-            {[1, 2, 3, 4, 5, 6].map((mod) => (
-              <button
-                key={mod}
-                onClick={() => setActiveModule(mod)}
-                className={`hover:opacity-90 text-center hover:cursor-pointer px-6 py-2 rounded-full font-articulat transition ${activeModule === mod ? "bg-[#c9408f] text-white" : "text-[#313131]"}`}
-              >
-                MÓDULO {mod}
-              </button>
-            ))}
-          </div>
+          <div className="flex md:flex-col md:gap-8 gap-2">
+            {/* Barra de Módulos */}
+            <div className="md:h-full h-[320px] justify-center flex md:flex-row flex-col gap-5 px-2 md:gap-4 bg-bg-white rounded-xl text-xs md:rounded-full md:px-8 md:py-4 text-bg-black shrink-0 overflow-x-auto md:text-xl">
+              {[1, 2, 3, 4, 5, 6].map((mod) => (
+                <button
+                  key={mod}
+                  onClick={() => setActiveModule(mod)}
+                  className={`hover:opacity-90 text-center hover:cursor-pointer px-3 md:px-6 md:py-2 py-2 rounded-full font-articulat transition ${activeModule === mod ? "bg-[#c9408f] text-white" : "text-[#313131]"}`}
+                >
+                  MÓDULO {mod}
+                </button>
+              ))}
+            </div>
 
-          {/* Card do Módulo Ativo */}
-          <ModuleCard
-            module={activeModule}
-            classes={modulosAulas[activeModule - 1].classes}
-            title={modulosAulas[activeModule - 1].title}
-          />
+            {/* Card do Módulo Ativo */}
+            <ModuleCard
+              module={activeModule}
+              classes={modulosAulas[activeModule - 1].classes}
+              title={modulosAulas[activeModule - 1].title}
+            />
+          </div>
 
           <div className="mt-6">
             <Button label="Eu quero fazer parte" size="xl" />
@@ -428,41 +509,54 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 6 */}
-      <section className="bg-[url('/images/certificado-blobs.png')] bg-cover bg-center xl:h-120 2xl:h-180">
-        <div className="2xl:ml-72 xl:ml-48 h-full flex flex-col justify-center gap-4 font-articulat">
-          <h2 className="xl:text-6xl 2xl:text-7xl font-bold leading-14">
+      <section className="md:bg-[url('/images/certificado-blobs.png')] md:bg-cover md:bg-center xl:h-120 2xl:h-180">
+        <div className="relative 2xl:ml-72 xl:ml-48 h-full flex flex-col justify-center gap-2 md:gap-4 font-articulat items-center md:items-start md:py-0 py-12 md:pb-0 pb-68">
+          <h2 className="xl:text-6xl 2xl:text-7xl font-bold md:leading-14 leading-8 md:text-start text-center text-4xl">
             <span className="text-text-pink">Certificado</span> <br /> de conclusão
           </h2>
-          <p className="2xl:text-2xl xl:text-lg font-light">
-            Valide sua evolução e conquiste o<br /> reconhecimento oficial do seu domínio no
-            <br /> Figma. Ao concluir sua jornada no Lab,
-            <br /> você recebe certificações que comprovam
-            <br />
-            seu nível técnico e sua autoridade como
-            <br /> designer estrategista no mercado.
+          <p className="2xl:text-2xl xl:text-lg text-xs md:text-start text-center font-light">
+            Valide sua evolução e conquiste o<br className="hidden md:block" /> reconhecimento
+            <br className="md:hidden" />
+            oficial do seu domínio no
+            <br className="hidden md:block" /> Figma. Ao concluir sua
+            <br className="md:hidden" /> jornada no Lab,
+            <br className="hidden md:block" /> você recebe certificações que{" "}
+            <br className="md:hidden" />
+            comprovam
+            <br className="hidden md:block" />
+            seu nível técnico e sua autoridade
+            <br className="md:hidden" /> como
+            <br className="hidden md:block" /> designer estrategista no mercado.
           </p>
+          <Image
+            src="/images/certificado-mob.png"
+            height={439.84}
+            width={424.91}
+            alt="Certificado Mobile"
+            className="md:hidden h-auto w-88 absolute -z-10 top-55"
+          />
         </div>
       </section>
       <Separator />
       {/* Seção 7 - Galeria */}
 
-      <section className="bg-text-pink py-20 text-white flex flex-col gap-8">
+      <section className="bg-text-pink py-8 md:py-20 text-white flex flex-col gap-8">
         {/* 1. CONTAINER DO TEXTO (Com limite de largura e centralizado) */}
         <div className="max-w-7xl mx-auto flex flex-col items-center px-4">
           {" "}
           {/* Adicionei px-4 para evitar colar nas bordas no mobile */}
           <div className="text-center flex flex-col gap-4">
-            <h2 className="font-articulat 2xl:text-2xl xl:text-xl">
+            <h2 className="font-articulat 2xl:text-2xl xl:text-xl leading-5 md:leading-8">
               Você pode continuar tentando, copiando, travando,
               <br /> duvidando ou pode aprender um processo que vai
               <br /> te acompanhar em qualquer projeto de design de
               <br /> post, qualquer cliente ou qualquer estilo gráfico.
             </h2>
-            <h2 className="2xl:text-6xl xl:text-5xl font-bold">
+            <h2 className="2xl:text-6xl xl:text-5xl font-bold leading-5 text-xl md:leading-14">
               Eu vou te mostrar o caminho.
               <br /> Mas a execução é sua.
             </h2>
-            <span className="2xl:text-3xl xl:text-2xl underline">
+            <span className="2xl:text-3xl xl:text-2xl underline leading-4 md:leading-8">
               Veja alguns carrosséis que eu
               <br /> vou te ensinar durante o curso:
             </span>
@@ -498,13 +592,13 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 8 - Preço e Bônus */}
-      <section className="bg-bg-black text-white py-20 px-8">
-        <div className="flex flex-col gap-12 items-center">
-          <h2 className="font-articulat xl:text-5xl 2xl:text-6xl text-center">
+      <section className="bg-bg-black text-white py-8 md:py-20 px-8">
+        <div className="flex flex-col md:gap-12 gap-4 items-center">
+          <h2 className="font-articulat text-3xl leading-6 md:leading-12 xl:text-5xl 2xl:text-6xl text-center">
             Garantindo sua vaga
             <br /> hoje <span className="font-bold"> você terá acesso</span>:
           </h2>
-          <div className="flex gap-8">
+          <div className="flex justify-center md:flex-row flex-col gap-2 md:gap-8">
             <Card
               bgColor="bg-white"
               data={benefits}
@@ -518,9 +612,9 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 9 */}
-      <section className="bg-white py-20 px-8 relative overflow-hidden">
+      <section className="md:bg-white md:bg-none bg-[url('/images/bg-quem-vai-te-ensinar-mobile.png')] bg-cover bg-no-repeat bg-center py-20 px-8 relative overflow-hidden">
         <svg
-          className="absolute right-30 bottom-80"
+          className="hidden md:block absolute right-30 bottom-80"
           width="104"
           height="103"
           viewBox="0 0 104 103"
@@ -536,7 +630,7 @@ export default function LandingPage() {
         </svg>
 
         <svg
-          className="absolute bottom-0 right-0"
+          className=" hidden md:block absolute bottom-0 right-0"
           width="158"
           height="331"
           viewBox="0 0 198 361"
@@ -551,18 +645,18 @@ export default function LandingPage() {
           />
         </svg>
 
-        <div className="2xl:max-w-6xl xl:max-w-5xl mx-auto flex md:flex-row items-center 2xl:gap-10">
-          <div className="flex-1 flex flex-col items-start gap-4">
-            <h2 className="font-editorial 2xl:text-7xl xl:text-5xl font-bold">
+        <div className="2xl:max-w-6xl gap-8 xl:max-w-5xl md:mx-auto flex-col flex md:flex-row items-center 2xl:gap-10">
+          <div className="md:flex-1 flex flex-col items-center md:items-start gap-4">
+            <h2 className="font-editorial 2xl:text-7xl text-4xl xl:text-5xl font-bold md:text-start text-center">
               {" "}
               <span className="text-text-pink">Quem</span> vai te
               <br /> ensinar tudo isso?
             </h2>
-            <h3 className="xl:text-xl 2xl:text-3xl font-bold">
+            <h3 className="xl:text-xl 2xl:text-3xl font-bold md:text-start text-center">
               Hello, eu sou a Emi, fundadora do
               <br /> Studio Emi e designer há 4 anos.
             </h3>
-            <div className="flex flex-col gap-4 2xl:text-xl xl:text-lg">
+            <div className="flex flex-col gap-4 2xl:text-xl xl:text-lg text-sm text-center">
               <p>
                 Por muito tempo, acreditei que meu maior obstáculo era a<br /> falta de
                 criatividade, quando na verdade o que me faltava
@@ -591,7 +685,7 @@ export default function LandingPage() {
               </p>
             </div>
           </div>
-          <div className="flex-1 relative 2xl:w-full xl:h-150 2xl:h-180">
+          <div className="md:flex-1 relative 2xl:w-full xl:h-150 2xl:h-180 w-full h-[550px]">
             <Image
               src="/images/foto-emi-sentada.png"
               alt="Mulher branca sentada"
@@ -603,10 +697,10 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 10 - FAQ e Card Final */}
-      <section className="bg-[url('/images/bg-faq.png')] bg-cover bg-no-repeat bg-center text-white py-20">
-        <div className="max-w-6xl mx-auto flex flex-col items-center gap-12">
-          <h2 className="font-articulat 2xl:text-9xl xl:text-8xl font-extrabold">FAQ</h2>
-          <div className="w-full flex flex-col gap-8">
+      <section className="bg-[url('/images/bg-faq.png')] bg-cover bg-no-repeat bg-center text-white md:py-20 py-8">
+        <div className="md:max-w-6xl md:mx-auto flex flex-col items-center gap-6 md:gap-12">
+          <h2 className="font-articulat 2xl:text-9xl xl:text-8xl font-extrabold text-4xl">FAQ</h2>
+          <div className="md:w-full w-[400px] flex flex-col gap-8">
             {faq.map((faq, idx) => (
               <div
                 key={idx}
@@ -614,7 +708,7 @@ export default function LandingPage() {
               >
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full py-4 px-8 text-left flex justify-between items-center  hover:bg-white/5 hover:cursor-pointer"
+                  className="w-full px-4 py-2 md:py-4 md:px-8 text-left flex justify-between items-center  hover:bg-white/5 hover:cursor-pointer"
                 >
                   {faq.question}
                   {activeFaq == idx ? (
@@ -629,25 +723,27 @@ export default function LandingPage() {
                   )}
                 </button>
                 {activeFaq === idx && (
-                  <div className="p-8 pt-4 bg-bg-pink font-bold text-white">{faq.answer}.</div>
+                  <div className="p-8 pt-4 bg-bg-pink text-white">{faq.answer}</div>
                 )}
               </div>
             ))}
           </div>
 
-          <div className="w-full bg-[#454545] p-10 py-20 rounded-2xl flex flex-col items-center text-center gap-6 mt-10 font-articulat">
-            <h2 className="xl:text-6xl lg:text-5xl font-bold">Ainda com dúvidas?</h2>
-            <p className="text-lg text-center">
-              Se tiver qualquer dúvida sobre sua inscrição no FigmaLab, conte com nosso suporte
-              exclusivo
-              <br /> via WhatsApp. Nossa equipe está pronta para te atender e tirar todas as suas
+          <div className="md:w-full bg-[#454545] py-10 px-8 md:p-10 md:py-20 rounded-2xl flex flex-col items-center text-center gap-4 md:gap-6 mt-10 font-articulat">
+            <h2 className="xl:text-6xl lg:text-5xl font-bold text-3xl">Ainda com dúvidas?</h2>
+            <p className="md:text-lg text-center text-xs">
+              Se tiver qualquer dúvida sobre sua inscrição no FigmaLab,
+              <br className="md:hidden" /> conte com nosso suporte exclusivo
+              <br className="hidden md:block" /> via WhatsApp. Nossa equipe
+              <br className="md:hidden" /> está pronta para te atender e tirar todas as suas
               dúvidas.
             </p>
             <Button label="Fale com o suporte" type="secondary" />
           </div>
         </div>
       </section>
-      <section className="bg-bg-black flex-col flex items-center gap-8 pb-48">
+
+      <section className="bg-bg-black flex-col flex items-center gap-8 md:pb-48 pb-16">
         <h2 className="font-articulat text-white text-center xl:text-5xl lg:text-4xl">
           Domine o <span className="font-bold">processo criativo estratégico</span> <br /> dentro do
           <span className="font-bold"> Figma</span>, a{" "}

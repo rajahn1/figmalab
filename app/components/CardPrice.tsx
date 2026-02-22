@@ -2,8 +2,8 @@ import Button from "./Button";
 
 export default function CardPrice() {
   return (
-    <div className="flex flex-col bg-bg-white justify-center items-center gap-2 font-articulat rounded-4xl border-text-pink border-4 w-lg">
-      <h2 className="text-white font-extrabold bg-text-pink px-4 py-1 rounded-sm xl:text-xl 2xl:text-3xl text-center mb-6">
+    <div className="flex flex-col bg-bg-white justify-center items-center gap-1 md:gap-2 font-articulat rounded-4xl border-text-pink border-4 md:w-lg md:py-0 py-6">
+      <h2 className="text-white text-xl font-extrabold bg-text-pink px-4 py-1 rounded-sm xl:text-xl 2xl:text-3xl text-center mb-6">
         OFERTA VÁLIDA POR 24H!
       </h2>
       <div className="relative">
@@ -17,14 +17,14 @@ export default function CardPrice() {
         >
           <path d="M0.140747 22.9336L227.633 1.49311" stroke="#CC0A0A" strokeWidth="3" />
         </svg>
-        <span className="text-bg-black xl:text-2xl 2xl:text-4xl">de R$297</span>
+        <span className="text-bg-black text-3xl xl:text-2xl 2xl:text-4xl">de R$297</span>
       </div>
-      <span className="text-[#9D9D9D] xl:text-2xl 2xl:text-4xl">Por apenas 12x de</span>
+      <span className="text-[#9D9D9D] text-2xl xl:text-2xl 2xl:text-4xl">Por apenas 12x de</span>
       <div className="text-black font-extrabold relative">
-        <span className="absolute xl:text-2xl 2xl:text-3xl -left-10 top-3">R$</span>
-        <span className="xl:text-7xl 2xl:text-9xl tracking-tighter">20,37</span>
+        <span className="absolute text-3xl xl:text-2xl 2xl:text-3xl -left-10 top-3">R$</span>
+        <span className="text-8xl xl:text-7xl 2xl:text-9xl tracking-tighter">20,37</span>
       </div>
-      <span className="font-semibold text-[#9D9D9D] xl:text-2xl 2xl:text-4xl">
+      <span className="font-semibold text-2xl text-[#9D9D9D] xl:text-2xl 2xl:text-4xl">
         ou R$197 à vista
       </span>
       <div className="mt-4">

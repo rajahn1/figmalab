@@ -37,7 +37,7 @@ export default function Button({ label, size = "lg", type = "primary" }: btnProp
     sm: "px-3 py-2 text-sm",
     md: "px-6 py-3 text-base",
     lg: "px-8 py-4 text-xl",
-    xl: "px-10 py-5 text-2xl",
+    xl: "md:px-10 md:py-5 md:text-2xl text-xl py-4 px-12",
     xxl: "px-12 py-6 text-3xl",
   };
 
