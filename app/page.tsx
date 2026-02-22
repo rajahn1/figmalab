@@ -12,11 +12,15 @@ import Header from "./components/Header";
 import Carousel from "./components/Carousel";
 import ModuleCard from "./components/ModuleCard";
 import Separator from "./components/Separator";
+import InfiniteCarousel from "./components/InfiniteCarousel";
+
 gsap.registerPlugin(useGSAP);
 
 export default function LandingPage() {
   const iconFigmaRef = useRef(null);
   const barFigmaHorizontalRef = useRef(null);
+  const image1ref = useRef(null);
+  const image2ref = useRef(null);
 
   useGSAP(() => {
     gsap.to(iconFigmaRef.current, {
@@ -38,6 +42,29 @@ export default function LandingPage() {
       repeat: -1,
       yoyo: true,
     });
+
+    gsap.to(image1ref.current, {
+      x: "100%",
+      duration: 3,
+      delay: 0.03,
+      repeat: -1,
+      ease: "linear",
+    });
+    gsap.fromTo(
+      image2ref.current,
+      {
+        x: -window.innerWidth,
+        duration: 3,
+        repeat: -1,
+        ease: "linear",
+      },
+      {
+        x: 0,
+        duration: 3,
+        repeat: -1,
+        ease: "linear",
+      }
+    );
   });
 
   const negativePoints = [
@@ -161,7 +188,7 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="w-full font-articulat text-[#313131]">
+    <div className="max-w-screen font-articulat text-[#313131]">
       <Header />
       {/* Seção 1 - Fundo Rosa */}
       <section className="relative bg-text-pink text-[#ffffff] xl:pt-12 lg:pt-0  px-8">
@@ -371,58 +398,72 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 6 */}
-      <section className="bg-[#f4ede8] px-8">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="flex-1 flex flex-col items-start gap-4">
-            <h2 className="font-articulat xl:text-6xl font-bold">
-              <span className="text-text-pink">Certificado</span> <br /> de conclusão
-            </h2>
-            <p className="text-lg font-light">
-              Valide sua evolução e conquiste o<br /> reconhecimento oficial do seu domínio no
-              <br /> Figma. Ao concluir sua jornada no Lab,
-              <br /> você recebe certificações que comprovam
-              <br />
-              seu nível técnico e sua autoridade como
-              <br /> designer estrategista no mercado.
-            </p>
-          </div>
-          <div className="w-148">
-            <Image
-              src="/images/certificado.png"
-              alt="Descrição da imagem"
-              width={1820}
-              height={1260}
-              className="mix-blend-exclusion
-                w-full h-auto
-                "
-            />
-          </div>
+      <section className="bg-[url('/images/certificado-blobs.png')] bg-cover bg-center xl:h-180">
+        <div className="ml-72 h-full flex flex-col justify-center gap-4 font-articulat">
+          <h2 className="lg:text-6xl xl:text-7xl font-bold leading-14">
+            <span className="text-text-pink">Certificado</span> <br /> de conclusão
+          </h2>
+          <p className="xl:text-2xl lg:text-lg font-light">
+            Valide sua evolução e conquiste o<br /> reconhecimento oficial do seu domínio no
+            <br /> Figma. Ao concluir sua jornada no Lab,
+            <br /> você recebe certificações que comprovam
+            <br />
+            seu nível técnico e sua autoridade como
+            <br /> designer estrategista no mercado.
+          </p>
         </div>
       </section>
       <Separator />
-
       {/* Seção 7 - Galeria */}
-      <section className="bg-white py-20 px-8">
-        <div className="max-w-7xl mx-auto flex flex-col items-center gap-8">
-          <div className="text-center">
-            <h2 className="font-editorial text-4xl font-bold">
-              Eu vou te mostrar o caminho. Mas a execução é sua.
+
+      <section className="bg-text-pink py-20 text-white flex flex-col gap-8">
+        {/* 1. CONTAINER DO TEXTO (Com limite de largura e centralizado) */}
+        <div className="max-w-7xl mx-auto flex flex-col items-center px-4">
+          {" "}
+          {/* Adicionei px-4 para evitar colar nas bordas no mobile */}
+          <div className="text-center flex flex-col gap-4">
+            <h2 className="font-articulat xl:text-2xl lg:text-xl">
+              Você pode continuar tentando, copiando, travando,
+              <br /> duvidando ou pode aprender um processo que vai
+              <br /> te acompanhar em qualquer projeto de design de
+              <br /> post, qualquer cliente ou qualquer estilo gráfico.
             </h2>
-            <p className="mt-2 text-lg underline">
-              Veja alguns carrosséis que eu vou te ensinar durante o curso:
-            </p>
+            <h2 className="xl:text-6xl lg:text-5xl font-bold">
+              Eu vou te mostrar o caminho.
+              <br /> Mas a execução é sua.
+            </h2>
+            <span className="xl:text-3xl lg:text-2xl underline">
+              Veja alguns carrosséis que eu
+              <br /> vou te ensinar durante o curso:
+            </span>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 w-full">
-            {/* 3 linhas x 6 cards = 18 itens */}
-            {Array.from({ length: 18 }).map((_, i) => (
-              <div
-                key={i}
-                className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center shadow-sm"
-              >
-                [Img {i + 1}]
-              </div>
-            ))}
-          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 w-full mt-24">
+          <InfiniteCarousel
+            pathImage="/images/carrossel-1.png"
+            width={1693.19}
+            height={352.61}
+            direction="forward"
+          />
+          <InfiniteCarousel
+            pathImage="/images/carrossel-2.png"
+            width={1693.18}
+            height={352.61}
+            direction="backward"
+          />
+          <InfiniteCarousel
+            pathImage="/images/carrossel-3.png"
+            width={2538.3}
+            height={352.61}
+            direction="forward"
+          />
+          <InfiniteCarousel
+            pathImage="/images/carrossel-4.png"
+            width={2256.7}
+            height={352.61}
+            direction="backward"
+          />
         </div>
       </section>
 
