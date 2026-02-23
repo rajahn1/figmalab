@@ -246,6 +246,20 @@ export default function LandingPage() {
       <Header />
       {/* Seção 1 - Fundo Rosa */}
       <section className="relative bg-text-pink text-[#ffffff] 2xl:pt-12 xl:pt-0 px-8">
+        <Image
+          src="/images/ferramentas-figma-2.png"
+          alt="ferramentas figma"
+          width={162}
+          height={978}
+          className="absolute xl:w-16 left-0 mix-blend-lighten hidden xl:block"
+        />
+        <Image
+          src="/images/ferramentas-figma-2.png"
+          alt="ferramentas figma"
+          width={162}
+          height={978}
+          className="absolute xl:w-16 right-0 bottom-0 rotate-180 mix-blend-lighten hidden xl:block"
+        />
         <div className="max-w-7xl mx-auto bg-text-pink flex flex-col md:flex-row xl:items-center xl:pt-8 2xl:pt-8 justify-center items-center">
           {/*  MOBILE */}
           <div className="xl:pr-0 pr-12 sm:w-[400px] xl:w-[500px] 2xl:w-[610px] aspect-[498/455] xl:hidden lg:hidden relative ">
@@ -312,7 +326,7 @@ export default function LandingPage() {
               height={1900}
               className="z-10 w-full h-auto"
             />
-            {/* <img src="/images/section-hero-img.png" className="w-[400px]" alt="teste" />*/}
+
             <Image
               src="/images/print-interface.png"
               alt="Interface do figma"
@@ -431,9 +445,23 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 4 */}
-      <section className="bg-text-pink py-8 md:py-20 px-8 flex flex-col items-center">
+      <section className="bg-text-pink py-8 md:py-20 px-8 flex flex-col items-center relative">
+        <Image
+          src="/images/ferramentas-figma-2.png"
+          alt="ferramentas figma"
+          width={162}
+          height={978}
+          className="absolute rotate-180 xl:w-16 left-0 mix-blend-lighten hidden xl:block"
+        />
+        <Image
+          src="/images/ferramentas-figma-2.png"
+          alt="ferramentas figma"
+          width={162}
+          height={978}
+          className="absolute xl:w-16 right-0 bottom-10 mix-blend-lighten hidden xl:block"
+        />
         <div className="max-w-6xl flex flex-col items-center xl:justify-center gap-5">
-          <h2 className="font-articulat text-2xl 2xl:text-7xl xl:text-5xl font-bold text-white text-center md:leading-14 leading-6">
+          <h2 className="font-articulat text-2xl 2xl:text-7xl xl:text-5xl font-bold text-white text-center md:leading-14 leading-6 tracking-[-7%]">
             O que você vai
             <br /> dominar no FigmaLab
           </h2>
@@ -612,8 +640,15 @@ export default function LandingPage() {
 
       {/* Seção 9 */}
       <section className="md:bg-white md:bg-none bg-[url('/images/bg-quem-vai-te-ensinar-mobile.png')] bg-cover bg-no-repeat bg-center py-8 md:py-20 px-8 relative overflow-hidden">
+        <Image
+          src="/images/barra-alinhamento.png"
+          alt="barra figma alinhamento"
+          width={189}
+          height={1027}
+          className="absolute xl:w-12 right-6 hidden xl:block"
+        />
         <svg
-          className="hidden md:block absolute right-30 bottom-80"
+          className="hidden md:block absolute right-10 bottom-80 w-20"
           width="104"
           height="103"
           viewBox="0 0 104 103"
@@ -646,7 +681,7 @@ export default function LandingPage() {
 
         <div className="2xl:max-w-6xl gap-8 xl:max-w-5xl md:mx-auto flex-col flex md:flex-row items-center 2xl:gap-10">
           <div className="md:flex-1 flex flex-col items-center md:items-start gap-2 xl:gap-4">
-            <h2 className="font-editorial 2xl:text-7xl text-4xl xl:text-5xl md:text-start text-center md:leading-none xl:leading-15 leading-8">
+            <h2 className="font-editorial 2xl:text-7xl text-4xl xl:text-5xl md:text-start text-center md:leading-none xl:leading-15 leading-8 tracking-[-6%]">
               {" "}
               <span className="text-text-pink">Quem</span> vai te
               <br /> ensinar tudo isso?
@@ -764,7 +799,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-bg-black flex-col flex items-center gap-8 md:py-12 pb-16">
+      <section className="bg-bg-black flex-col flex items-center gap-8 md:pt-12 md:pb-24 pb-16">
         <h2 className="font-articulat text-white text-center xl:text-5xl lg:text-4xl leading-4 lg:leading-11">
           Domine o <span className="font-bold">processo criativo estratégico</span> <br /> dentro do
           <span className="font-bold"> Figma</span>, a{" "}
