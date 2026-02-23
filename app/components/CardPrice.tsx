@@ -8,12 +8,18 @@ export default function CardPrice() {
       </h2>
       <div className="relative">
         <svg
-          className="absolute -left-8 top-1"
-          width="228"
-          height="25"
+          className="
+          absolute
+          -left-2 md:-left-8
+          top-1
+          w-36
+          sm:w-32
+          md:w-56
+          2xl:w-64
+          h-auto
+          "
           viewBox="0 0 228 25"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path d="M0.140747 22.9336L227.633 1.49311" stroke="#CC0A0A" strokeWidth="3" />
         </svg>

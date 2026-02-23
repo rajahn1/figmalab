@@ -11,6 +11,14 @@ export interface btnProps {
 }
 
 export default function Button({ label, size = "lg", type = "primary" }: btnProps) {
+  let link =
+    type == "primary"
+      ? "https://pay.kiwify.com.br/eADN6hR"
+      : "https://wa.me/message/KS4FVL6M7D6KL1";
+
+  const handleOnClickBtn = () => {
+    window.open(link, "_blank");
+  };
   const buttonRef = useRef(null);
 
   const handleMouseEnter = () => {
@@ -35,9 +43,9 @@ export default function Button({ label, size = "lg", type = "primary" }: btnProp
 
   const sizeClasses = {
     sm: "px-3 py-2 text-sm",
-    md: "px-6 py-3 text-base",
+    md: "px-6 py-3 text-base md:px-8 md:py-4 md:text-xl",
     lg: "px-8 py-4 text-xl",
-    xl: "md:px-10 md:py-5 md:text-2xl text-xl py-4 px-12",
+    xl: "md:px-10 md:py-5 md:text-2xl text-lg py-2 px-10",
     xxl: "px-12 py-6 text-3xl",
   };
 
@@ -48,6 +56,7 @@ export default function Button({ label, size = "lg", type = "primary" }: btnProp
 
   return (
     <button
+      onClick={handleOnClickBtn}
       ref={buttonRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

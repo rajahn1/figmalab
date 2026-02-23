@@ -299,7 +299,7 @@ export default function LandingPage() {
               hoje você dependa 100% de referências prontas.
             </h2>
             <div className="xl:mb-0 mb-12">
-              <Button label="Eu quero fazer parte" />
+              <Button size="md" label="Eu quero fazer parte" />
             </div>
           </div>
 
@@ -390,10 +390,10 @@ export default function LandingPage() {
 
       {/* Seção 3 - Fundo Imagem Emilize */}
 
-      <section className="2xl:h-240 bg-[url('/images/section-bg-feedbacks-mobile.png')] md:bg-[url('/images/section-bg-feedbacks.png')] py-4 xl:bg-cover bg-cover bg-no-repeat bg-center text-black md:py-20 md:px-8">
+      <section className="h-190 2xl:h-280 bg-[url('/images/bg-mobile-feedbacks.png')]  md:bg-[url('/images/section-bg-feedbacks.png')] py-4 xl:bg-cover bg-cover bg-no-repeat bg-center text-black md:py-20 md:px-8">
         <div className="max-w-6xl mx-auto flex flex-col gap-12 md:pt-0 pt-70">
           <div className="flex 2xl:mt-16 flex-col md:flex-row justify-end xl:px-32 2xl:mr-0">
-            <div className="flex flex-col items-center md:items-start gap-3 md:gap-4 md:justify-center md:mt-8 md:pt-0 pt-10">
+            <div className="flex flex-col items-center md:items-start gap-3 md:gap-4 md:justify-center md:mt-8 md:pt-0 pt-26">
               <h2 className="md:text-start text-center font-editorial text-3xl xl:text-5xl 2xl:text-6xl tracking-tighter">
                 O problema não <br className="hidden md:block" /> é <br className="md:hidden" />{" "}
                 talento, é falta
@@ -401,23 +401,27 @@ export default function LandingPage() {
                 .
               </h2>
               <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-xl">
-                Design não é dom, é processo. O<br className="hidden md:block" /> FigmaLab é o
-                resultado de <br className="md:hidden" /> anos
-                <br className="hidden md:block" /> organizando meu próprio método
+                Design não é dom, é processo. O<br className="hidden md:block" /> FigmaLab
+                <br className="md:hidden" /> é o resultado de anos
+                <br className="hidden md:block" /> organizando meu
+                <br className="md:hidden" /> próprio método
                 <br className="hidden md:block" /> criativo de design para{" "}
-                <br className="md:hidden" /> social media,
-                <br className="hidden md:block" /> validado em projetos reais. Aqui, você
-                <br className="hidden md:block" /> para de
-                <br className="md:hidden" /> copiar e aprende a analisar,
+                <br className="md:hidden" />
+                social media,
+                <br className="hidden md:block" /> validado em projetos reais.
+                <br className="md:hidden" /> Aqui, você
+                <br className="hidden md:block" /> para de copiar e aprende a
+                <br className="md:hidden" /> analisar,
                 <br className="hidden md:block" /> decidir e criar com consciência.
               </span>
               <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-xl xl:mb-4 md:mb-8">
                 Saia do amadorismo e domine o método
+                <br className="md:hidden" />
                 <br className="hidden md:block" /> que{" "}
                 <span className="font-bold">
-                  transforma
-                  <br className="md:hidden" /> criatividade travada
-                  <br className="hidden md:block" /> em design de post estratégico.
+                  transforma criatividade travada
+                  <br className="hidden md:block" /> em <br className="md:hidden" />
+                  design de post estratégico.
                 </span>
               </span>
               <div className="hidden md:block">
@@ -704,17 +708,24 @@ export default function LandingPage() {
             {faq.map((faq, idx) => (
               <div
                 key={idx}
-                className="bg-[#403F3F] lg:text-lg xl:text-xl rounded-lg overflow-hidden transition-all font-articulat"
+                className="bg-[#403F3F] text-sm lg:text-lg xl:text-xl rounded-lg overflow-hidden transition-all font-articulat"
               >
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full px-4 py-2 md:py-4 md:px-8 text-left flex justify-between items-center  hover:bg-white/5 hover:cursor-pointer"
+                  className="w-full px-4 py-3 md:py-4 md:px-8 text-left flex justify-between items-center  hover:bg-white/5 hover:cursor-pointer"
                 >
                   {faq.question}
                   {activeFaq == idx ? (
-                    <Image src="/icons/icon-up-faq.svg" alt="icon up faq" height={32} width={32} />
+                    <Image
+                      className="md:w-8 w-4"
+                      src="/icons/icon-up-faq.svg"
+                      alt="icon up faq"
+                      height={32}
+                      width={32}
+                    />
                   ) : (
                     <Image
+                      className="md:w-8 w-4"
                       src="/icons/icon-down-faq.svg"
                       alt="icon up faq"
                       height={32}
