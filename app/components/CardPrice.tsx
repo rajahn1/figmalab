@@ -26,8 +26,10 @@ export default function CardPrice() {
         <span className="text-bg-black text-3xl xl:text-2xl 2xl:text-4xl">de R$297</span>
       </div>
       <span className="text-[#9D9D9D] text-2xl xl:text-2xl 2xl:text-4xl">Por apenas 12x de</span>
-      <div className="text-black font-extrabold relative">
-        <span className="absolute text-3xl xl:text-2xl 2xl:text-3xl -left-10 top-3">R$</span>
+      <div className="text-black font-extrabold relative ml-7">
+        <span className="absolute text-3xl xl:text-2xl 2xl:text-3xl -left-9 md:-left-10 top-3">
+          R$
+        </span>
         <span className="text-8xl xl:text-7xl 2xl:text-9xl tracking-tighter">20,37</span>
       </div>
       <span className="font-semibold text-2xl text-[#9D9D9D] xl:text-2xl 2xl:text-4xl">

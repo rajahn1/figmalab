@@ -25,12 +25,12 @@ export default function ModuleCard(props: Props) {
           />
         </div>
         <h2
-          className={`whitespace-pre-line text-lg leading-4 md:leading-10 md:text:2xl ${classText} font-semibold`}
+          className={`whitespace-pre-line text-lg leading-4 md:leading-8 md:text:2xl ${classText} font-semibold`}
         >
           {title}
         </h2>
       </div>
-      <div className="flex flex-col gap-1 justify-center text-xs 2xl:text-base xl:text-sm">
+      <div className="flex flex-col gap-1 justify-center text-xs 2xl:text-base xl:text-sm leading-4 xl:leading-6">
         {classes.map((item: string, idx: number) => (
           <span key={idx} className="text-bg-white">
             {item}

@@ -95,7 +95,7 @@ export default function LandingPage() {
 
   const negativePoints = [
     "Continuar criando no improviso",
-    "Travar no frame me branco",
+    "Travar no frame em branco",
     "Depender 100% das referências",
     'Sentir que "falta criatividade"',
     "Demorar 3h em um design simples",
@@ -245,10 +245,10 @@ export default function LandingPage() {
     <div className="max-w-screen font-articulat text-[#313131]">
       <Header />
       {/* Seção 1 - Fundo Rosa */}
-      <section className="relative bg-text-pink text-[#ffffff] 2xl:pt-12 xl:pt-0  px-8">
-        <div className="max-w-7xl mx-auto bg-text-pink flex flex-col md:flex-row xl:items-center xl:pt-8 2xl:pt-8 justify-center">
+      <section className="relative bg-text-pink text-[#ffffff] 2xl:pt-12 xl:pt-0 px-8">
+        <div className="max-w-7xl mx-auto bg-text-pink flex flex-col md:flex-row xl:items-center xl:pt-8 2xl:pt-8 justify-center items-center">
           {/*  MOBILE */}
-          <div className="xl:pr-0 pr-12 sm:w-[400px] xl:w-[500px] 2xl:w-[610px] aspect-[498/455] xl:hidden relative xl:items-center xl:justify-center">
+          <div className="xl:pr-0 pr-12 sm:w-[400px] xl:w-[500px] 2xl:w-[610px] aspect-[498/455] xl:hidden lg:hidden relative ">
             <Image
               src="/images/hero-section-mobile.png"
               alt="Mulher branca de cabelos pretos segurando um ipad"
@@ -290,7 +290,7 @@ export default function LandingPage() {
               <br className="hidden md:block" />
               no design de post.
             </h1>
-            <h2 className="2xl:text-xl xl:text-base text-sm font-normal xl:text-start text-center">
+            <h2 className="2xl:text-xl xl:text-base text-sm font-normal xl:text-start text-center xl:leading-6 leading-4">
               Aprenda a <span className="font-bold">pensar como designer</span> e use o <br />
               Figma com inteligência. O FigmaLab transforma
               <br /> o seu caos criativo em <span className="font-bold">clareza</span>, a cópia em
@@ -304,7 +304,7 @@ export default function LandingPage() {
           </div>
 
           {/* DESKTOP */}
-          <div className="sm:w-[400px] xl:w-[500px] 2xl:w-[610px] aspect-[2040/1900] xl:flex hidden relative xl:items-center xl:justify-center">
+          <div className="sm:w-[400px] xl:w-[500px] 2xl:w-[610px] aspect-[2040/1900] lg:flex xl:flex hidden relative xl:items-center xl:justify-center">
             <Image
               src="/images/section-hero-img.png"
               alt="Mulher branca de cabelos pretos segurando um ipad "
@@ -390,47 +390,42 @@ export default function LandingPage() {
 
       {/* Seção 3 - Fundo Imagem Emilize */}
 
-      <section className="h-190 2xl:h-280 bg-[url('/images/bg-mobile-feedbacks.png')]  md:bg-[url('/images/section-bg-feedbacks.png')] py-4 xl:bg-cover bg-cover bg-no-repeat bg-center text-black md:py-20 md:px-8">
-        <div className="max-w-6xl mx-auto flex flex-col gap-12 md:pt-0 pt-70">
-          <div className="flex 2xl:mt-16 flex-col md:flex-row justify-end xl:px-32 2xl:mr-0">
-            <div className="flex flex-col items-center md:items-start gap-3 md:gap-4 md:justify-center md:mt-8 md:pt-0 pt-26">
-              <h2 className="md:text-start text-center font-editorial text-3xl xl:text-5xl 2xl:text-6xl tracking-tighter">
-                O problema não <br className="hidden md:block" /> é <br className="md:hidden" />{" "}
-                talento, é falta
-                <br className="hidden md:block" /> de <span className="text-text-pink">método</span>
-                .
-              </h2>
-              <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-xl">
-                Design não é dom, é processo. O<br className="hidden md:block" /> FigmaLab
-                <br className="md:hidden" /> é o resultado de anos
-                <br className="hidden md:block" /> organizando meu
-                <br className="md:hidden" /> próprio método
-                <br className="hidden md:block" /> criativo de design para{" "}
-                <br className="md:hidden" />
-                social media,
-                <br className="hidden md:block" /> validado em projetos reais.
-                <br className="md:hidden" /> Aqui, você
-                <br className="hidden md:block" /> para de copiar e aprende a
-                <br className="md:hidden" /> analisar,
-                <br className="hidden md:block" /> decidir e criar com consciência.
-              </span>
-              <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-xl xl:mb-4 md:mb-8">
-                Saia do amadorismo e domine o método
-                <br className="md:hidden" />
-                <br className="hidden md:block" /> que{" "}
-                <span className="font-bold">
-                  transforma criatividade travada
-                  <br className="hidden md:block" /> em <br className="md:hidden" />
-                  design de post estratégico.
-                </span>
-              </span>
-              <div className="hidden md:block">
-                <Button label="Eu quero fazer parte" />
-              </div>
-              <div className="md:hidden py-4">
-                <Button size="md" label="Eu quero fazer parte" />
-              </div>
-            </div>
+      <section className="flex items-end justify-center md:items-center aspect-800/1478 md:aspect-4236/2471 bg-[url('/images/bg-mobile-feedbacks.png')] xs  md:bg-[url('/images/section-bg-feedbacks-desktop.png')] xl:bg-contain bg-contain bg-no-repeat bg-center text-black">
+        <div className="md:ml-auto md:w-1/2 md:items-start items-center flex flex-col gap-3 md:gap-4 md:pb-0 pb-[10%]">
+          <h2 className="md:text-start text-center font-editorial text-3xl sm:text-5xl xl:text-5xl 2xl:text-6xl tracking-tighter leading-7 sm:leading-11 md:leading-14">
+            O problema não <br className="hidden md:block" /> é <br className="md:hidden" />{" "}
+            talento, é falta
+            <br className="hidden md:block" /> de <span className="text-text-pink">método</span>.
+          </h2>
+          <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-xl sm:text-base leading-3 xl:leading-6">
+            Design não é dom, é processo. O<br className="hidden md:block" /> FigmaLab
+            <br className="md:hidden" /> é o resultado de anos
+            <br className="hidden md:block" /> organizando meu
+            <br className="md:hidden" /> próprio método
+            <br className="hidden md:block" /> criativo de design para <br className="md:hidden" />
+            social media,
+            <br className="hidden md:block" /> validado em projetos reais.
+            <br className="md:hidden" /> Aqui, você
+            <br className="hidden md:block" /> para de copiar e aprende a
+            <br className="md:hidden" /> analisar,
+            <br className="hidden md:block" /> decidir e criar com consciência.
+          </span>
+          <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-xl xl:mb-4 md:mb-8 sm:text-base leading-3 xl:leading-6">
+            Saia do amadorismo e domine o método.
+            <br />
+            que{" "}
+            <span className="font-bold">
+              transforma criatividade travada
+              <br className="hidden md:block" /> em <br className="md:hidden" />
+              design de post estratégico.
+            </span>
+          </span>
+
+          <div className="hidden md:block">
+            <Button label="Eu quero fazer parte" />
+          </div>
+          <div className="md:hidden py-4">
+            <Button size="md" label="Eu quero fazer parte" />
           </div>
         </div>
       </section>
@@ -478,7 +473,7 @@ export default function LandingPage() {
       {/* Seção 5 - Módulos */}
       <section className="bg-bg-black py-8 md:py-20 px-8">
         <div className="max-w-6xl mx-auto flex flex-col items-center gap-4">
-          <h2 className="font-articulat text-2xl leading-7 md:leading-16 2xl:text-6xl xl:text-5xl font-bold text-white text-center">
+          <h2 className="font-articulat text-2xl leading-5 md:leading-14 2xl:text-6xl xl:text-5xl font-bold text-white text-center">
             Veja tudo que <br /> você vai aprender:
           </h2>
 
@@ -518,7 +513,7 @@ export default function LandingPage() {
           <h2 className="xl:text-6xl 2xl:text-7xl font-bold md:leading-14 leading-8 md:text-start text-center text-4xl">
             <span className="text-text-pink">Certificado</span> <br /> de conclusão
           </h2>
-          <p className="2xl:text-2xl xl:text-lg text-xs md:text-start text-center font-light">
+          <p className="2xl:text-2xl xl:text-lg text-xs md:text-start text-center font-light leading-4 xl:leading-6">
             Valide sua evolução e conquiste o<br className="hidden md:block" /> reconhecimento
             <br className="md:hidden" />
             oficial do seu domínio no
@@ -550,11 +545,11 @@ export default function LandingPage() {
           {" "}
           {/* Adicionei px-4 para evitar colar nas bordas no mobile */}
           <div className="text-center flex flex-col gap-4">
-            <h2 className="font-articulat 2xl:text-2xl xl:text-xl leading-5 md:leading-8">
+            <h2 className="font-articulat 2xl:text-2xl xl:text-xl leading-4 md:leading-6">
               Você pode continuar tentando, copiando, travando,
-              <br /> duvidando ou pode aprender um processo que vai
-              <br /> te acompanhar em qualquer projeto de design de
-              <br /> post, qualquer cliente ou qualquer estilo gráfico.
+              <br className="md:block hidden" /> duvidando ou pode aprender um processo que vai
+              <br className="md:block hidden" /> te acompanhar em qualquer projeto de design de
+              <br className="md:block hidden" /> post, qualquer cliente ou qualquer estilo gráfico.
             </h2>
             <h2 className="2xl:text-6xl xl:text-5xl font-bold leading-5 text-xl md:leading-14">
               Eu vou te mostrar o caminho.
@@ -650,8 +645,8 @@ export default function LandingPage() {
         </svg>
 
         <div className="2xl:max-w-6xl gap-8 xl:max-w-5xl md:mx-auto flex-col flex md:flex-row items-center 2xl:gap-10">
-          <div className="md:flex-1 flex flex-col items-center md:items-start gap-4">
-            <h2 className="font-editorial 2xl:text-7xl text-4xl xl:text-5xl font-bold md:text-start text-center">
+          <div className="md:flex-1 flex flex-col items-center md:items-start gap-2 xl:gap-4">
+            <h2 className="font-editorial 2xl:text-7xl text-4xl xl:text-5xl md:text-start text-center md:leading-none xl:leading-15 leading-8">
               {" "}
               <span className="text-text-pink">Quem</span> vai te
               <br /> ensinar tudo isso?
@@ -660,32 +655,39 @@ export default function LandingPage() {
               Hello, eu sou a Emi, fundadora do
               <br /> Studio Emi e designer há 4 anos.
             </h3>
-            <div className="flex flex-col gap-4 2xl:text-xl xl:text-lg text-xs text-center md:text-start">
+            <div className="flex flex-col gap-3 2xl:text-xl xl:text-lg text-[11px] text-center md:text-start text-balance leading-3 lg:leading-6">
               <p>
-                Por muito tempo, acreditei que meu maior obstáculo era a<br /> falta de
-                criatividade, quando na verdade o que me faltava
-                <br /> era um método claro. O FigmaLab nasceu da organização
-                <br /> do{" "}
+                Por muito tempo, acreditei que meu maior obstáculo era a
+                <br className="md:block hidden" /> falta de criatividade, quando na verdade o que me
+                faltava
+                <br className="md:block hidden" /> era um método claro. O FigmaLab nasceu da
+                organização
+                <br className="md:block hidden" /> do{" "}
                 <span className="font-bold">
                   meu próprio processo criativo, validado em projetos
-                  <br /> reais que hoje me permitem faturar 5 dígitos mensais
-                  <br /> com design para social media.
+                  <br className="md:block hidden" /> reais que hoje me permitem faturar 5 dígitos
+                  mensais
+                  <br className="md:block hidden" /> com design para social media.
                 </span>{" "}
                 Aqui, eu te ensino a pensar
-                <br /> como designer estrategista, dominando a técnica para criar
-                <br /> com total autoria e segurança.
+                <br className="md:block hidden" /> como designer estrategista, dominando a técnica
+                para criar
+                <br className="md:block hidden" /> com total autoria e segurança.
               </p>
               <p>
                 <span className="font-bold">
                   Minha missão é que o design transforme sua realidade
-                  <br /> assim como mudou a minha,
+                  <br className="md:block hidden" /> assim como mudou a minha,
                 </span>
                 tirando você da dependência
-                <br /> de referências para conquistar autoridade. No meu lab
-                <br /> criativo, você domina o processo lógico por trás de grandes
-                <br /> criações no Figma. O objetivo é ir além de "posts bonitos" e <br />
+                <br className="md:block hidden" /> de referências para conquistar autoridade. No meu
+                lab
+                <br className="md:block hidden" /> criativo, você domina o processo lógico por trás
+                de grandes
+                <br className="md:block hidden" /> criações no Figma. O objetivo é ir além de "posts
+                bonitos" e <br />
                 alcançar o posicionamento necessário para ser uma
-                <br /> profissional devidamente valorizada pelo mercado.
+                <br className="md:block hidden" /> profissional devidamente valorizada pelo mercado.
               </p>
             </div>
           </div>
@@ -701,10 +703,17 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 10 - FAQ e Card Final */}
-      <section className="bg-[url('/images/bg-faq.png')] bg-cover bg-no-repeat bg-center text-white md:py-20 py-8">
+      <section className="relative text-white md:py-20 py-8 overflow-hidden">
+        <Image
+          src="/images/bg-faq.png"
+          alt="FAQ background"
+          fill
+          className="object-cover object-center -z-10"
+          priority
+        />
         <div className="md:max-w-6xl md:mx-auto flex flex-col items-center gap-6 md:gap-12">
           <h2 className="font-articulat 2xl:text-9xl xl:text-8xl font-extrabold text-4xl">FAQ</h2>
-          <div className="md:w-full w-[380px] flex flex-col gap-8">
+          <div className="md:w-full w-[88%] flex flex-col gap-8">
             {faq.map((faq, idx) => (
               <div
                 key={idx}
@@ -734,28 +743,29 @@ export default function LandingPage() {
                   )}
                 </button>
                 {activeFaq === idx && (
-                  <div className="p-8 pt-4 bg-bg-pink text-white">{faq.answer}</div>
+                  <div className="leading-4 xl:leading-6 text-balance md:p-8 p-4 pt-4 bg-bg-pink text-white">
+                    {faq.answer}
+                  </div>
                 )}
               </div>
             ))}
           </div>
 
-          <div className="md:w-full bg-[#454545] py-10 px-5 md:p-10 md:py-20 rounded-2xl flex flex-col items-center text-center gap-4 md:gap-6 mt-10 font-articulat">
+          <div className="md:w-full w-[88%] bg-[#454545] py-10 px-5 md:p-10 md:py-20 rounded-2xl flex flex-col items-center text-center gap-4 md:gap-6 mt-10 font-articulat">
             <h2 className="xl:text-6xl lg:text-5xl font-bold text-3xl">Ainda com dúvidas?</h2>
-            <p className="md:text-lg text-center text-xs">
-              Se tiver qualquer dúvida sobre sua inscrição no FigmaLab,
-              <br className="md:hidden" /> conte com nosso suporte exclusivo
-              <br className="hidden md:block" /> via WhatsApp. Nossa equipe
-              <br className="md:hidden" /> está pronta para te atender e tirar todas as suas
-              dúvidas.
+            <p className="md:text-lg text-center text-xs text-balance leading-4 xl:leading-6">
+              Se tiver qualquer dúvida sobre sua inscrição no FigmaLab, conte com nosso suporte
+              exclusivo
+              <br className="hidden md:block" /> via WhatsApp. Nossa equipe está pronta para te
+              atender e tirar todas as suas dúvidas.
             </p>
             <Button label="Fale com o suporte" type="secondary" />
           </div>
         </div>
       </section>
 
-      <section className="bg-bg-black flex-col flex items-center gap-8 md:pb-48 pb-16">
-        <h2 className="font-articulat text-white text-center xl:text-5xl lg:text-4xl">
+      <section className="bg-bg-black flex-col flex items-center gap-8 md:py-12 pb-16">
+        <h2 className="font-articulat text-white text-center xl:text-5xl lg:text-4xl leading-4 lg:leading-11">
           Domine o <span className="font-bold">processo criativo estratégico</span> <br /> dentro do
           <span className="font-bold"> Figma</span>, a{" "}
           <span className="text-text-pink font-bold">
