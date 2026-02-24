@@ -264,10 +264,11 @@ export default function LandingPage() {
           {/*  MOBILE */}
           <div className="xl:pr-0 pr-12 sm:w-[400px] xl:w-[500px] 2xl:w-[610px] aspect-[498/455] xl:hidden lg:hidden relative ">
             <Image
-              src="/images/hero-section-mobile.png"
+              src="/images/hero-section-mobile.webp"
               alt="Mulher branca de cabelos pretos segurando um ipad"
               width={1000}
               height={913.65}
+              priority
               className="z-10 w-full h-auto"
             />
             {/* <img src="/images/section-hero-img.png" className="w-[400px]" alt="teste" />*/}
@@ -320,11 +321,13 @@ export default function LandingPage() {
           {/* DESKTOP */}
           <div className="sm:w-[400px] xl:w-[500px] 2xl:w-[610px] aspect-[2040/1900] lg:flex xl:flex hidden relative xl:items-center xl:justify-center">
             <Image
-              src="/images/section-hero-img.png"
+              src="/images/section-hero-img.webp"
               alt="Mulher branca de cabelos pretos segurando um ipad "
               width={2040}
               height={1900}
               className="z-10 w-full h-auto"
+              priority
+              fetchPriority="high"
             />
 
             <Image
@@ -404,7 +407,7 @@ export default function LandingPage() {
 
       {/* Seção 3 - Fundo Imagem Emilize */}
 
-      <section className="flex items-end justify-center md:items-center aspect-800/1478 md:aspect-4236/2471 bg-[url('/images/bg-mobile-feedbacks.png')] xs  md:bg-[url('/images/section-bg-feedbacks-desktop.png')] xl:bg-contain bg-contain bg-no-repeat bg-center text-black">
+      <section className="flex items-end justify-center md:items-center aspect-800/1478 md:aspect-4236/2471 bg-[url('/images/bg-mobile-feedbacks.webp')] md:bg-[url('/images/section-bg-feedbacks-desktop.webp')] xl:bg-contain bg-contain bg-no-repeat bg-center text-black">
         <div className="md:ml-auto md:w-1/2 md:items-start items-center flex flex-col gap-3 md:gap-4 md:pb-0 pb-[10%]">
           <h2 className="md:text-start text-center font-editorial text-3xl sm:text-5xl xl:text-5xl 2xl:text-6xl tracking-tighter leading-7 sm:leading-11 md:leading-14">
             O problema não <br className="hidden md:block" /> é <br className="md:hidden" />{" "}
@@ -482,7 +485,7 @@ export default function LandingPage() {
                 -bottom-50 w-108 -left-32"
             >
               <Image
-                src="/images/mockup-notebooks.png"
+                src="/images/mockup-notebooks.webp"
                 alt="Descrição da imagem"
                 width={1400}
                 height={980}
@@ -536,7 +539,7 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 6 */}
-      <section className="md:bg-[url('/images/certificado-blobs.png')] md:bg-cover md:bg-center xl:h-120 2xl:h-180">
+      <section className="md:bg-[url('/images/certificado-blobs.webp')] md:bg-cover md:bg-center xl:h-120 2xl:h-180">
         <div className="relative 2xl:ml-72 xl:ml-48 h-full flex flex-col justify-center gap-2 md:gap-4 font-articulat items-center md:items-start md:py-0 py-12 md:pb-0 pb-68">
           <h2 className="xl:text-6xl 2xl:text-7xl font-bold md:leading-14 leading-8 md:text-start text-center text-4xl">
             <span className="text-text-pink">Certificado</span> <br /> de conclusão
@@ -556,7 +559,7 @@ export default function LandingPage() {
             <br className="hidden md:block" /> designer estrategista no mercado.
           </p>
           <Image
-            src="/images/certificado-mob.png"
+            src="/images/certificado-mob.webp"
             height={439.84}
             width={424.91}
             alt="Certificado Mobile"
@@ -592,25 +595,25 @@ export default function LandingPage() {
 
         <div className="flex flex-col gap-1 w-full 2xl:mt-20">
           <InfiniteCarousel
-            pathImage="/images/carrossel-1.png"
+            pathImage="/images/carrossel-1.webp"
             width={4096}
             height={853}
             direction="forward"
           />
           <InfiniteCarousel
-            pathImage="/images/carrossel-2.png"
+            pathImage="/images/carrossel-2.webp"
             width={4096}
             height={853}
             direction="backward"
           />
           <InfiniteCarousel
-            pathImage="/images/caro-3.png"
+            pathImage="/images/caro-3.webp"
             width={4096}
             height={853}
             direction="forward"
           />
           <InfiniteCarousel
-            pathImage="/images/caro-4.png"
+            pathImage="/images/caro-4.webp"
             width={4096}
             height={853}
             direction="backward"
@@ -639,7 +642,7 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 9 */}
-      <section className="md:bg-white md:bg-none bg-[url('/images/bg-quem-vai-te-ensinar-mobile.png')] bg-cover bg-no-repeat bg-center py-8 md:py-20 px-8 relative overflow-hidden">
+      <section className="md:bg-white md:bg-none bg-[url('/images/bg-quem-vai-te-ensinar-mobile.webp')] bg-cover bg-no-repeat bg-center py-8 md:py-20 px-8 relative overflow-hidden">
         <Image
           src="/images/barra-alinhamento.png"
           alt="barra figma alinhamento"
@@ -728,7 +731,7 @@ export default function LandingPage() {
           </div>
           <div className="md:flex-1 relative 2xl:w-full xl:h-150 2xl:h-180 w-full h-[550px]">
             <Image
-              src="/images/foto-emi-sentada.png"
+              src="/images/foto-emi-sentada.webp"
               alt="Mulher branca sentada"
               fill
               className="object-cover rounded-2xl"
@@ -738,14 +741,7 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 10 - FAQ e Card Final */}
-      <section className="relative text-white md:py-20 py-8 overflow-hidden">
-        <Image
-          src="/images/bg-faq.png"
-          alt="FAQ background"
-          fill
-          className="object-cover object-center -z-10"
-          priority
-        />
+      <section className="relative text-white md:py-20 py-8 overflow-hidden bg-bg-black">
         <div className="md:max-w-6xl md:mx-auto flex flex-col items-center gap-6 md:gap-12">
           <h2 className="font-articulat 2xl:text-9xl xl:text-8xl font-extrabold text-4xl">FAQ</h2>
           <div className="md:w-full w-[88%] flex flex-col gap-8">

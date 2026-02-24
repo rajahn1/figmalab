@@ -2,14 +2,15 @@
 
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 
 const images = [
-  "/images/modulo-1.png",
-  "/images/modulo-2.png",
-  "/images/modulo-3.png",
-  "/images/modulo-4.png",
-  "/images/modulo-5.png",
-  "/images/modulo-6.png",
+  "/images/modulo-1.webp",
+  "/images/modulo-2.webp",
+  "/images/modulo-3.webp",
+  "/images/modulo-4.webp",
+  "/images/modulo-5.webp",
+  "/images/modulo-6.webp",
 ];
 
 export default function Carousel() {
@@ -39,9 +40,11 @@ export default function Carousel() {
                 px-2
               "
             >
-              <img
+              <Image
                 src={src}
                 alt={`Card ${index + 1}`}
+                width={1086}
+                height={1628}
                 className=" w-full
                 h-auto
                 object-contain

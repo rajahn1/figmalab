@@ -13,6 +13,7 @@ export default function Header() {
           alt="logo figma lab"
           width={133}
           height={25}
+          priority
         />
       </div>
       <div className="relative aspect-[127.34] w-20 xl:w-32">
