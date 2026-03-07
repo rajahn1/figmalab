@@ -15,6 +15,7 @@ import Separator from "./components/Separator";
 import InfiniteCarousel from "./components/InfiniteCarousel";
 import CardPrice from "./components/CardPrice";
 import Footer from "./components/Footer";
+import CarouselFeedbacks from "./components/CarouselFeedbacks";
 
 gsap.registerPlugin(useGSAP);
 
@@ -92,6 +93,27 @@ export default function LandingPage() {
       }
     );
   });
+
+  const imagesModulos = [
+    "/images/modulo-1.webp",
+    "/images/modulo-2.webp",
+    "/images/modulo-3.webp",
+    "/images/modulo-4.webp",
+    "/images/modulo-5.webp",
+    "/images/modulo-6.webp",
+  ];
+
+  const imagesFeedbacks = [
+    "/images/FEEDBACK01.webp",
+    "/images/FEEDBACK02.webp",
+    "/images/FEEDBACK03.webp",
+    "/images/FEEDBACK04.webp",
+    "/images/FEEDBACK05.webp",
+    "/images/FEEDBACK06.webp",
+    "/images/FEEDBACK07.webp",
+    "/images/FEEDBACK08.webp",
+    "/images/FEEDBACK09.webp",
+  ];
 
   const negativePoints = [
     "Continuar criando no improviso",
@@ -173,7 +195,7 @@ export default function LandingPage() {
         'Aula 4: Um tesouro chamado "Community"',
         "Aula 5: Organização é tempo!",
         "Aula 6: Lab colaborativo",
-        "Aula 7: Pen e Pencil",
+        "Aula 7: Pen, Pencil e Figma Draw",
         "Aula 8: Textos e funcionalidades",
         "Aula 9: Cores, gradientes e kit de marca",
       ],
@@ -197,9 +219,9 @@ export default function LandingPage() {
       title: "Mão no\n mouse!",
       classes: [
         "Aula 1: Do briefing ao export: me veja criar do zero!",
-        "Aula 2: Carrossel na prática 01 (nicho psicologia)",
-        "Aula 3: Carrossel na prática 02 (nicho marketing)",
-        "Aula 4: Carrossel na prática 03 (nicho design)",
+        "Aula 2: Carrossel na prática 01",
+        "Aula 3: Carrossel na prática 02",
+        "Aula 4: Carrossel na prática 03",
         "Aula 5: Checklist da criatividade",
         "Aula 6: O próximo nível",
       ],
@@ -508,7 +530,7 @@ export default function LandingPage() {
             Veja tudo que <br /> você vai aprender:
           </h2>
 
-          <Carousel />
+          <Carousel images={imagesModulos} />
 
           <div className="flex md:flex-col md:gap-8 gap-2">
             {/* Barra de Módulos */}
@@ -570,7 +592,7 @@ export default function LandingPage() {
       <Separator />
       {/* Seção 7 - Galeria */}
 
-      <section className="bg-text-pink py-8 md:py-20 text-white flex flex-col gap-8">
+      <section className="bg-text-pink pt-8 md:pt-20 text-white flex flex-col gap-8">
         {/* 1. CONTAINER DO TEXTO (Com limite de largura e centralizado) */}
         <div className="max-w-7xl mx-auto flex flex-col items-center px-4">
           {" "}
@@ -595,30 +617,56 @@ export default function LandingPage() {
 
         <div className="flex flex-col gap-1 w-full 2xl:mt-20">
           <InfiniteCarousel
-            pathImage="/images/carrossel-1.webp"
+            pathImage="/images/carrossel-5.webp"
             width={4096}
             height={853}
             direction="forward"
           />
           <InfiniteCarousel
-            pathImage="/images/carrossel-2.webp"
+            pathImage="/images/carrossel-6.webp"
             width={4096}
             height={853}
             direction="backward"
           />
           <InfiniteCarousel
-            pathImage="/images/caro-3.webp"
+            pathImage="/images/carrossel-7.webp"
             width={4096}
             height={853}
             direction="forward"
           />
           <InfiniteCarousel
-            pathImage="/images/caro-4.webp"
+            pathImage="/images/carrossel-8.webp"
             width={4096}
             height={853}
             direction="backward"
           />
         </div>
+      </section>
+      {/* FEEDBACKS */}
+      <section className="bg-text-pink flex flex-col items-center justify-center gap-2 lg:gap-8 py-8 md:py-20 relative">
+        <Image
+          src="/images/ferramentas-figma-2.png"
+          alt="ferramentas figma"
+          width={162}
+          height={978}
+          className="absolute top-4 xl:w-16 left-0 mix-blend-lighten hidden xl:block"
+        />
+        <Image
+          src="/images/ferramentas-figma-2.png"
+          alt="ferramentas figma"
+          width={162}
+          height={978}
+          className="absolute rotate-180 xl:w-16 right-0 bottom-4 mix-blend-lighten hidden xl:block"
+        />
+        <h2 className="font-editorial text-3xl xl:text-6xl xl:leading-13 2xl:text-7xl 2xl:leading-16 leading-7 md:leading-6 text-white">
+          O que os alunos estão
+          <br /> dizendo do FigmaLab:
+        </h2>
+        <CarouselFeedbacks images={imagesFeedbacks} />
+        {/*
+        <div className="bg-[#C00E83] lg:rounded-4xl lg:py-16 lg:px-24 py-1 px-4 rounded-lg max-w-[320px]">
+        </div>
+          */}
       </section>
 
       {/* Seção 8 - Preço e Bônus */}

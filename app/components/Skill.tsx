@@ -2,9 +2,10 @@ import Image from "next/image";
 export interface Props {
   label: string;
   icon: string;
+  type: string;
 }
 
-export default function Skill({ label, icon }: Props) {
+export default function Skill({ label, icon, type }: Props) {
   return (
     <div className="flex items-center md:gap-4 gap-2">
       <Image className="md:w-6 w-4" src={icon} height={24} width={24} alt="icon check pink" />

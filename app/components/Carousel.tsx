@@ -4,16 +4,12 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 
-const images = [
-  "/images/modulo-1.webp",
-  "/images/modulo-2.webp",
-  "/images/modulo-3.webp",
-  "/images/modulo-4.webp",
-  "/images/modulo-5.webp",
-  "/images/modulo-6.webp",
-];
+export interface Props {
+  images: string[];
+}
 
-export default function Carousel() {
+export default function Carousel(props: Props) {
+  const { images } = props;
   // Configura o Embla com loop infinito e autoplay
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" }, [
     Autoplay({ delay: 2000 }),
