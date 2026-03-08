@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 export interface Props {
   images: string[];
@@ -12,9 +13,10 @@ export default function CarouselFeedbacks(props: Props) {
   const { images } = props;
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  const width = useWindowSize();
 
   let slidesToScroll = 3;
-  if (window.innerWidth <= 768) slidesToScroll = 2;
+  if (width <= 768) slidesToScroll = 2;
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", slidesToScroll }, [
     Autoplay({ delay: 4000, stopOnInteraction: true }),
