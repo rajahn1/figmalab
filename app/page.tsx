@@ -336,7 +336,7 @@ export default function LandingPage() {
               hoje você dependa 100% de referências prontas.
             </h2>
             <div className="xl:mb-0 mb-12">
-              <Button size="md" label="Eu quero fazer parte" />
+              <Button size="md" label="Eu quero fazer parte" content_name="CTA Hero" />
             </div>
           </div>
 
@@ -461,10 +461,17 @@ export default function LandingPage() {
           </span>
 
           <div className="hidden md:block">
-            <Button label="Eu quero fazer parte" />
+            <Button
+              label="Eu quero fazer parte"
+              content_name="CTA O problema não é talento, é falta de método"
+            />
           </div>
           <div className="md:hidden py-4">
-            <Button size="md" label="Eu quero fazer parte" />
+            <Button
+              size="md"
+              label="Eu quero fazer parte"
+              content_name="CTA O problema não é talento, é falta de método"
+            />
           </div>
         </div>
       </section>
@@ -518,7 +525,11 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="md:mt-8 mt-48 md:mb-0 mb-6">
-            <Button label="Eu quero isso" size="xl" />
+            <Button
+              label="Eu quero isso"
+              size="xl"
+              content_name="CTA o que você vai dominar no FigmaLab"
+            />
           </div>
         </div>
       </section>
@@ -555,7 +566,7 @@ export default function LandingPage() {
           </div>
 
           <div className="mt-6">
-            <Button label="Eu quero fazer parte" size="xl" />
+            <Button label="Eu quero fazer parte" size="xl" content_name="CTA Módulos" />
           </div>
         </div>
       </section>
@@ -838,7 +849,7 @@ export default function LandingPage() {
               <br className="hidden md:block" /> via WhatsApp. Nossa equipe está pronta para te
               atender e tirar todas as suas dúvidas.
             </p>
-            <Button label="Fale com o suporte" type="secondary" />
+            <Button label="Fale com o suporte" type="secondary" content_name="CTA WhatsApp" />
           </div>
         </div>
       </section>
@@ -852,7 +863,7 @@ export default function LandingPage() {
             <br /> mais cresce no mercado.
           </span>
         </h2>
-        <Button label="Eu quero fazer parte" size="xl" />
+        <Button label="Eu quero fazer parte" size="xl" content_name="CTA Footer" />
       </section>
       <Footer />
     </div>

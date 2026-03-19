@@ -1,5 +1,6 @@
 "use client";
 
+import { event } from "@/lib/fpixel";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
@@ -8,16 +9,26 @@ export interface btnProps {
   label: string;
   size?: "sm" | "md" | "lg" | "xl" | "xxl" | "terciary";
   type?: "primary" | "secondary" | "terciary";
+  content_name?: string;
 }
 
-export default function Button({ label, size = "lg", type = "primary" }: btnProps) {
+export default function Button({
+  label,
+  size = "lg",
+  type = "primary",
+  content_name = "CTA Hero",
+}: btnProps) {
   let link =
     type == "primary" || type == "terciary"
       ? "https://pay.kiwify.com.br/eADN6hR"
       : "https://wa.me/message/KS4FVL6M7D6KL1";
 
   const handleOnClickBtn = () => {
-    window.open(link, "_blank");
+    event("Lead", { content_name: content_name, source: "landing_page" });
+
+    setTimeout(() => {
+      window.open(link, "_blank");
+    }, 150);
   };
   const buttonRef = useRef(null);
 

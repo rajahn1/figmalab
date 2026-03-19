@@ -41,7 +41,12 @@ export default function CardPrice() {
       </span>
 
       <div className="mt-4 xl:mt-14">
-        <Button type="terciary" size="terciary" label="Garanta sua vaga" />
+        <Button
+          type="terciary"
+          size="terciary"
+          label="Garanta sua vaga"
+          content_name="CTA Garanta sua vaga, preço"
+        />
       </div>
     </div>
   );
