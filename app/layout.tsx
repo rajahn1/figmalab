@@ -5,7 +5,11 @@ import localFont from "next/font/local";
 import PixelTracker from "./components/PixelTracker";
 
 const ppEditorial = localFont({
-  src: [{ path: "./fonts/PPEditorialNew-Regular.otf", weight: "400", style: "normal" }],
+  src: [
+    { path: "./fonts/PPEditorialNew-Regular.otf", weight: "400", style: "normal" },
+    { path: "./fonts/PPEditorialNew-Ultralight.otf", weight: "300", style: "normal" },
+    { path: "./fonts/PPEditorialNew-UltralightItalic.otf", weight: "300", style: "italic" },
+  ],
   variable: "--font-editorial",
 });
 
@@ -15,6 +19,7 @@ const articulatCF = localFont({
     { path: "./fonts/ArticulatCF-Medium.ttf", weight: "500", style: "normal" },
     { path: "./fonts/ArticulatCF-DemiBold.ttf", weight: "600", style: "normal" },
     { path: "./fonts/ArticulatCF-Bold.ttf", weight: "700", style: "normal" },
+    { path: "./fonts/ArticulatCF-BoldOblique.ttf", weight: "700", style: "italic" },
     { path: "./fonts/ArticulatCF-ExtraBold.ttf", weight: "800", style: "normal" },
   ],
   variable: "--font-articulat",

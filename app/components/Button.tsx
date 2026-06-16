@@ -7,8 +7,8 @@ import { useRef } from "react";
 
 export interface btnProps {
   label: string;
-  size?: "sm" | "md" | "lg" | "xl" | "xxl" | "terciary";
-  type?: "primary" | "secondary" | "terciary";
+  size?: "sm" | "md" | "lg" | "xl" | "xxl" | "terciary" | "support";
+  type?: "primary" | "secondary" | "terciary" | "support";
   content_name?: string;
 }
 
@@ -58,13 +58,15 @@ export default function Button({
     lg: "px-8 py-4 text-xl",
     xl: "md:px-10 md:py-5 md:text-2xl text-lg py-2 px-10",
     xxl: "px-12 py-6 text-3xl",
-    terciary: "md:px-16 md:py-5 md:text-4xl text-lg py-2 px-10",
+    terciary: "md:px-16 md:py-5 md:text-4xl text-lg py-2 px-4 xl:px-8 xl:py-2 xl:text-xl",
+    support: "px-6 py-2 text-xs xl:text-xl xl:px-12 xl:py-3",
   };
 
   const bgClasses = {
     primary: "bg-bg-button shadow-[0_0_25px_1.3px_rgba(103,55,204,1)]",
     secondary: "bg-gradient-to-b from-[#D82099] to-[#DF65B5]",
     terciary: "bg-[#D82099] shadow-[0_0_25px_1.3px_rgba(216,32,153,1)]",
+    support: "bg-[#353535] text-white",
   };
 
   return (

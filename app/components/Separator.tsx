@@ -23,7 +23,7 @@ export default function Separator() {
 
   return (
     // overflow-hidden garante que a barra não crie rolagem horizontal na página
-    <div className="bg-[#8950FF] md:py-4 py-2 text-sm xl:text-xl overflow-hidden flex w-full">
+    <div className="bg-[#EB3B6A] md:py-4 py-2 text-sm xl:text-xl overflow-hidden flex w-full">
       {/* Container principal da animação (que possui w-max para não quebrar linha) */}
       <div ref={marqueeRef} className="flex w-max items-center gap-4 md:gap-18">
         {/* GRUPO 1: Lista original */}

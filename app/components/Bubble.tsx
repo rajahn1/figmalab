@@ -7,11 +7,11 @@ export default function Bubble({ type, label }: Props) {
   const variants = {
     positive: {
       icon: "/icons/icon-check.svg",
-      className: "bg-bg-pink text-white",
+      className: "bg-[#D82099] text-white",
     },
     negative: {
       icon: "/icons/icon-x.svg",
-      className: "bg-bg-black text-white",
+      className: "bg-[#353535] text-white",
     },
   };
 
