@@ -9,7 +9,7 @@ export default function ModuleCard(props: Props) {
   const classText = module == 1 ? "xl:text-4xl lg:text-3xl" : "xl:text-5xl lg:text-4xl";
   return (
     <div className="flex md:flex-row gap-1 flex-col justify-center md:justify-between md:items-center md:gap-16 bg-[#424242] rounded-2xl py-4 md:py-8 md:px-32 px-4 font-articulat md:h-85 xl:rounded-3xl xl:w-[1000px] 2xl:w-[1010.98px] w-[210px]">
-      <div className="flex flex-col gap-4 md:gap-6 text-white">
+      <div className="flex flex-col gap-2 md:gap-6 text-white">
         <div className="flex gap-1 text-center items-center">
           {" "}
           <span className="bg-bg-pink rounded-full px-4 md:text-base text-xs md:px-8 py-1 whitespace-nowrap">
@@ -25,12 +25,12 @@ export default function ModuleCard(props: Props) {
           />
         </div>
         <h2
-          className={`whitespace-pre-line text-lg leading-4 md:leading-8 md:text:2xl ${classText} font-semibold`}
+          className={`whitespace-pre-line text-lg leading-4 xl:leading-10 md:leading-8 md:text:2xl ${classText} font-semibold`}
         >
           {title}
         </h2>
       </div>
-      <div className="flex flex-col gap-1 justify-center text-xs 2xl:text-base xl:text-sm leading-4 xl:leading-6">
+      <div className="flex flex-col xl:gap-1 justify-center text-[10px] 2xl:text-base xl:text-sm leading-4 xl:leading-4">
         {classes.map((item: string, idx: number) => (
           <span key={idx} className="text-bg-white">
             {item}

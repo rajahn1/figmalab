@@ -197,6 +197,7 @@ export default function LandingPage() {
         "Aula 7: Pen, Pencil e Figma Draw",
         "Aula 8: Textos e funcionalidades",
         "Aula 9: Cores, gradientes e kit de marca",
+        "Aula 10: Como exportar um documento em PDF",
       ],
     },
     {
@@ -210,8 +211,12 @@ export default function LandingPage() {
         "Aula 6: Componentes e Assets",
         "Aula 7: Modos de mesclagem",
         "Aula 8: Efeitos blur e glass",
-        "Aula 9: Figma Draw",
-        "Aula 10: Texto atrás da imagem",
+        "Aula 9: Texto atrás da imagem",
+        "Aula 10: Stickers",
+        "Aula 11: Mockups",
+        "Aula 12: Texto distorcido",
+        "Aula 13: Filtros do Photoshop no Figma",
+        "Aula 14: Texto em perspectiva",
       ],
     },
     {
@@ -221,8 +226,8 @@ export default function LandingPage() {
         "Aula 2: Carrossel na prática 01",
         "Aula 3: Carrossel na prática 02",
         "Aula 4: Carrossel na prática 03",
-        "Aula 5: Checklist da criatividade",
-        "Aula 6: O próximo nível",
+        "Aula 5: Carrossel na prática 04",
+        "Aula 6: Checklist da criatividade",
       ],
     },
     {
@@ -280,17 +285,34 @@ export default function LandingPage() {
           {/*  MOBILE */}
           <div className="xl:hidden lg:hidden relative">
             <Image
-              src="/images/section-hero-emi-mobile-1.webp"
+              src="/images/section-hero-emi-mobile-3x.webp"
               alt="Mulher branca de cabelos pretos segurando um ipad"
-              width={480}
-              height={388}
+              width={1440}
+              height={1164}
               priority
               className="z-10"
+            />
+
+            <Image
+              ref={iconFigmaRefMobile}
+              src="/icons/icon-figma-pink.svg"
+              alt="Icone do Figma"
+              width={300}
+              height={225}
+              className="w-32 top-40 left-52 lg:w-72 absolute xl:w-72 xl:right-31 xl:bottom-30 2xl:right-55 2xl:bottom-30 z-20"
+            />
+            <Image
+              ref={barFigmaHorizontalRefMobile}
+              src="/images/barra-horizontal-pink.png"
+              alt="barra do figma horizontal"
+              width={250}
+              height={35}
+              className="w-32 top-60 left-12 lg:w-50 xl:w-52 xl:bottom-50 xl:right-120 absolute z-20 2xl:w-72 2xl:bottom-50 2xl:right-160"
             />
             {/* <img src="/images/section-hero-img.png" className="w-[400px]" alt="teste" />*/}
           </div>
 
-          <div className="bg-[#EB3B6A] lg:bg-transparent -mt-8 flex flex-col gap-6 text-center lg:text-start lg:mt-56 lg:ml-32 ml-0">
+          <div className="bg-[#EB3B6A] lg:bg-transparent -mt-8 flex flex-col xl:gap-6 gap-4 text-center lg:text-start lg:mt-56 lg:ml-32 ml-0">
             <h1 className="font-editorial text-3xl xl:text-5xl 2xl:text-6xl leading-[92%] tracking-[-5%]">
               <span className="font-light">Aprenda</span> Figma do zero
               <br /> <span className="font-light">enquanto desenvolve um</span>
@@ -327,13 +349,13 @@ export default function LandingPage() {
           alt="barra do figma horizontal"
           width={250}
           height={35}
-          className="w-0 lg:w-50 xl:w-52 xl:bottom-50 xl:right-120 absolute mix-blend-luminosity z-20 2xl:w-72 2xl:bottom-50 2xl:right-160"
+          className="w-0 lg:w-50 xl:w-52 xl:bottom-50 xl:right-120 absolute z-20 2xl:w-72 2xl:bottom-50 2xl:right-160"
         />
       </section>
 
       {/* Seção 2 - Fundo Branco */}
-      <section className="bg-[#212121] py-8 md:py-20 px-8 leading-[94%]">
-        <div className="max-w-6xl md:mx-auto flex flex-col items-center gap-6 md:gap-12">
+      <section className="bg-[#212121] py-6 md:py-20 px-8 leading-[94%]">
+        <div className="max-w-6xl md:mx-auto flex flex-col items-center gap-4 md:gap-12">
           <h2 className="font-articulat text-xl xl:text-5xl text-center md:leading-12 leading-5 text-bg-white">
             Hoje existem <span className="font-bold">dois caminhos</span> para
             <br /> quem trabalha com
@@ -370,8 +392,8 @@ export default function LandingPage() {
 
       {/* Seção 3 - Fundo Imagem Emilize */}
 
-      <section className="flex items-end justify-center md:items-center aspect-800/1478 md:aspect-4236/2471 bg-[url('/images/bg-mobile-feedbacks.webp')] md:bg-[url('/images/section-bg-feedbacks-desktop.webp')] xl:bg-contain bg-contain bg-no-repeat bg-center text-black">
-        <div className="md:ml-auto md:w-1/2 md:items-start items-center flex flex-col gap-3 md:gap-4 md:pb-0 pb-[10%]">
+      <section className="flex justify-center md:items-center aspect-800/1478 md:aspect-4236/2471 bg-[url('/images/bg-mobile-feedbacks.webp')] md:bg-[url('/images/section-bg-feedbacks-desktop.webp')] xl:bg-contain bg-contain bg-no-repeat bg-center text-black">
+        <div className="md:ml-auto md:w-1/2 md:items-start items-center flex flex-col gap-2 md:gap-4 md:pb-0 pb-0 mt-90 xl:mt-0">
           <h2 className="md:text-start text-center font-editorial text-3xl sm:text-5xl xl:text-5xl 2xl:text-6xl tracking-tighter leading-7 sm:leading-11 md:leading-14 font-light xl:leading-11 2xl:leading-14">
             O problema <br className="hidden md:block" />
             não é <br className="md:hidden" /> talento, é<br className="hidden md:block" /> falta de{" "}
@@ -390,7 +412,7 @@ export default function LandingPage() {
             <br className="md:hidden" /> analisar,
             <br className="hidden md:block" /> decidir e criar com consciência.
           </span>
-          <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-xl xl:mb-4 md:mb-8 sm:text-base leading-3 xl:leading-6">
+          <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-xl xl:mb-4 md:mb-8 sm:text-base leading-3 xl:leading-6 mt-2">
             Saia do amadorismo e domine o método.
             <br />
             que{" "}
@@ -407,7 +429,7 @@ export default function LandingPage() {
               content_name="CTA O problema não é talento, é falta de método"
             />
           </div>
-          <div className="md:hidden py-4">
+          <div className="md:hidden mt-6">
             <Button
               size="md"
               label="Eu quero fazer parte"
@@ -418,7 +440,7 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 4 */}
-      <section className="flex flex-col items-center bg-[url('/images/section-beneficios-mobile.webp')] lg:bg-[url('/images/section-beneficios-opt.webp')] bg-cover bg-no-repeat bg-center aspect-[427/516] lg:aspect-[1920/1080]">
+      <section className="flex flex-col items-center bg-[url('/images/section-beneficios-mobile-2x.webp')] lg:bg-[url('/images/section-beneficios-opt.webp')] bg-cover bg-no-repeat bg-center aspect-[1281/1548] lg:aspect-[1920/1080]">
         <h2 className="font-articulat text-4xl 2xl:text-7xl xl:text-6xl font-bold text-white text-center lg:leading-12 leading-8 tracking-[-7%] pt-12 xl:pt-16 2xl:pt-30">
           O que você <span className="font-editorial italic font-light">recebe</span> <br /> no
           FigmaLab
@@ -467,12 +489,12 @@ export default function LandingPage() {
 
       {/* Seção 6 */}
       <section className="xl:h-120 2xl:h-180 bg-[#F4EDE8]">
-        <div className="relative 2xl:ml-72 xl:ml-48 h-full flex flex-col justify-center gap-2 md:gap-4 font-articulat items-center md:items-start md:py-0 py-12 md:pb-0 pb-68">
-          <h2 className="xl:text-6xl 2xl:text-8xl 2xl:leading-19 font-light xl:leading-12 md:leading-14 leading-8 md:text-start text-center text-4xl font-editorial">
+        <div className="relative 2xl:ml-72 xl:ml-48 h-full flex flex-col justify-center gap-1 md:gap-4 font-articulat items-center md:items-start md:py-0 py-12 md:pb-0 pb-68">
+          <h2 className="xl:text-6xl 2xl:text-8xl 2xl:leading-19 font-light xl:leading-12 md:leading-14 leading-8 md:text-start text-center text-3xl tracking-tighter font-editorial">
             <span className="text-text-pink">Certificado</span> <br className="hidden lg:block" />{" "}
             de <span className="italic">conclusão</span>
           </h2>
-          <p className="2xl:text-2xl 2xl:leading-7 xl:text-lg text-xs md:text-start text-center font-light leading-4 xl:leading-5">
+          <p className="2xl:text-2xl 2xl:leading-7 xl:text-lg text-xs md:text-start text-center font-light leading-3 xl:leading-5">
             Ao concluir sua jornada no FigmaLab, <br />
             você recebe certificado de conclusão
             <br /> para registrar sua evolução e tudo o<br /> que aprendeu ao longo do curso.
@@ -565,10 +587,10 @@ export default function LandingPage() {
           height={978}
           className="absolute rotate-180 xl:w-16 right-0 bottom-4 mix-blend-lighten hidden xl:block"
         />
-        <div className="flex mt-4 gap-8 xl:gap-32 items-center justify-center font-editorial font-bold text-4xl  xl:text-8xl xl:leading-13 2xl:text-9xl 2xl:leading-16 leading-7 md:leading-6 text-white relative">
+        <div className="flex mt-4 gap-10 xl:gap-32 items-center justify-center font-editorial font-bold text-5xl  xl:text-8xl xl:leading-13 2xl:text-9xl 2xl:leading-16 leading-7 md:leading-6 text-white relative">
           <h2 className="font-articulat">Feed</h2>
           <Image
-            className="w-11 xl:w-36 xl:left-50 xl:-top-8 -top-1 left-18 absolute 2xl:left-64 2xl:w-42 2xl:-top-12"
+            className="w-14 xl:w-36 xl:left-50 xl:-top-8 -top-3 left-24 absolute 2xl:left-64 2xl:w-42 2xl:-top-12"
             src={"/images/emoji-feedbacks.webp"}
             alt="icon coracao"
             width={406.07}
@@ -722,20 +744,20 @@ export default function LandingPage() {
           src={"/images/lirio.webp"}
           width={129.16}
           height={134.28}
-          className="absolute bottom-0 -left-15 xl:w-80 xl:-left-40 2xl:w-100"
+          className="absolute -bottom-4 -left-15 xl:w-84 xl:-left-40 2xl:w-100"
         />
         <Image
           alt="lirio"
           src={"/images/lirio.webp"}
           width={129.16}
           height={134.28}
-          className="absolute bottom-20 rotate-[-60deg] -right-15 xl:w-80 xl:bottom-80 xl:-right-36 2xl:w-100"
+          className="absolute bottom-12 rotate-[-60deg] -right-15 xl:w-84 xl:bottom-80 xl:-right-36 2xl:w-100"
         />
         <div className="md:max-w-6xl md:mx-auto flex flex-col items-center gap-6 md:gap-12">
           <h2 className="font-articulat 2xl:text-9xl xl:text-8xl font-bold text-4xl">
             Perguntas <span className="font-editorial font-light italic">frequentes</span>
           </h2>
-          <div className="md:w-full w-[88%] flex flex-col gap-8">
+          <div className="md:w-full w-[88%] flex flex-col gap-4">
             {faq.map((faq, idx) => (
               <div
                 key={idx}

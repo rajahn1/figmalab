@@ -52,7 +52,7 @@ export default function CarouselFeedbacks(props: Props) {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="relative w-full 2xl:max-w-6xl xl:max-w-5xl lg:max-w-4xl max-w-[350px] md:mx-auto px-6 py-2">
+    <div className="relative w-full 2xl:max-w-6xl xl:max-w-5xl lg:max-w-4xl max-w-[320px] md:mx-auto px-2 py-2">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {images.map((src, index) => (
@@ -71,13 +71,13 @@ export default function CarouselFeedbacks(props: Props) {
         onClick={prev}
         className="absolute -left-5 md:-left-15 top-1/2 -translate-y-1/2 text-white p-3 transition hover:cursor-pointer"
       >
-        <img src="/icons/arrow-left-feedback.svg" className="md:w-10 w-4" alt="Anterior" />
+        <img src="/icons/arrow-left-feedback.svg" className="md:w-10 w-3" alt="Anterior" />
       </button>
       <button
         onClick={next}
         className="absolute -right-5 md:-right-15 top-1/2 -translate-y-1/2 text-white p-3 transition hover:cursor-pointer"
       >
-        <img src="/icons/arrow-right-feedback.svg" className="md:w-10 w-4" alt="Próximo" />
+        <img src="/icons/arrow-right-feedback.svg" className="md:w-10 w-3" alt="Próximo" />
       </button>
 
       {/* --- PAGINAÇÃO (BOLINHAS) --- */}
@@ -86,7 +86,7 @@ export default function CarouselFeedbacks(props: Props) {
           <button
             key={index}
             onClick={() => scrollTo(index)}
-            className={`h-2 w-2 lg:h-5 lg:w-5 rounded-full transition-colors duration-300 ${
+            className={`h-1 w-1 lg:h-2 lg:w-2 rounded-full transition-colors duration-300 ${
               index === selectedIndex ? "bg-[#B40679]" : "bg-[#D5D0D4]"
             }`}
             aria-label={`Ir para slide ${index + 1}`}
