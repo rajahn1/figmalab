@@ -86,7 +86,7 @@ export default function CarouselFeedbacks(props: Props) {
           <button
             key={index}
             onClick={() => scrollTo(index)}
-            className={`h-2 w-2 lg:h-5 lg:w-5 rounded-full transition-colors duration-300 ${
+            className={`h-2 w-2 lg:h-2 lg:w-2 rounded-full transition-colors duration-300 ${
               index === selectedIndex ? "bg-[#B40679]" : "bg-[#D5D0D4]"
             }`}
             aria-label={`Ir para slide ${index + 1}`}
