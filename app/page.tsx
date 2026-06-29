@@ -274,7 +274,7 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="max-w-screen font-articulat text-[#313131]">
+    <div className="max-w-screen font-articulat text-[#313131] bg-[#D82099]">
       {/*<Header /> */}
       {/* Seção 1 - Fundo Rosa */}
       <section
@@ -312,7 +312,7 @@ export default function LandingPage() {
             {/* <img src="/images/section-hero-img.png" className="w-[400px]" alt="teste" />*/}
           </div>
 
-          <div className="bg-[#EB3B6A] lg:bg-transparent -mt-8 flex flex-col xl:gap-6 gap-4 text-center lg:text-start lg:mt-56 lg:ml-32 ml-0">
+          <div className="bg-[#EB3B6A] lg:bg-transparent -mt-8 flex flex-col xl:gap-6 gap-4 text-center lg:text-start lg:mt-56 lg:ml-32 ml-0 2xl:ml-56 xl:ml-40">
             <h1 className="font-editorial text-3xl xl:text-5xl 2xl:text-6xl leading-[92%] tracking-[-5%]">
               <span className="font-light">Aprenda</span> Figma do zero
               <br /> <span className="font-light">enquanto desenvolve um</span>
@@ -393,13 +393,13 @@ export default function LandingPage() {
       {/* Seção 3 - Fundo Imagem Emilize */}
 
       <section className="flex justify-center md:items-center aspect-800/1478 md:aspect-4236/2471 bg-[url('/images/bg-mobile-feedbacks.webp')] md:bg-[url('/images/section-bg-feedbacks-desktop.webp')] xl:bg-contain bg-contain bg-no-repeat bg-center text-black">
-        <div className="md:ml-auto md:w-1/2 md:items-start items-center flex flex-col gap-2 md:gap-4 md:pb-0 pb-0 mt-90 xl:mt-0">
-          <h2 className="md:text-start text-center font-editorial text-3xl sm:text-5xl xl:text-5xl 2xl:text-6xl tracking-tighter leading-7 sm:leading-11 md:leading-14 font-light xl:leading-11 2xl:leading-14">
+        <div className="xl:ml-120 2xl:ml-160 md:items-start items-center flex flex-col gap-2 md:gap-4 md:pb-0 pb-0 mt-90 xl:mt-0">
+          <h2 className="md:text-start text-center font-editorial text-3xl sm:text-5xl xl:text-5xl 2xl:text-7xl tracking-tighter leading-7 sm:leading-11 md:leading-14 font-light xl:leading-11 2xl:leading-16">
             O problema <br className="hidden md:block" />
             não é <br className="md:hidden" /> talento, é<br className="hidden md:block" /> falta de{" "}
             <span className="text-text-pink">método</span>.
           </h2>
-          <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-xl sm:text-base leading-3 xl:leading-6 font-articulat">
+          <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-2xl sm:text-base leading-3 xl:leading-6 font-articulat">
             Design não é dom, é processo. O<br className="hidden md:block" /> FigmaLab
             <br className="md:hidden" /> é o resultado de anos
             <br className="hidden md:block" /> organizando meu
@@ -412,7 +412,7 @@ export default function LandingPage() {
             <br className="md:hidden" /> analisar,
             <br className="hidden md:block" /> decidir e criar com consciência.
           </span>
-          <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-xl xl:mb-4 md:mb-8 sm:text-base leading-3 xl:leading-6 mt-2">
+          <span className="text-xs text-center md:text-start xl:text-lg 2xl:text-2xl xl:mb-4 md:mb-8 sm:text-base leading-3 xl:leading-6 mt-2">
             Saia do amadorismo e domine o método.
             <br />
             que{" "}
@@ -427,6 +427,7 @@ export default function LandingPage() {
             <Button
               label="Eu quero fazer parte"
               content_name="CTA O problema não é talento, é falta de método"
+              size="xl"
             />
           </div>
           <div className="md:hidden mt-6">
@@ -440,13 +441,15 @@ export default function LandingPage() {
       </section>
 
       {/* Seção 4 */}
-      <section className="flex flex-col items-center bg-[url('/images/section-beneficios-mobile-2x.webp')] lg:bg-[url('/images/section-beneficios-opt.webp')] bg-cover bg-no-repeat bg-center aspect-[1281/1548] lg:aspect-[1920/1080]">
-        <h2 className="font-articulat text-4xl 2xl:text-7xl xl:text-6xl font-bold text-white text-center lg:leading-12 leading-8 tracking-[-7%] pt-12 xl:pt-16 2xl:pt-30">
+      <section className="flex flex-col items-center bg-[url('/images/section-beneficios-mobile-2x.webp')] lg:bg-[url('/images/section-beneficios-opt.webp')] bg-cover bg-no-repeat bg-center aspect-[1281/1548] lg:aspect-[1920/1000]">
+        <h2 className="font-articulat text-4xl 2xl:text-8xl 2xl:leading-20 xl:text-6xl font-bold text-white text-center lg:leading-12 leading-8 tracking-[-7%] pt-12 xl:pt-16 2xl:pt-20">
           O que você <span className="font-editorial italic font-light">recebe</span> <br /> no
           FigmaLab
         </h2>
       </section>
-      <div className="bg-[#D82099] hidden xl:block h-24 w-full"></div>
+      {/* 
+      <div className="bg-[#D82099] hidden xl:block h-12 w-full"></div>
+      */}
 
       {/* Seção 5 - Módulos */}
       <section className="bg-[#212121] py-8 md:py-20 px-8 2xl:py-32 ">
