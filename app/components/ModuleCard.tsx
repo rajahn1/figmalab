@@ -8,7 +8,7 @@ export default function ModuleCard(props: Props) {
   const { classes, module, title } = props;
   const classText = module == 1 ? "xl:text-4xl lg:text-3xl" : "xl:text-5xl lg:text-4xl";
   return (
-    <div className="flex md:flex-row gap-1 flex-col justify-center md:justify-between md:items-center md:gap-16 bg-[#424242] rounded-2xl py-4 md:py-8 md:px-32 px-4 font-articulat md:h-85 xl:rounded-3xl xl:w-[1000px] 2xl:w-[1010.98px] w-[210px]">
+    <div className="flex md:flex-row gap-1 flex-col justify-center md:justify-between md:items-center md:gap-16 bg-[#424242] rounded-2xl py-4 md:py-8 md:px-32 px-4 font-articulat md:h-85 xl:rounded-3xl xl:w-[1000px] lg:w-[1170px] 2xl:w-[1010.98px] w-[210px]">
       <div className="flex flex-col gap-2 md:gap-6 text-white">
         <div className="flex gap-1 text-center items-center">
           {" "}
