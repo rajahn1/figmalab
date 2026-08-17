@@ -41,6 +41,7 @@ export default function Carousel(props: Props) {
                 alt={`Card ${index + 1}`}
                 width={1086}
                 height={1628}
+                sizes="(min-width: 1024px) 25vw, 50vw"
                 className=" w-full
                 h-auto
                 object-contain
@@ -54,16 +55,32 @@ export default function Carousel(props: Props) {
       </div>
 
       <button
+        type="button"
+        aria-label="Ver módulos anteriores"
         onClick={prev}
-        className="absolute -left-4 md:-left-15 top-1/2 -translate-y-1/2 text-white p-3 rounded-r-lg transition hover:cursor-pointer hover:opacity-90 hover:scale-105"
+        className="absolute -left-4 xl:-left-15 top-1/2 -translate-y-1/2 text-white p-3 rounded-r-lg transition hover:cursor-pointer hover:opacity-90 hover:scale-105"
       >
-        <img src="/icons/icon-arrow-left.svg" className="md:w-10 w-4" alt="Anterior" />
+        <Image
+          src="/icons/icon-arrow-left.svg"
+          width={40}
+          height={40}
+          className="w-4 md:w-6 xl:w-10"
+          alt=""
+        />
       </button>
       <button
+        type="button"
+        aria-label="Ver próximos módulos"
         onClick={next}
-        className="absolute -right-4 md:-right-15 top-1/2 -translate-y-1/2 text-white p-3 rounded-l-lg transition hover:cursor-pointer hover:opacity-90 hover:scale-105"
+        className="absolute -right-4 xl:-right-15 top-1/2 -translate-y-1/2 text-white p-3 rounded-l-lg transition hover:cursor-pointer hover:opacity-90 hover:scale-105"
       >
-        <img src="/icons/icon-arrow-right.svg" className="md:w-10 w-4" alt="Próximo" />
+        <Image
+          src="/icons/icon-arrow-right.svg"
+          width={40}
+          height={40}
+          className="w-4 md:w-6 xl:w-10"
+          alt=""
+        />
       </button>
     </div>
   );

@@ -1,9 +1,6 @@
 "use client";
 
 import { event } from "@/lib/fpixel";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { useRef } from "react";
 
 export interface btnProps {
   label: string;
@@ -18,39 +15,14 @@ export default function Button({
   type = "primary",
   content_name = "CTA Hero",
 }: btnProps) {
-  let link =
-    type == "primary" || type == "terciary"
+  const link =
+    type === "primary" || type === "terciary"
       ? "https://pay.kiwify.com.br/eADN6hR"
       : "https://wa.me/message/KS4FVL6M7D6KL1";
 
   const handleOnClickBtn = () => {
     event("Lead", { content_name: content_name, source: "landing_page" });
-
-    setTimeout(() => {
-      window.open(link, "_blank");
-    }, 150);
   };
-  const buttonRef = useRef(null);
-
-  const handleMouseEnter = () => {
-    gsap.to(buttonRef.current, {
-      scale: 1.1,
-      opacity: 0.9,
-      duration: 0.5,
-      ease: "power2.out",
-    });
-  };
-
-  const handleMouseLeave = () => {
-    gsap.to(buttonRef.current, {
-      scale: 1,
-      opacity: 1,
-      duration: 0.5,
-      ease: "power2.out",
-    });
-  };
-
-  useGSAP(() => {});
 
   const sizeClasses = {
     sm: "px-3 py-2 text-sm",
@@ -70,14 +42,14 @@ export default function Button({
   };
 
   return (
-    <button
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer noopener"
       onClick={handleOnClickBtn}
-      ref={buttonRef}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className={`text-white relative z-10 w-max font-bold ${bgClasses[type]} rounded-full cursor-pointer  ${sizeClasses[size]}`}
+      className={`relative z-10 w-max rounded-full font-bold text-white transition-[transform,opacity] duration-300 hover:scale-105 hover:opacity-90 ${bgClasses[type]} ${sizeClasses[size]}`}
     >
       {label}
-    </button>
+    </a>
   );
 }

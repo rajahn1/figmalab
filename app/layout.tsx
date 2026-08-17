@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import localFont from "next/font/local";
-import PixelTracker from "./components/PixelTracker";
 
 const ppEditorial = localFont({
   src: [
@@ -11,6 +10,8 @@ const ppEditorial = localFont({
     { path: "./fonts/PPEditorialNew-UltralightItalic.otf", weight: "300", style: "italic" },
   ],
   variable: "--font-editorial",
+  display: "swap",
+  preload: false,
 });
 
 const articulatCF = localFont({
@@ -23,6 +24,8 @@ const articulatCF = localFont({
     { path: "./fonts/ArticulatCF-ExtraBold.ttf", weight: "800", style: "normal" },
   ],
   variable: "--font-articulat",
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -36,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         {/* Google Tag Manager - Script do Head */}
         <Script
@@ -83,7 +86,6 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        <PixelTracker />
         {children}
       </body>
     </html>

@@ -1,14 +1,14 @@
 export interface Props {
   module: number;
   title: string;
-  classes: string[];
+  classes: readonly string[];
 }
 import Image from "next/image";
 export default function ModuleCard(props: Props) {
   const { classes, module, title } = props;
-  const classText = module == 1 ? "xl:text-4xl lg:text-3xl" : "xl:text-5xl lg:text-4xl";
+  const classText = module === 1 ? "xl:text-4xl lg:text-3xl" : "xl:text-5xl lg:text-4xl";
   return (
-    <div className="flex md:flex-row gap-1 flex-col justify-center md:justify-between md:items-center md:gap-16 bg-[#424242] rounded-2xl py-4 md:py-8 md:px-32 px-4 font-articulat md:h-85 xl:rounded-3xl xl:w-[1000px] lg:w-[1170px] 2xl:w-[1010.98px] w-[210px]">
+    <div className="flex h-full w-full max-w-[210px] flex-col justify-center gap-1 rounded-2xl bg-[#424242] px-4 py-4 font-articulat md:h-85 md:max-w-[720px] md:flex-row md:items-center md:justify-between md:gap-16 md:px-32 md:py-8 lg:max-w-[1000px] xl:max-w-[1000px] xl:rounded-3xl 2xl:max-w-[1010.98px]">
       <div className="flex flex-col gap-2 md:gap-6 text-white">
         <div className="flex gap-1 text-center items-center">
           {" "}
@@ -17,7 +17,7 @@ export default function ModuleCard(props: Props) {
             MÓDULO {module}
           </span>
           <Image
-            src="icons/icon-estrela-pink.svg"
+            src="/icons/icon-estrela-pink.svg"
             width={32}
             height={32}
             alt="icone estrela com fundo rosa"

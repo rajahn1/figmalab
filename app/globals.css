@@ -36,3 +36,69 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
+
+.hero-float {
+  animation: hero-float 3s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.marquee-forward {
+  animation: marquee-forward 20s linear infinite;
+}
+
+.marquee-backward {
+  animation: marquee-backward 20s linear infinite;
+}
+
+.separator-marquee {
+  animation: separator-marquee 20s linear infinite;
+}
+
+.deferred-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
+@keyframes hero-float {
+  to {
+    transform: translateY(-15px) scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+@keyframes marquee-forward {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-backward {
+  from {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes separator-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 64rem) {
+  @keyframes hero-float {
+    to {
+      transform: translateY(-30px) scale(1.05);
+      opacity: 0.9;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-float,
+  .marquee-forward,
+  .marquee-backward,
+  .separator-marquee {
+    animation: none;
+    transform: none;
+  }
+}
