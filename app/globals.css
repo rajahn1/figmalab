@@ -37,6 +37,55 @@ body {
   overflow-x: hidden;
 }
 
+.cta-button {
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.cta-button--attention::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border: 2px solid rgb(255 255 255 / 60%);
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  animation: cta-pulse 4.8s ease-out 1s infinite;
+}
+
+@keyframes cta-pulse {
+  0%, 35%, 100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.65;
+  }
+  30% {
+    transform: scale(1.07, 1.22);
+    opacity: 0;
+  }
+}
+
+@media (hover: hover) {
+  .cta-button:hover {
+    transform: translateY(-2px) scale(1.03);
+    filter: brightness(1.1);
+  }
+}
+
+.cta-button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 5px;
+}
+
+.cta-button:is(:hover, :focus-visible)::after {
+  animation: none;
+}
+
+.cta-button:active {
+  transform: scale(0.98);
+}
+
 .hero-float {
   animation: hero-float 3s ease-in-out infinite alternate;
   will-change: transform;
@@ -94,6 +143,18 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .cta-button {
+    transition: none;
+  }
+
+  .cta-button:is(:hover, :active) {
+    transform: none;
+  }
+
+  .cta-button--attention::after {
+    animation: none;
+  }
+
   .hero-float,
   .marquee-forward,
   .marquee-backward,

@@ -15,13 +15,25 @@ export default function Button({
   type = "primary",
   content_name = "CTA Hero",
 }: btnProps) {
-  const link =
-    type === "primary" || type === "terciary"
-      ? "https://pay.kiwify.com.br/eADN6hR"
-      : "https://wa.me/message/KS4FVL6M7D6KL1";
+  const isCheckout = type === "primary" || type === "terciary";
+  const link = isCheckout
+    ? "https://pay.kiwify.com.br/eADN6hR"
+    : "https://wa.me/message/KS4FVL6M7D6KL1";
 
   const handleOnClickBtn = () => {
-    event("Lead", { content_name: content_name, source: "landing_page" });
+    if (isCheckout) {
+      event("InitiateCheckout", {
+        content_name,
+        content_category: "Curso FigmaLab",
+        content_type: "product",
+        value: 297,
+        currency: "BRL",
+      });
+
+      return;
+    }
+
+    event("Contact", { content_name, source: "landing_page" });
   };
 
   const sizeClasses = {
@@ -47,7 +59,7 @@ export default function Button({
       target="_blank"
       rel="noreferrer noopener"
       onClick={handleOnClickBtn}
-      className={`relative z-10 w-max rounded-full font-bold text-white transition-[transform,opacity] duration-300 hover:scale-105 hover:opacity-90 ${bgClasses[type]} ${sizeClasses[size]}`}
+      className={`cta-button ${isCheckout ? "cta-button--attention" : ""} relative z-10 inline-flex w-max items-center justify-center rounded-full font-bold text-white ${bgClasses[type]} ${sizeClasses[size]}`}
     >
       {label}
     </a>
