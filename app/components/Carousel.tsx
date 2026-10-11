@@ -3,9 +3,10 @@
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
+import type { LandingImage } from "@/lib/landing/types";
 
 export interface Props {
-  images: string[];
+  images: LandingImage[];
 }
 
 export default function Carousel(props: Props) {
@@ -23,10 +24,10 @@ export default function Carousel(props: Props) {
       {/* Container do Embla */}
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
-          {images.map((src, index) => (
+          {images.map((image, index) => (
             // flex-[0_0_25%] garante que mostre exatamente 4 por vez (100% / 4)
             <div
-              key={index}
+              key={image.src}
               className="
                 flex-[0_0_50%]     /* mobile: 1.25 imagens visíveis */
                 sm:flex-[0_0_50%]  /* celular grande */
@@ -37,10 +38,10 @@ export default function Carousel(props: Props) {
               "
             >
               <Image
-                src={src}
-                alt={`Card ${index + 1}`}
-                width={1086}
-                height={1628}
+                src={image.src}
+                alt={image.alt || `Card ${index + 1}`}
+                width={image.width}
+                height={image.height}
                 sizes="(min-width: 1024px) 25vw, 50vw"
                 className=" w-full
                 h-auto

@@ -2,18 +2,36 @@
   "name": "figma-lab",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.9.0 <26"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "payload:types": "npm run payload -- generate:types",
+    "payload:importmap": "npm run payload -- generate:importmap",
+    "migrate:create": "cross-env PAYLOAD_MIGRATING=true npm run payload -- migrate:create",
+    "migrate:status": "cross-env PAYLOAD_MIGRATING=true npm run payload -- migrate:status",
+    "migrate:prod": "cross-env PAYLOAD_MIGRATING=true tsx scripts/migrate-production.ts",
+    "seed": "cross-env PAYLOAD_MIGRATING=true tsx scripts/seed.ts"
   },
   "dependencies": {
+    "@payloadcms/db-postgres": "3.90.2",
+    "@payloadcms/next": "3.90.2",
+    "@payloadcms/storage-s3": "3.90.2",
+    "cross-env": "10.1.0",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
-    "next": "16.1.6",
+    "next": "16.3.8",
+    "payload": "3.90.2",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "sharp": "0.35.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -21,10 +39,18 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.1.6",
+    "eslint-config-next": "16.3.8",
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.8.1",
     "tailwindcss": "^4",
+    "tsx": "^4.20.6",
     "typescript": "^5"
+  },
+  "overrides": {
+    "baseline-browser-mapping": "2.11.0",
+    "dompurify": "3.4.16",
+    "js-yaml": "4.3.2",
+    "picomatch@4": "4.0.4",
+    "undici": "7.29.1"
   }
 }

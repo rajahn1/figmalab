@@ -1,26 +1,30 @@
 import Image from "next/image";
+import type { LandingPageContent } from "@/lib/landing/types";
 import InfiniteCarousel from "../InfiniteCarousel";
 import Separator from "../Separator";
+import StyledHeading from "../StyledHeading";
 
-export default function CertificateGallery() {
+interface CertificateGalleryProps {
+  certificate: LandingPageContent["certificate"];
+  gallery: LandingPageContent["gallery"];
+}
+
+export default function CertificateGallery({ certificate, gallery }: CertificateGalleryProps) {
   return (
     <>
       <section className="deferred-section bg-[#F4EDE8] xl:h-120 lg:h-120 2xl:h-180">
         <div className="relative flex h-full flex-col items-center justify-center gap-1 py-12 pb-68 font-articulat md:items-start md:gap-4 md:py-0 md:pb-0 lg:ml-36 xl:ml-48 2xl:ml-72">
           <h2 className="text-center font-editorial text-3xl leading-8 font-light tracking-tighter md:text-start md:leading-14 lg:text-5xl xl:text-6xl xl:leading-12 2xl:text-8xl 2xl:leading-19">
-            <span className="text-text-pink">Certificado</span> <br className="hidden lg:block" />{" "}
-            de <span className="italic">conclusão</span>
+            <StyledHeading segments={certificate.heading} />
           </h2>
-          <p className="text-center text-xs leading-3 font-light md:text-start lg:text-lg lg:leading-4 xl:text-lg xl:leading-5 2xl:text-2xl 2xl:leading-7">
-            Ao concluir sua jornada no FigmaLab, <br />
-            você recebe certificado de conclusão
-            <br /> para registrar sua evolução e tudo o<br /> que aprendeu ao longo do curso.
+          <p className="whitespace-pre-line text-center text-xs leading-3 font-light md:text-start lg:text-lg lg:leading-4 xl:text-lg xl:leading-5 2xl:text-2xl 2xl:leading-7">
+            {certificate.description}
           </p>
           <Image
-            src="/images/certificado-mock-opt.webp"
-            width={922}
-            height={699}
-            alt="Certificado Mobile"
+            src={certificate.image.src}
+            width={certificate.image.width}
+            height={certificate.image.height}
+            alt={certificate.image.alt}
             className="absolute top-40 left-1/8 w-72 lg:top-10 lg:left-124 lg:w-[520px] xl:top-10 xl:left-128 xl:w-[520px] 2xl:left-156 2xl:w-[720px]"
           />
         </div>
@@ -52,35 +56,22 @@ export default function CertificateGallery() {
             </div>
           </div>
           <h2 className="mt-8 text-center font-articulat text-2xl leading-6 font-semibold lg:mt-16 lg:text-5xl lg:leading-10">
-            Veja os carrosséis que você <br />
-            vai aprender no curso
+            {gallery.heading.split("\n").map((line, index) => (
+              <span key={line}>
+                {index > 0 ? <br /> : null}
+                {line}
+              </span>
+            ))}
           </h2>
         </div>
         <div className="flex w-full flex-col">
-          <InfiniteCarousel
-            pathImage="/images/carrossel-5.webp"
-            width={4096}
-            height={853}
-            direction="forward"
-          />
-          <InfiniteCarousel
-            pathImage="/images/carrossel-6.webp"
-            width={4096}
-            height={853}
-            direction="backward"
-          />
-          <InfiniteCarousel
-            pathImage="/images/carrossel-7.webp"
-            width={4096}
-            height={853}
-            direction="forward"
-          />
-          <InfiniteCarousel
-            pathImage="/images/carrossel-8.webp"
-            width={4096}
-            height={853}
-            direction="backward"
-          />
+          {gallery.images.map((image, index) => (
+            <InfiniteCarousel
+              key={image.src}
+              image={image}
+              direction={index % 2 === 0 ? "forward" : "backward"}
+            />
+          ))}
         </div>
       </section>
     </>

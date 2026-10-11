@@ -9,6 +9,7 @@
   --bg-black: #313131;
   --bg-pink: #c9408f;
   --bg-button: #6737cc;
+  --studio-pink: #df3da8;
 }
 
 @theme inline {
@@ -17,11 +18,13 @@
   --color-bg-black: var(--bg-black);
   --color-bg-white: var(--white);
   --color-bg-button: var(--bg-button);
+  --color-studio-pink: var(--studio-pink);
   --color-text-pink: var(--pink);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-articulat: var(--font-articulat);
   --font-editorial: var(--font-editorial);
+  --font-windy: var(--font-windy);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,8 +40,54 @@ body {
   overflow-x: hidden;
 }
 
+.studio-noise {
+  background-image:
+    radial-gradient(circle at 25% 15%, rgb(255 255 255 / 5%) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 75% 70%, rgb(255 255 255 / 4%) 0 1px, transparent 1.5px);
+  background-size:
+    18px 18px,
+    23px 23px;
+}
+
+@media (max-width: 47.999rem) {
+  .studio-noise-mobile-off {
+    background-image: none;
+  }
+}
+
+.studio-signature {
+  font-family: var(--font-editorial), Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: -0.08em;
+}
+
+.studio-ticker {
+  animation: studio-ticker 28s linear infinite;
+}
+
+.studio-hero-star {
+  animation: studio-hero-star-spin 18s linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@keyframes studio-ticker {
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes studio-hero-star-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .cta-button {
-  transition: transform 220ms ease, filter 220ms ease;
+  transition:
+    transform 220ms ease,
+    filter 220ms ease;
 }
 
 .cta-button--attention::after {
@@ -53,7 +102,9 @@ body {
 }
 
 @keyframes cta-pulse {
-  0%, 35%, 100% {
+  0%,
+  35%,
+  100% {
     transform: scale(1);
     opacity: 0;
   }
@@ -158,7 +209,9 @@ body {
   .hero-float,
   .marquee-forward,
   .marquee-backward,
-  .separator-marquee {
+  .separator-marquee,
+  .studio-ticker,
+  .studio-hero-star {
     animation: none;
     transform: none;
   }

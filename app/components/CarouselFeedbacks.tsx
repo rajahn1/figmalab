@@ -4,16 +4,10 @@ import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-
-export interface CarouselImage {
-  src: string;
-  width: number;
-  height: number;
-  alt: string;
-}
+import type { LandingImage } from "@/lib/landing/types";
 
 export interface Props {
-  images: readonly CarouselImage[];
+  images: readonly LandingImage[];
 }
 
 export default function CarouselFeedbacks(props: Props) {

@@ -1,6 +1,16 @@
 import Button from "./Button";
+import type { LandingPageContent } from "@/lib/landing/types";
 
-export default function CardPrice() {
+const currencyFormatter = new Intl.NumberFormat("pt-BR", {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+});
+
+const cashPriceFormatter = new Intl.NumberFormat("pt-BR", {
+  maximumFractionDigits: 0,
+});
+
+export default function CardPrice({ settings }: { settings: LandingPageContent["settings"] }) {
   return (
     <div className="flex flex-col bg-bg-white justify-center items-center gap-1 md:gap-2 xl font-articulat rounded-4xl border-text-pink border-4 px-6 lg:px-0 md:w-lg xl:w-full md:py-0 xl:py-10 xl:px-10 py-6">
       {/*
@@ -30,17 +40,19 @@ export default function CardPrice() {
       */}
 
       <span className="text-[#9D9D9D] text-2xl xl:text-2xl 2xl:text-4xl font-medium font-articulat">
-        Por apenas 12x de
+        Por apenas {settings.installmentCount}x de
       </span>
       <div className="flex flex-col items-center">
         <div className="text-black font-extrabold relative ml-7">
           <span className="absolute text-3xl xl:text-3xl 2xl:text-3xl -left-9 md:-left-10 top-3">
             R$
           </span>
-          <span className="text-8xl xl:text-9xl 2xl:text-[10rem] tracking-tighter">30,72</span>
+          <span className="text-8xl xl:text-9xl 2xl:text-[10rem] tracking-tighter">
+            {currencyFormatter.format(settings.installmentAmount)}
+          </span>
         </div>
         <span className="font-semibold text-2xl text-[#9D9D9D] xl:text-3xl 2xl:text-5xl">
-          ou R$297 à vista
+          ou R${cashPriceFormatter.format(settings.cashPrice)} à vista
         </span>
       </div>
 
@@ -48,7 +60,10 @@ export default function CardPrice() {
         <Button
           type="terciary"
           size="terciary"
-          label="Quero entrar no FigmaLab!"
+          label={settings.purchaseCtaLabel}
+          href={settings.checkoutUrl}
+          courseName={settings.courseName}
+          trackingValue={settings.cashPrice}
           content_name="CTA Garanta sua vaga, preço"
         />
       </div>

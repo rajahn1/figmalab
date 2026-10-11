@@ -4,6 +4,9 @@ import { event } from "@/lib/fpixel";
 
 export interface btnProps {
   label: string;
+  href: string;
+  courseName: string;
+  trackingValue?: number;
   size?: "sm" | "md" | "lg" | "xl" | "xxl" | "terciary" | "support";
   type?: "primary" | "secondary" | "terciary" | "support";
   content_name?: string;
@@ -11,22 +14,22 @@ export interface btnProps {
 
 export default function Button({
   label,
+  href,
+  courseName,
+  trackingValue,
   size = "lg",
   type = "primary",
   content_name = "CTA Hero",
 }: btnProps) {
   const isCheckout = type === "primary" || type === "terciary";
-  const link = isCheckout
-    ? "https://pay.kiwify.com.br/eADN6hR"
-    : "https://wa.me/message/KS4FVL6M7D6KL1";
 
   const handleOnClickBtn = () => {
     if (isCheckout) {
       event("InitiateCheckout", {
         content_name,
-        content_category: "Curso FigmaLab",
+        content_category: `Curso ${courseName}`,
         content_type: "product",
-        value: 297,
+        value: trackingValue ?? 0,
         currency: "BRL",
       });
 
@@ -55,7 +58,7 @@ export default function Button({
 
   return (
     <a
-      href={link}
+      href={href}
       target="_blank"
       rel="noreferrer noopener"
       onClick={handleOnClickBtn}
