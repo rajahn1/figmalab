@@ -8,6 +8,7 @@ import {
 } from "@/lib/studio/about-copy";
 import type { StudioHomeContent } from "@/lib/studio/types";
 import StudioFavoritesCarousel from "./StudioFavoritesCarousel";
+import StudioServicesCarousel from "./StudioServicesCarousel";
 
 const isInternal = (url: string) => url.startsWith("/") || url.startsWith("#");
 
@@ -380,35 +381,7 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
             start={content.services.headingStart}
             accent={content.services.headingAccent}
           />
-          <div
-            role="region"
-            aria-label="Carrossel de serviços do Studio Emi"
-            className="mt-8 snap-x snap-mandatory overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mt-14 md:overflow-visible md:pb-0"
-          >
-            <div className="flex gap-5 md:grid md:grid-cols-3">
-              {content.services.items.map((service) => (
-                <article
-                  key={`${service.image.src}-${service.url}`}
-                  className="flex w-full shrink-0 snap-center flex-col md:w-auto md:shrink"
-                >
-                  <Image
-                    src={service.image.src}
-                    alt={service.image.alt}
-                    width={service.image.width}
-                    height={service.image.height}
-                    sizes="(max-width: 768px) 90vw, 33vw"
-                    className="mx-auto h-auto w-[90%] md:w-full"
-                  />
-                  <StudioLink
-                    url={service.url}
-                    className="mt-3 inline-flex min-h-10 w-fit self-center items-center justify-center whitespace-nowrap rounded-md bg-[#8B7BAA] px-6 text-center font-articulat text-base text-white transition-colors hover:bg-[#806aa0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#181818] md:min-h-11 md:px-8 md:text-xl"
-                  >
-                    {service.ctaLabel}
-                  </StudioLink>
-                </article>
-              ))}
-            </div>
-          </div>
+          <StudioServicesCarousel services={content.services.items} />
         </div>
       </section>
 
