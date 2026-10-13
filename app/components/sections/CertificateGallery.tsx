@@ -25,7 +25,7 @@ export default function CertificateGallery({ certificate, gallery }: Certificate
             width={certificate.image.width}
             height={certificate.image.height}
             alt={certificate.image.alt}
-            className="absolute top-40 left-1/8 w-72 lg:top-10 lg:left-124 lg:w-[520px] xl:top-10 xl:left-128 xl:w-[520px] 2xl:left-156 2xl:w-[720px]"
+            className="absolute top-48 left-1/8 w-72 md:top-40 lg:top-10 lg:left-124 lg:w-[520px] xl:top-10 xl:left-128 xl:w-[520px] 2xl:left-156 2xl:w-[720px]"
           />
         </div>
       </section>

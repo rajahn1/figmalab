@@ -160,7 +160,7 @@ export default function MarketingIntro({
         </div>
       </section>
 
-      <section className="deferred-section relative flex aspect-[800/1478] justify-center text-black md:aspect-[4236/2471] md:items-center">
+      <section className="deferred-section relative flex justify-center pt-90 pb-6 text-black md:aspect-[4236/2471] md:items-center md:py-0">
         <picture className="absolute inset-0">
           <source
             media="(min-width: 768px)"
@@ -170,11 +170,11 @@ export default function MarketingIntro({
           <img
             {...mobileMethodBackground}
             alt=""
-            className="h-full w-full object-contain"
+            className="h-full w-full object-cover object-top md:object-contain"
             loading="lazy"
           />
         </picture>
-        <div className="relative z-10 mt-90 flex flex-col items-center gap-2 pb-0 md:items-start md:gap-4 md:pb-0 lg:mt-20 lg:ml-110 xl:mt-0 xl:ml-120 2xl:ml-160">
+        <div className="relative z-10 flex flex-col items-center gap-2 pb-0 md:mt-90 md:items-start md:gap-4 md:pb-0 lg:mt-20 lg:ml-110 xl:mt-0 xl:ml-120 2xl:ml-160">
           <h2 className="text-center font-editorial text-3xl leading-7 font-light tracking-tighter sm:text-5xl sm:leading-11 md:text-start md:leading-14 xl:text-5xl xl:leading-11 2xl:text-7xl 2xl:leading-16">
             <MethodHeading heading={method.heading} />
           </h2>
