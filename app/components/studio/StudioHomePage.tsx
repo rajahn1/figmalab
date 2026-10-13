@@ -143,23 +143,23 @@ function ProductPriceLabel({ label }: { label: string }) {
   const isPrice = /^R\$\s*/i.test(primary);
 
   return (
-    <div className="inline-flex items-center rounded-[5px] border border-[#DF3DA8] px-2 py-1 font-articulat text-[8px] leading-3 text-[#fff] md:rounded-[6px] md:px-3 md:py-2 md:text-[14px] md:leading-5">
+    <div className="inline-flex min-h-7 items-center rounded-[5px] border border-[#DF3DA8] px-2 py-1 font-articulat text-[13px] leading-4 text-[#fff] md:rounded-[6px] md:px-3 md:py-2 md:text-[14px] md:leading-5">
       {isPrice ? (
-        <strong className="text-[11px] leading-3 font-bold text-[#fff] md:text-[20px] md:leading-6">
+        <strong className="text-[13px] leading-4 font-bold text-[#fff] md:text-[20px] md:leading-6">
           {primary}
         </strong>
       ) : (
-        <span className="text-[8px] text-[#fff] md:text-[14px]">{primary}</span>
+        <span className="text-[13px] text-[#fff] md:text-[14px]">{primary}</span>
       )}
       {detail ? (
         <>
           <span
             aria-hidden="true"
-            className="mx-1 text-[10px] leading-none text-[#fff] md:mx-2 md:text-lg"
+            className="mx-1 text-[13px] leading-none text-[#fff] md:mx-2 md:text-lg"
           >
             •
           </span>
-          <span className="text-[8px] text-[#fff] md:text-[14px]">{detail}</span>
+          <span className="text-[13px] text-[#fff] md:text-[14px]">{detail}</span>
         </>
       ) : null}
     </div>
@@ -427,17 +427,17 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
                   <p className="studio-body-copy studio-product-copy mt-1 max-w-3xl font-articulat font-normal text-[#fff] md:line-clamp-3 md:max-w-[34rem]">
                     {product.description}
                   </p>
-                  <div className="mt-2 flex flex-wrap items-center gap-1 md:mt-6 md:gap-3">
+                  <div className="mt-2 flex w-full flex-wrap items-center justify-center gap-1 md:mt-6 md:w-auto md:justify-start md:gap-3">
                     <StudioLink
                       url={product.url}
-                      className="inline-flex w-[78px] shrink-0 items-center justify-center whitespace-nowrap rounded-[5px] bg-studio-pink px-2 py-1.5 text-center font-articulat text-[10px] leading-3 font-normal text-white transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:w-[150px] md:rounded-[6px] md:px-5 md:py-2 md:text-[20px] md:leading-6"
+                      className="inline-flex min-h-7 w-[105px] shrink-0 items-center justify-center whitespace-nowrap rounded-[5px] bg-studio-pink px-3 py-1 text-center font-articulat text-[13px] leading-4 font-normal text-white transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:w-[150px] md:rounded-[6px] md:px-5 md:py-2 md:text-[20px] md:leading-6"
                     >
                       {product.ctaLabel}
                     </StudioLink>
                     <ProductPriceLabel label={product.priceLabel} />
                   </div>
                 </div>
-                <div className="relative mt-5 aspect-[385/266] w-full max-w-[640px] self-center overflow-hidden rounded-[10px] md:mt-0 md:max-w-none md:self-auto md:rounded-[16px] lg:h-[266px] lg:w-[385px] lg:justify-self-end">
+                <div className="relative mt-5 aspect-[385/266] w-[94%] self-center overflow-hidden rounded-[10px] md:mt-0 md:w-full md:self-auto md:rounded-[16px] lg:h-[266px] lg:w-[385px] lg:justify-self-end">
                   <Image
                     src={product.image.src}
                     alt={product.image.alt}
@@ -523,8 +523,8 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
             <Image
               src="/icons/created-by-studio-emi.svg"
               alt="Created by Studio Emi"
-              width={202}
-              height={29}
+              width={201.46}
+              height={28.44}
               className="studio-signature-mark-compact shrink-0"
             />
           </div>
