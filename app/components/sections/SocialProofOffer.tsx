@@ -21,9 +21,13 @@ function InstructorHeading({ heading }: { heading: LandingPageContent["instructo
   if (plainHeading === "Quem vai te ensinar tudo isso?") {
     return (
       <>
-        <span className="text-text-pink">Quem</span> vai
-        <br /> te <span className="font-editorial font-light italic">ensinar</span>
-        <br /> tudo isso?
+        <span className="text-text-pink">Quem</span> vai{" "}
+        <br className="hidden md:block" />
+        te
+        <br className="md:hidden" />{" "}
+        <span className="font-editorial font-light italic">ensinar</span>{" "}
+        <br className="hidden md:block" />
+        tudo isso?
       </>
     );
   }
