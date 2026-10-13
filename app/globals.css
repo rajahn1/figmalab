@@ -76,7 +76,7 @@ body {
 }
 
 .studio-feature-title-accent {
-  font-size: 1.8em;
+  font-size: 1.55em;
 }
 
 .studio-body-copy {
@@ -90,7 +90,9 @@ body {
 }
 
 .studio-product-copy {
+  font-size: 0.75rem;
   line-height: 1.25;
+  text-wrap: balance;
 }
 
 .studio-cta {
@@ -162,6 +164,10 @@ body {
     line-height: 0.82;
   }
 
+  .studio-feature-title-accent {
+    font-size: 1.8em;
+  }
+
   .studio-body-copy {
     line-height: 1.4;
   }
@@ -173,6 +179,7 @@ body {
 
   .studio-product-copy {
     line-height: 1.2;
+    text-wrap: wrap;
   }
 
   .studio-cta {

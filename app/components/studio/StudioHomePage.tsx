@@ -143,23 +143,25 @@ function ProductPriceLabel({ label }: { label: string }) {
   const isPrice = /^R\$\s*/i.test(primary);
 
   return (
-    <div className="inline-flex min-h-7 items-center rounded-[5px] border border-[#DF3DA8] px-2 py-1 font-articulat text-[13px] leading-4 text-[#fff] md:rounded-[6px] md:px-3 md:py-2 md:text-[14px] md:leading-5">
+    <div className="inline-flex min-h-8 shrink-0 items-center whitespace-nowrap rounded-[5px] border border-[#DF3DA8] px-3 py-1 font-articulat text-sm leading-4 text-[#fff] md:rounded-[6px] md:py-2 md:text-[14px] md:leading-5">
       {isPrice ? (
-        <strong className="text-[13px] leading-4 font-bold text-[#fff] md:text-[20px] md:leading-6">
+        <strong className="text-sm leading-4 font-bold text-[#fff] md:text-[20px] md:leading-6">
           {primary}
         </strong>
       ) : (
-        <span className="text-[13px] text-[#fff] md:text-[14px]">{primary}</span>
+        <span className="text-sm text-[#fff] md:text-[14px]">{primary}</span>
       )}
       {detail ? (
         <>
           <span
             aria-hidden="true"
-            className="mx-1 text-[13px] leading-none text-[#fff] md:mx-2 md:text-lg"
+            className="mx-1 text-[9px] leading-none text-[#fff] md:mx-2 md:text-lg"
           >
             •
           </span>
-          <span className="text-[13px] text-[#fff] md:text-[14px]">{detail}</span>
+          <span className="text-[8px] leading-3 text-[#fff] md:text-[14px] md:leading-5">
+            {detail}
+          </span>
         </>
       ) : null}
     </div>
@@ -418,19 +420,19 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
               >
                 <span
                   aria-hidden="true"
-                  className="pointer-events-none absolute -top-1 left-1/2 h-[6px] w-[88px] -translate-x-1/2 rounded-full bg-[#8B7BAA] md:-left-1 md:top-1/2 md:h-[146px] md:w-[7px] md:translate-x-0 md:-translate-y-1/2"
+                  className="pointer-events-none absolute -top-1 left-1/2 h-[6px] w-[120px] -translate-x-1/2 rounded-full bg-[#8B7BAA] md:-left-1 md:top-1/2 md:h-[146px] md:w-[7px] md:translate-x-0 md:-translate-y-1/2"
                 />
                 <div className="flex flex-col items-center justify-center text-center md:items-stretch md:text-left">
-                  <h3 className="font-articulat text-[1.35rem] leading-tight font-bold tracking-[-0.04em] text-[#fff] md:text-[2.75rem]">
+                  <h3 className="font-articulat text-[2rem] leading-tight font-bold tracking-[-0.04em] text-[#fff] md:text-[2.75rem]">
                     {product.title}
                   </h3>
-                  <p className="studio-body-copy studio-product-copy mt-1 max-w-3xl font-articulat font-normal text-[#fff] md:line-clamp-3 md:max-w-[34rem]">
+                  <p className="studio-body-copy studio-product-copy mt-2 max-w-3xl font-articulat font-normal text-[#fff] md:mt-1 md:line-clamp-3 md:max-w-[34rem]">
                     {product.description}
                   </p>
-                  <div className="mt-2 flex w-full flex-wrap items-center justify-center gap-1 md:mt-6 md:w-auto md:justify-start md:gap-3">
+                  <div className="mt-4 flex w-[94%] flex-nowrap items-center justify-center gap-2 md:mt-6 md:w-auto md:justify-start md:gap-3">
                     <StudioLink
                       url={product.url}
-                      className="inline-flex min-h-7 w-[105px] shrink-0 items-center justify-center whitespace-nowrap rounded-[5px] bg-studio-pink px-3 py-1 text-center font-articulat text-[13px] leading-4 font-normal text-white transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:w-[150px] md:rounded-[6px] md:px-5 md:py-2 md:text-[20px] md:leading-6"
+                      className="inline-flex min-h-8 min-w-0 flex-1 items-center justify-center whitespace-nowrap rounded-[5px] bg-studio-pink px-5 py-1 text-center font-articulat text-sm leading-4 font-normal text-white transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:w-[150px] md:flex-none md:rounded-[6px] md:py-2 md:text-[20px] md:leading-6"
                     >
                       {product.ctaLabel}
                     </StudioLink>
@@ -454,7 +456,7 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
 
       <section
         id="portfolio"
-        className="bg-cover bg-center bg-no-repeat px-5 py-24 text-[#181818] md:px-10 md:py-20"
+        className="bg-cover bg-center bg-no-repeat px-5 py-8 text-[#181818] md:px-10 md:py-16"
         style={{
           backgroundImage:
             'url("https://pub-d51033f4b865409099cb79bce79a2581.r2.dev/home/fundo_nuvens.webp")',
@@ -469,7 +471,7 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
             sizes="(max-width: 768px) 100vw, 1024px"
             className="h-auto w-[92%] md:w-full"
           />
-          <div className="mt-6 flex w-full max-w-2xl flex-nowrap justify-center gap-3 md:mt-8 md:gap-8">
+          <div className="mt-3 flex w-full max-w-2xl flex-nowrap justify-center gap-3 md:mt-6 md:gap-8">
             {content.portfolio.behanceImage ? (
               <StudioLink
                 url={content.portfolio.behanceUrl}
