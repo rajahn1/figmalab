@@ -62,6 +62,125 @@ body {
   letter-spacing: -0.08em;
 }
 
+/* Shared Studio Emi type scale: one size per content role at each breakpoint. */
+.studio-section-title {
+  font-size: clamp(2.25rem, 8.5vw, 3rem);
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+}
+
+.studio-feature-title {
+  font-size: clamp(2.625rem, 12vw, 3.75rem);
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+}
+
+.studio-feature-title-accent {
+  font-size: 1.8em;
+}
+
+.studio-body-copy {
+  font-size: clamp(0.875rem, 3.6vw, 1rem);
+  line-height: 1.45;
+}
+
+.studio-paragraph-copy,
+.studio-product-copy {
+  font-size: 0.8125rem;
+}
+
+.studio-product-copy {
+  line-height: 1.25;
+}
+
+.studio-cta {
+  display: inline-flex;
+  min-height: 2.75rem;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.375rem;
+  font-family: var(--font-articulat), Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 47.999rem) {
+  .studio-hero-accent-line {
+    margin-top: -0.22em;
+  }
+
+  .studio-hero-accent-word {
+    transform: translateY(-0.04em);
+  }
+
+  .studio-hero-cta {
+    min-height: 3rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 1.0625rem;
+  }
+}
+
+.studio-signature-mark {
+  width: 8.5rem;
+  height: auto;
+}
+
+.studio-signature-mark-compact {
+  width: 4.25rem;
+  height: auto;
+}
+
+.studio-portfolio-button {
+  width: 38%;
+}
+
+@media (min-width: 48rem) {
+  .studio-section-title {
+    font-size: clamp(3.25rem, 5vw, 4.25rem);
+    line-height: 0.84;
+  }
+
+  .studio-feature-title {
+    font-size: clamp(4.5rem, 7vw, 6.25rem);
+    line-height: 0.82;
+  }
+
+  .studio-body-copy {
+    line-height: 1.4;
+  }
+
+  .studio-paragraph-copy,
+  .studio-product-copy {
+    font-size: 1rem;
+  }
+
+  .studio-product-copy {
+    line-height: 1.2;
+  }
+
+  .studio-cta {
+    min-height: 3rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  .studio-signature-mark {
+    width: 10.75rem;
+  }
+
+  .studio-signature-mark-compact {
+    width: 5.375rem;
+  }
+
+  .studio-portfolio-button {
+    width: calc(50% - 0.375rem);
+  }
+}
+
 .studio-ticker {
   animation: studio-ticker 28s linear infinite;
 }

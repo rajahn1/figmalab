@@ -23,7 +23,7 @@ function getServiceOrder(service: StudioService) {
 
 function ServiceLink({ service }: { service: StudioService }) {
   const className =
-    "mt-3 inline-flex min-h-10 w-fit self-center items-center justify-center whitespace-nowrap rounded-md bg-[#8B7BAA] px-6 text-center font-articulat text-base text-white transition-colors hover:bg-[#806aa0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#181818] md:min-h-11 md:px-8 md:text-xl";
+    "studio-cta mt-3 self-center bg-[#8B7BAA] text-white transition-colors hover:bg-[#806aa0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#181818]";
 
   if (isInternal(service.url)) {
     return (

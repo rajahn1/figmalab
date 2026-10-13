@@ -177,9 +177,9 @@ function SectionHeading({
 }) {
   return (
     <h2
-      className={`flex items-baseline justify-center whitespace-nowrap text-center font-editorial text-[clamp(2.25rem,11vw,3.5rem)] font-light leading-[0.78] tracking-[-0.06em] md:text-[clamp(3.6rem,9vw,7.5rem)] ${dark ? "text-white" : "text-[#171717]"}`}
+      className={`studio-feature-title flex items-baseline justify-center whitespace-nowrap text-center font-articulat font-light ${dark ? "text-white" : "text-[#171717]"}`}
     >
-      <span className="font-windy mr-[0.12em] inline-block text-[clamp(3.75rem,18vw,5.5rem)] leading-none text-studio-pink md:text-[200px]">
+      <span className="studio-feature-title-accent font-windy mr-[0.12em] inline-block leading-none text-studio-pink">
         {start}
       </span>
       {accent}
@@ -256,9 +256,9 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
             <h1 className="max-w-2xl font-editorial text-[clamp(3rem,14vw,3.5rem)] font-light leading-[0.8] tracking-[-0.05em] md:hidden">
               <span className="block">{content.hero.lineOne}</span>
               <span className="block">{mobileHeroLineTwo}</span>
-              <span className="flex items-baseline whitespace-nowrap">
+              <span className="studio-hero-accent-line flex items-baseline whitespace-nowrap">
                 <span>{mobileHeroLineThree}</span>
-                <span className="font-windy ml-[0.12em] text-[1.35em] leading-none text-studio-pink">
+                <span className="studio-hero-accent-word font-windy ml-[0.12em] text-[1.35em] leading-none text-studio-pink">
                   {content.hero.accent}
                 </span>
               </span>
@@ -277,12 +277,12 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
                 height={28.44}
                 width={201.46}
                 alt="created by studio emi"
-                className="h-auto w-[160px] md:w-[201px]"
+                className="studio-signature-mark"
               />
             </div>
             <StudioLink
               url={content.hero.ctaUrl}
-              className="mt-5 inline-flex w-fit self-center items-center justify-center whitespace-nowrap rounded-md bg-studio-pink px-5 py-2.5 text-center font-articulat text-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:mt-6 md:self-start md:px-8 md:py-3 md:text-2xl"
+              className="studio-cta studio-hero-cta mt-5 self-center bg-studio-pink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:mt-6 md:self-start"
             >
               {content.hero.ctaLabel}
             </StudioLink>
@@ -329,16 +329,16 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
         id="sobre"
         className="bg-[#201F1F] px-5 pt-10 pb-16 md:bg-[#9782b4] md:px-10 md:py-28"
       >
-        <div className="mx-auto grid max-w-5xl gap-9 md:grid-cols-[1.1fr_0.9fr] md:items-center md:gap-12">
-          <div className="order-2 text-center md:order-1 md:text-left">
-            <h2 className="mx-auto max-w-xl text-center text-[clamp(1.85rem,9vw,2.2rem)] font-light leading-[0.92] tracking-[-0.045em] md:hidden">
+        <div className="mx-auto grid w-full min-w-0 max-w-5xl gap-9 md:grid-cols-[1.1fr_0.9fr] md:items-center md:gap-12">
+          <div className="order-2 min-w-0 text-center md:order-1 md:text-left">
+            <h2 className="studio-section-title mx-auto max-w-xl text-center font-light md:hidden">
               <span className="block whitespace-nowrap">{mobileAboutLines[0]}</span>
               <span className="block whitespace-nowrap">{mobileAboutLines[1]}</span>
               <strong className="block whitespace-nowrap font-semibold">
                 {mobileAboutLines[2]}
               </strong>
             </h2>
-            <h2 className="hidden max-w-xl text-[clamp(2.2rem,4.5vw,4.25rem)] font-light leading-[0.8] tracking-[-0.045em] md:block">
+            <h2 className="studio-section-title hidden max-w-xl font-light md:block">
               <span className="block whitespace-nowrap">{desktopAboutLines[0]}</span>
               <span className="block whitespace-nowrap">{desktopAboutLines[1]}</span>
               <span className="block whitespace-nowrap">{desktopAboutLines[2]}</span>
@@ -346,13 +346,13 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
                 {desktopAboutLines[3]}
               </strong>
             </h2>
-            <div className="mx-auto mt-5 max-w-xl space-y-[18px] text-center text-[clamp(0.625rem,2.8vw,0.875rem)] leading-[1.4] text-white/90 md:mx-0 md:mt-5 md:space-y-5 md:text-left md:text-[clamp(0.75rem,1.2vw,1rem)] md:leading-[1.3]">
+            <div className="studio-body-copy studio-paragraph-copy mx-auto mt-5 max-w-xl space-y-[18px] text-center text-white/90 md:mx-0 md:mt-5 md:space-y-5 md:text-left">
               {aboutParagraphs.map((paragraph, index) => (
                 <AboutParagraph key={`${index}-${paragraph}`} text={paragraph} index={index} />
               ))}
             </div>
           </div>
-          <div className="order-1 flex flex-col items-center gap-3 md:order-2 md:gap-6">
+          <div className="order-1 flex w-full min-w-0 flex-col items-center gap-3 md:order-2 md:gap-6">
             <div className="relative mx-auto aspect-[4/5] w-full max-w-[280px] overflow-hidden md:max-w-none">
               <Image
                 src={content.about.image.src}
@@ -414,17 +414,17 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
             {content.products.items.map((product) => (
               <article
                 key={product.title}
-                className="relative grid grid-cols-[minmax(0,1fr)_104px] items-center gap-3 rounded-[16px] border-[1.5px] border-[#949292] px-5 py-5 font-articulat text-[#fff] sm:grid-cols-[minmax(0,1fr)_150px] md:rounded-[24px] md:px-10 md:py-[30px] lg:grid-cols-[minmax(0,1fr)_385px] lg:gap-12"
+                className="relative flex flex-col rounded-[16px] border-[1.5px] border-[#949292] px-5 py-5 font-articulat text-[#fff] md:grid md:grid-cols-[minmax(0,1fr)_150px] md:items-center md:gap-3 md:rounded-[24px] md:px-10 md:py-[30px] lg:grid-cols-[minmax(0,1fr)_385px] lg:gap-12"
               >
                 <span
                   aria-hidden="true"
-                  className="pointer-events-none absolute -left-1 top-1/2 h-[88px] w-[6px] -translate-y-1/2 rounded-full bg-[#8B7BAA] md:h-[146px] md:w-[7px]"
+                  className="pointer-events-none absolute -top-1 left-1/2 h-[6px] w-[88px] -translate-x-1/2 rounded-full bg-[#8B7BAA] md:-left-1 md:top-1/2 md:h-[146px] md:w-[7px] md:translate-x-0 md:-translate-y-1/2"
                 />
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col items-center justify-center text-center md:items-stretch md:text-left">
                   <h3 className="font-articulat text-[1.35rem] leading-tight font-bold tracking-[-0.04em] text-[#fff] md:text-[2.75rem]">
                     {product.title}
                   </h3>
-                  <p className="mt-1 line-clamp-3 max-w-[34rem] font-articulat text-[9px] leading-[1.3] font-normal text-[#fff] md:mt-1 md:text-lg md:leading-[1.1]">
+                  <p className="studio-body-copy studio-product-copy mt-1 max-w-3xl font-articulat font-normal text-[#fff] md:line-clamp-3 md:max-w-[34rem]">
                     {product.description}
                   </p>
                   <div className="mt-2 flex flex-wrap items-center gap-1 md:mt-6 md:gap-3">
@@ -437,12 +437,12 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
                     <ProductPriceLabel label={product.priceLabel} />
                   </div>
                 </div>
-                <div className="relative aspect-[385/266] w-full overflow-hidden rounded-[10px] md:rounded-[16px] lg:h-[266px] lg:w-[385px] lg:justify-self-end">
+                <div className="relative mt-5 aspect-[385/266] w-full max-w-[640px] self-center overflow-hidden rounded-[10px] md:mt-0 md:max-w-none md:self-auto md:rounded-[16px] lg:h-[266px] lg:w-[385px] lg:justify-self-end">
                   <Image
                     src={product.image.src}
                     alt={product.image.alt}
                     fill
-                    sizes="(max-width: 767px) calc(100vw - 120px), (max-width: 1023px) calc(100vw - 160px), 385px"
+                    sizes="(max-width: 767px) calc(100vw - 80px), (max-width: 1023px) 150px, 385px"
                     className="object-cover"
                   />
                 </div>
@@ -473,14 +473,14 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
             {content.portfolio.behanceImage ? (
               <StudioLink
                 url={content.portfolio.behanceUrl}
-                className="group block w-[42%] max-w-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#181818] md:w-[calc(50%-0.375rem)]"
+                className="studio-portfolio-button group block max-w-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#181818]"
               >
                 <Image
                   src={content.portfolio.behanceImage.src}
                   alt={content.portfolio.behanceImage.alt}
                   width={content.portfolio.behanceImage.width}
                   height={content.portfolio.behanceImage.height}
-                  sizes="(max-width: 639px) 42vw, 320px"
+                  sizes="(max-width: 767px) 36vw, 320px"
                   className="h-auto w-full transition-transform group-hover:scale-[1.02]"
                 />
               </StudioLink>
@@ -488,14 +488,14 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
             {content.portfolio.pinterestImage ? (
               <StudioLink
                 url={content.portfolio.pinterestUrl}
-                className="group block w-[42%] max-w-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#181818] md:w-[calc(50%-0.375rem)]"
+                className="studio-portfolio-button group block max-w-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#181818]"
               >
                 <Image
                   src={content.portfolio.pinterestImage.src}
                   alt={content.portfolio.pinterestImage.alt}
                   width={content.portfolio.pinterestImage.width}
                   height={content.portfolio.pinterestImage.height}
-                  sizes="(max-width: 639px) 42vw, 320px"
+                  sizes="(max-width: 767px) 36vw, 320px"
                   className="h-auto w-full transition-transform group-hover:scale-[1.02]"
                 />
               </StudioLink>
@@ -525,13 +525,13 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
               alt="Created by Studio Emi"
               width={202}
               height={29}
-              className="h-auto w-[100px] shrink-0 sm:w-[150px] md:w-[202px]"
+              className="studio-signature-mark-compact shrink-0"
             />
           </div>
         </div>
       </section>
 
-      <footer className="font-articulat flex min-h-8 items-center justify-center gap-1 bg-[#D82099] px-5 py-4 text-center text-[11px] leading-tight text-white md:px-10 md:text-sm">
+      <footer className="studio-body-copy font-articulat flex min-h-8 items-center justify-center gap-1 bg-[#D82099] px-5 py-4 text-center text-white md:px-10">
         <strong className="font-bold">{content.footer.boldText}</strong>
         <span className="font-normal">{content.footer.regularText}</span>
       </footer>
