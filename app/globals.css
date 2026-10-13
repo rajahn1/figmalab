@@ -108,6 +108,19 @@ body {
   white-space: nowrap;
 }
 
+.studio-hero-cta {
+  transition:
+    transform 200ms ease,
+    filter 200ms ease;
+}
+
+@media (min-width: 48rem) and (hover: hover) {
+  .studio-hero-cta:hover {
+    transform: translateY(-2px) scale(1.03);
+    filter: brightness(1.1);
+  }
+}
+
 @media (max-width: 47.999rem) {
   .studio-hero-accent-line {
     margin-top: -0.22em;
@@ -313,8 +326,14 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .studio-hero-cta,
   .cta-button {
     transition: none;
+  }
+
+  .studio-hero-cta:hover,
+  .studio-hero-cta:active {
+    transform: none;
   }
 
   .cta-button:is(:hover, :active) {

@@ -266,7 +266,7 @@ export default function StudioHomePage({ content }: { content: StudioHomeContent
             <h1 className="hidden max-w-2xl font-editorial text-[clamp(3.5rem,7vw,7rem)] font-light leading-[0.78] tracking-[-0.055em] md:block">
               <span className="block">{content.hero.lineOne}</span>
               <span className="block">{desktopHeroLineTwo}</span>
-              <span className="block">{desktopHeroLineThree}</span>
+              <span className="mt-[0.12em] block">{desktopHeroLineThree}</span>
               <span className="font-windy block translate-y-[-32%] text-[clamp(5.5rem,11vw,10rem)] text-studio-pink">
                 {content.hero.accent}
               </span>
