@@ -182,7 +182,7 @@ function SectionHeading({
       <span className="studio-feature-title-accent font-windy mr-[0.12em] inline-block leading-none text-studio-pink">
         {start}
       </span>
-      {accent}
+      <span className="font-editorial">{accent}</span>
     </h2>
   );
 }
