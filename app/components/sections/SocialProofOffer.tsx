@@ -158,6 +158,7 @@ export default function SocialProofOffer({
               src={instructor.mobileImage.src}
               alt={instructor.mobileImage.alt}
               fill
+              unoptimized
               className="object-cover xl:hidden"
             />
             <Image
@@ -165,6 +166,7 @@ export default function SocialProofOffer({
               alt={instructor.desktopImage.alt}
               width={instructor.desktopImage.width}
               height={instructor.desktopImage.height}
+              unoptimized
               className="hidden object-cover xl:block"
             />
           </div>

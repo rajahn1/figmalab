@@ -20,6 +20,7 @@ export default function FaqSupport({ faq, support, settings }: FaqSupportProps) 
         src={lily.src}
         width={lily.width}
         height={lily.height}
+        unoptimized
         className="absolute -bottom-4 -left-15 w-[129px] xl:-left-40 xl:w-84 2xl:w-100"
       />
       <Image
@@ -27,6 +28,7 @@ export default function FaqSupport({ faq, support, settings }: FaqSupportProps) 
         src={lily.src}
         width={lily.width}
         height={lily.height}
+        unoptimized
         className="absolute -right-15 bottom-12 w-[129px] rotate-[-60deg] xl:-right-36 xl:bottom-80 xl:w-84 2xl:w-100"
       />
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 md:gap-12">
