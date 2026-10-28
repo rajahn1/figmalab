@@ -1,14 +1,12 @@
-import Button from "../Button";
 import Carousel from "../Carousel";
 import ModuleSelector from "../ModuleSelector";
 import type { LandingPageContent } from "@/lib/landing/types";
 
 interface CourseModulesProps {
   data: LandingPageContent["modules"];
-  settings: LandingPageContent["settings"];
 }
 
-export default function CourseModules({ data, settings }: CourseModulesProps) {
+export default function CourseModules({ data }: CourseModulesProps) {
   return (
     <section
       id="modulos"
@@ -26,16 +24,6 @@ export default function CourseModules({ data, settings }: CourseModulesProps) {
         </h2>
         <Carousel images={data.items.map((module) => module.image)} />
         <ModuleSelector modules={data.items} />
-        <div className="mt-6">
-          <Button
-            label={settings.defaultCtaLabel}
-            href={settings.checkoutUrl}
-            courseName={settings.courseName}
-            trackingValue={settings.cashPrice}
-            size="xl"
-            content_name="CTA Módulos"
-          />
-        </div>
       </div>
     </section>
   );

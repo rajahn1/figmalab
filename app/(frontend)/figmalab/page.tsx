@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import Footer from "@/app/components/Footer";
 import BlackFridayOverview from "@/app/components/sections/BlackFridayOverview";
 import BlackFridayReleaseSchedule from "@/app/components/sections/BlackFridayReleaseSchedule";
-import CertificateGallery from "@/app/components/sections/CertificateGallery";
 import CourseModules from "@/app/components/sections/CourseModules";
 import FaqSupport from "@/app/components/sections/FaqSupport";
 import Hero from "@/app/components/sections/Hero";
@@ -42,11 +41,9 @@ export default async function FigmaLabPage() {
       <Hero />
       <BlackFridayOverview />
       <BlackFridayReleaseSchedule />
-      <CourseModules data={content.modules} settings={content.settings} />
-      <CertificateGallery certificate={content.certificate} gallery={content.gallery} />
+      <CourseModules data={content.modules} />
       <SocialProofOffer
         feedback={content.feedback}
-        offer={content.offer}
         instructor={content.instructor}
         settings={content.settings}
       />

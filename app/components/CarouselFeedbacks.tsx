@@ -71,7 +71,7 @@ export default function CarouselFeedbacks(props: Props) {
                 width={image.width}
                 height={image.height}
                 sizes="(min-width: 1280px) 33vw, 50vw"
-                className="h-auto w-full object-contain"
+                className="h-[280px] w-full object-contain lg:h-[341px]"
               />
             </div>
           ))}

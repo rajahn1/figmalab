@@ -1,13 +1,13 @@
 import Image from "next/image";
 import type { LandingPageContent } from "@/lib/landing/types";
-import Card from "../Card";
-import CardPrice from "../CardPrice";
+import BlackFridayTicker from "../BlackFridayTicker";
+import Button from "../Button";
 import CarouselFeedbacks from "../CarouselFeedbacks";
 import StyledHeading from "../StyledHeading";
+import BlackFridayOffer from "./BlackFridayOffer";
 
 interface SocialProofOfferProps {
   feedback: LandingPageContent["feedback"];
-  offer: LandingPageContent["offer"];
   instructor: LandingPageContent["instructor"];
   settings: LandingPageContent["settings"];
 }
@@ -21,8 +21,7 @@ function InstructorHeading({ heading }: { heading: LandingPageContent["instructo
   if (plainHeading === "Quem vai te ensinar tudo isso?") {
     return (
       <>
-        <span className="text-text-pink">Quem</span> vai{" "}
-        <br className="hidden md:block" />
+        <span className="text-text-pink">Quem</span> vai <br className="hidden md:block" />
         te
         <br className="md:hidden" />{" "}
         <span className="font-editorial font-light italic">ensinar</span>{" "}
@@ -37,76 +36,41 @@ function InstructorHeading({ heading }: { heading: LandingPageContent["instructo
 
 export default function SocialProofOffer({
   feedback,
-  offer,
   instructor,
   settings,
 }: SocialProofOfferProps) {
   return (
     <>
-      <section className="deferred-section relative flex flex-col items-center justify-center gap-2 bg-text-pink py-8 md:py-20 lg:gap-8">
-        <Image
-          src="/images/ferramentas-figma-2.png"
-          alt="ferramentas figma"
-          width={162}
-          height={978}
-          className="absolute top-4 left-0 hidden mix-blend-lighten xl:block xl:w-16"
-        />
-        <Image
-          src="/images/ferramentas-figma-2.png"
-          alt="ferramentas figma"
-          width={162}
-          height={978}
-          className="absolute right-0 bottom-4 hidden rotate-180 mix-blend-lighten xl:block xl:w-16"
-        />
-        <div className="relative mt-4 flex items-center justify-center gap-10 font-editorial text-5xl leading-7 font-bold text-white md:leading-6 xl:gap-32 xl:text-8xl xl:leading-13 2xl:text-9xl 2xl:leading-16">
-          <h2 className="font-articulat">{feedback.headingStart}</h2>
-          <Image
-            className="absolute -top-3 left-24 w-14 xl:-top-8 xl:left-50 xl:w-36 2xl:-top-12 2xl:left-64 2xl:w-42"
-            src="/images/emoji-feedbacks.webp"
-            alt="ícone coração"
-            width={406.07}
-            height={372.8}
+      <section className="relative z-10 flex flex-col items-center overflow-visible bg-[#D82099] px-4 pt-20 pb-10 text-white lg:px-0 lg:pt-[63px] lg:pb-[45px]">
+        <div className="absolute top-0 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
+          <Button
+            label="Quero ser FigmaLover"
+            href={settings.checkoutUrl}
+            courseName={settings.courseName}
+            trackingValue={settings.cashPrice}
+            size="blackFridayBridge"
+            type="blackFridayPurple"
+            content_name="CTA Módulos Black Friday"
           />
-          <h2 className="font-light italic">{feedback.headingEnd}</h2>
         </div>
-        <CarouselFeedbacks images={feedback.images} />
-      </section>
 
-      <section
-        id="oferta"
-        className="deferred-section bg-bg-black px-8 py-8 text-white md:py-20 xl:py-32"
-      >
-        <div className="flex flex-col items-center gap-4 md:gap-12 xl:items-center">
-          <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-8 xl:gap-12 2xl:gap-20">
-            <div className="flex flex-col items-center gap-4 xl:items-start">
-              <Image
-                alt="Figma Lab Logo"
-                src="/icons/logo-figma-lab.svg"
-                width={238.53}
-                height={57.86}
-                className="xl:hidden"
-              />
-              <Image
-                alt="Figma Lab Logo"
-                src="/images/FigmaLabLogo-desktop.webp"
-                width={670.29}
-                height={165.03}
-                className="hidden w-100 xl:block"
-              />
-              <Card data={offer.benefits} icon="/icons/check-box-icon.svg" />
-            </div>
-            <div className="flex flex-col items-center gap-4 xl:gap-8">
-              <CardPrice settings={settings} />
-              <Image
-                src="/icons/kiwify-compra-segura.svg"
-                alt="logo kiwify"
-                width={140.84}
-                height={14.3}
-              />
-            </div>
-          </div>
+        <h2 className="mx-auto max-w-[979px] text-center font-articulat text-[clamp(2.75rem,7vw,5.9375rem)] leading-[0.81] font-bold tracking-[-0.08em]">
+          <span className="block lg:whitespace-nowrap">
+            Quem{" "}
+            <span className="font-windy inline-block text-[1.426em] leading-[0.81] font-normal tracking-[-0.04em] text-[#201F1F]">
+              aprende
+            </span>
+            , coloca a mão
+          </span>
+          <span className="block lg:whitespace-nowrap">no mouse e começa a evoluir</span>
+        </h2>
+
+        <div className="mt-3 w-full">
+          <CarouselFeedbacks images={feedback.images} />
         </div>
       </section>
+      <BlackFridayTicker />
+      <BlackFridayOffer settings={settings} />
 
       <section className="deferred-section relative overflow-hidden bg-[#F4EDE8] px-8 py-8 md:py-20 xl:py-30 2xl:py-36">
         <div className="absolute bottom-40 -left-10 rotate-45 xl:-left-16 xl:bottom-140">

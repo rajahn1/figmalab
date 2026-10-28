@@ -1,9 +1,10 @@
 import Image from "next/image";
 
+import BlackFridayDateBadge from "../BlackFridayDateBadge";
+import BlackFridayTicker from "../BlackFridayTicker";
 import Button from "../Button";
 
-const r2AssetBase =
-  "https://pub-d51033f4b865409099cb79bce79a2581.r2.dev/figmalab";
+const r2AssetBase = "https://pub-d51033f4b865409099cb79bce79a2581.r2.dev/figmalab";
 
 const navigationLinks = [
   { label: "Para quem é", href: "#para-quem-e" },
@@ -11,8 +12,6 @@ const navigationLinks = [
   { label: "Módulos", href: "#modulos" },
   { label: "Oferta", href: "#oferta" },
 ];
-
-const tickerItems = Array.from({ length: 8 }, (_, index) => index);
 
 export default function Hero() {
   return (
@@ -24,7 +23,13 @@ export default function Hero() {
           rel="noreferrer noopener"
           className="flex shrink-0 items-center gap-2 text-sm font-normal focus-visible:rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#DF3DA8] lg:text-[20px]"
         >
-          <Image src="/icons/studio-emi-mark.svg" alt="" width={33} height={33} aria-hidden="true" />
+          <Image
+            src="/icons/studio-emi-mark.svg"
+            alt=""
+            width={33}
+            height={33}
+            aria-hidden="true"
+          />
           @studioemi.design
         </a>
 
@@ -58,17 +63,7 @@ export default function Hero() {
               <p className="whitespace-nowrap text-[clamp(1.15rem,5vw,1.668rem)] leading-[0.92] tracking-[-0.05em]">
                 DO STUDIO EMI
               </p>
-              <div className="flex min-h-[41px] items-center gap-3 rounded-full border-2 border-[#DF3DA8] px-5 py-1.5 text-[clamp(1rem,4.5vw,1.506rem)] leading-[0.92] tracking-[-0.05em] sm:px-[22px]">
-                <Image
-                  src="/icons/icone-calendario.svg"
-                  alt=""
-                  width={20}
-                  height={21}
-                  aria-hidden="true"
-                  className="h-[21px] w-5 shrink-0"
-                />
-                <span className="whitespace-nowrap">11 a 20 de novembro</span>
-              </div>
+              <BlackFridayDateBadge />
             </div>
           </div>
 
@@ -141,18 +136,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="h-[62px] overflow-hidden bg-[#8B7BAA]" aria-hidden="true">
-        <div className="black-friday-ticker flex h-full w-max items-center whitespace-nowrap font-bold">
-          {tickerItems.map((item) => (
-            <span key={item} className="flex items-center">
-              <span className="px-5 text-sm tracking-[-0.04em] lg:px-6 lg:text-[19px]">
-                BLACK FRIDAY STUDIO EMI
-              </span>
-              <span className="size-2 rounded-full bg-white" />
-            </span>
-          ))}
-        </div>
-      </div>
+      <BlackFridayTicker />
     </section>
   );
 }

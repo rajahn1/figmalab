@@ -7,8 +7,18 @@ export interface btnProps {
   href: string;
   courseName: string;
   trackingValue?: number;
-  size?: "sm" | "md" | "lg" | "xl" | "xxl" | "terciary" | "support" | "blackFriday";
-  type?: "primary" | "secondary" | "terciary" | "support" | "blackFriday";
+  size?:
+    | "sm"
+    | "md"
+    | "lg"
+    | "xl"
+    | "xxl"
+    | "terciary"
+    | "support"
+    | "blackFriday"
+    | "blackFridayBridge"
+    | "blackFridayOffer";
+  type?: "primary" | "secondary" | "terciary" | "support" | "blackFriday" | "blackFridayPurple";
   content_name?: string;
 }
 
@@ -21,7 +31,11 @@ export default function Button({
   type = "primary",
   content_name = "CTA Hero",
 }: btnProps) {
-  const isCheckout = type === "primary" || type === "terciary" || type === "blackFriday";
+  const isCheckout =
+    type === "primary" ||
+    type === "terciary" ||
+    type === "blackFriday" ||
+    type === "blackFridayPurple";
   const hasAttentionEffect = type === "primary" || type === "terciary";
 
   const handleOnClickBtn = () => {
@@ -50,6 +64,10 @@ export default function Button({
     support: "px-6 py-2 text-xs xl:text-xl xl:px-12 xl:py-3",
     blackFriday:
       "min-h-[3.5rem] px-7 py-3 text-xl sm:min-h-[4.5rem] sm:px-8 sm:py-4 sm:text-[2.082rem]",
+    blackFridayBridge:
+      "min-h-[3.5rem] px-8 py-3 text-xl sm:min-h-[5.317rem] sm:px-[3.25rem] sm:py-4 sm:text-[2.472rem]",
+    blackFridayOffer:
+      "min-h-[3.75rem] w-full px-5 py-3 text-xl sm:min-h-[3.807rem] sm:px-8 sm:text-[1.766rem]",
   };
 
   const bgClasses = {
@@ -58,6 +76,7 @@ export default function Button({
     terciary: "bg-[#D82099] shadow-[0_0_25px_1.3px_rgba(216,32,153,1)]",
     support: "bg-[#353535] text-white",
     blackFriday: "bg-[#D82099]",
+    blackFridayPurple: "bg-[#8B7BAA]",
   };
 
   return (
@@ -66,7 +85,7 @@ export default function Button({
       target="_blank"
       rel="noreferrer noopener"
       onClick={handleOnClickBtn}
-      className={`cta-button ${hasAttentionEffect ? "cta-button--attention" : ""} relative z-10 inline-flex w-max items-center justify-center rounded-full font-bold text-white ${bgClasses[type]} ${sizeClasses[size]}`}
+      className={`cta-button ${hasAttentionEffect ? "cta-button--attention" : ""} relative z-10 inline-flex items-center justify-center rounded-full font-bold text-white ${size === "blackFridayOffer" ? "w-full" : "w-max"} ${bgClasses[type]} ${sizeClasses[size]}`}
     >
       {label}
     </a>
