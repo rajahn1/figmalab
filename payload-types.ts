@@ -631,11 +631,11 @@ export interface LandingPage {
       id?: string | null;
     }[];
     /**
-     * Referência atual: 272×291px.
+     * Referência atual: 553×590px.
      */
     mobileImage: number | Media;
     /**
-     * Referência atual: 939×986px.
+     * Referência atual: 1908×2001px.
      */
     desktopImage: number | Media;
   };

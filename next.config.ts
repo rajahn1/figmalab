@@ -7,6 +7,7 @@ const mediaHostname = process.env.R2_PUBLIC_URL
 
 const nextConfig: NextConfig = {
   images: {
+    unoptimized: true,
     qualities: [75, 76, 78, 100],
     remotePatterns: mediaHostname
       ? [
