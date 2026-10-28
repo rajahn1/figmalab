@@ -7,8 +7,8 @@ export interface btnProps {
   href: string;
   courseName: string;
   trackingValue?: number;
-  size?: "sm" | "md" | "lg" | "xl" | "xxl" | "terciary" | "support";
-  type?: "primary" | "secondary" | "terciary" | "support";
+  size?: "sm" | "md" | "lg" | "xl" | "xxl" | "terciary" | "support" | "blackFriday";
+  type?: "primary" | "secondary" | "terciary" | "support" | "blackFriday";
   content_name?: string;
 }
 
@@ -21,7 +21,8 @@ export default function Button({
   type = "primary",
   content_name = "CTA Hero",
 }: btnProps) {
-  const isCheckout = type === "primary" || type === "terciary";
+  const isCheckout = type === "primary" || type === "terciary" || type === "blackFriday";
+  const hasAttentionEffect = type === "primary" || type === "terciary";
 
   const handleOnClickBtn = () => {
     if (isCheckout) {
@@ -47,6 +48,8 @@ export default function Button({
     xxl: "px-12 py-6 text-3xl",
     terciary: "md:px-16 md:py-5 md:text-4xl text-lg py-2 px-4 xl:px-8 xl:py-2 xl:text-xl",
     support: "px-6 py-2 text-xs xl:text-xl xl:px-12 xl:py-3",
+    blackFriday:
+      "min-h-[3.5rem] px-7 py-3 text-xl sm:min-h-[4.5rem] sm:px-8 sm:py-4 sm:text-[2.082rem]",
   };
 
   const bgClasses = {
@@ -54,6 +57,7 @@ export default function Button({
     secondary: "bg-gradient-to-b from-[#D82099] to-[#DF65B5]",
     terciary: "bg-[#D82099] shadow-[0_0_25px_1.3px_rgba(216,32,153,1)]",
     support: "bg-[#353535] text-white",
+    blackFriday: "bg-[#D82099]",
   };
 
   return (
@@ -62,7 +66,7 @@ export default function Button({
       target="_blank"
       rel="noreferrer noopener"
       onClick={handleOnClickBtn}
-      className={`cta-button ${isCheckout ? "cta-button--attention" : ""} relative z-10 inline-flex w-max items-center justify-center rounded-full font-bold text-white ${bgClasses[type]} ${sizeClasses[size]}`}
+      className={`cta-button ${hasAttentionEffect ? "cta-button--attention" : ""} relative z-10 inline-flex w-max items-center justify-center rounded-full font-bold text-white ${bgClasses[type]} ${sizeClasses[size]}`}
     >
       {label}
     </a>

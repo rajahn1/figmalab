@@ -282,6 +282,19 @@ body {
   will-change: transform;
 }
 
+.black-friday-float {
+  animation: black-friday-float 3.4s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.black-friday-float-delayed {
+  animation-delay: -1.7s;
+}
+
+.black-friday-ticker {
+  animation: black-friday-ticker 28s linear infinite;
+}
+
 .marquee-forward {
   animation: marquee-forward 20s linear infinite;
 }
@@ -303,6 +316,18 @@ body {
   to {
     transform: translateY(-15px) scale(1.05);
     opacity: 0.9;
+  }
+}
+
+@keyframes black-friday-float {
+  to {
+    transform: translateY(-18px);
+  }
+}
+
+@keyframes black-friday-ticker {
+  to {
+    transform: translateX(-50%);
   }
 }
 
@@ -353,6 +378,8 @@ body {
   }
 
   .hero-float,
+  .black-friday-float,
+  .black-friday-ticker,
   .marquee-forward,
   .marquee-backward,
   .separator-marquee,

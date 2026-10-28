@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 
 import Footer from "@/app/components/Footer";
+import BlackFridayOverview from "@/app/components/sections/BlackFridayOverview";
+import BlackFridayReleaseSchedule from "@/app/components/sections/BlackFridayReleaseSchedule";
 import CertificateGallery from "@/app/components/sections/CertificateGallery";
 import CourseModules from "@/app/components/sections/CourseModules";
 import FaqSupport from "@/app/components/sections/FaqSupport";
 import Hero from "@/app/components/sections/Hero";
-import MarketingIntro from "@/app/components/sections/MarketingIntro";
 import SocialProofOffer from "@/app/components/sections/SocialProofOffer";
 import { getLandingPage } from "@/lib/landing/get-content";
 
@@ -38,13 +39,9 @@ export default async function FigmaLabPage() {
 
   return (
     <main className="max-w-screen bg-[#D82099] font-articulat text-[#313131]">
-      <Hero data={content.hero} settings={content.settings} />
-      <MarketingIntro
-        comparison={content.comparison}
-        method={content.method}
-        receives={content.receives}
-        settings={content.settings}
-      />
+      <Hero />
+      <BlackFridayOverview />
+      <BlackFridayReleaseSchedule />
       <CourseModules data={content.modules} settings={content.settings} />
       <CertificateGallery certificate={content.certificate} gallery={content.gallery} />
       <SocialProofOffer

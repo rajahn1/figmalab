@@ -72,7 +72,10 @@ export default function SocialProofOffer({
         <CarouselFeedbacks images={feedback.images} />
       </section>
 
-      <section className="deferred-section bg-bg-black px-8 py-8 text-white md:py-20 xl:py-32">
+      <section
+        id="oferta"
+        className="deferred-section bg-bg-black px-8 py-8 text-white md:py-20 xl:py-32"
+      >
         <div className="flex flex-col items-center gap-4 md:gap-12 xl:items-center">
           <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-8 xl:gap-12 2xl:gap-20">
             <div className="flex flex-col items-center gap-4 xl:items-start">

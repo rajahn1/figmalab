@@ -11,7 +11,10 @@ interface CourseModulesProps {
 
 export default function CourseModules({ data, settings }: CourseModulesProps) {
   return (
-    <section className="deferred-section bg-[#212121] px-8 py-8 md:py-20 2xl:py-32">
+    <section
+      id="modulos"
+      className="deferred-section bg-[#212121] px-8 py-8 md:py-20 2xl:py-32"
+    >
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4">
         <h2 className="text-center font-articulat text-4xl leading-8 font-bold tracking-[-5%] text-white md:leading-14 lg:text-6xl lg:leading-12 xl:text-5xl xl:leading-11 2xl:text-6xl">
           <StyledHeading segments={data.heading} />
