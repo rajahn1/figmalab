@@ -83,13 +83,13 @@ export default function CarouselFeedbacks(props: Props) {
         type="button"
         aria-label="Ver feedbacks anteriores"
         onClick={prev}
-        className="absolute -left-5 md:-left-15 top-1/2 -translate-y-1/2 text-white p-3 transition hover:cursor-pointer"
+        className="absolute -left-5 md:-left-12 top-1/2 -translate-y-1/2 text-white p-3 transition hover:cursor-pointer"
       >
         <Image
           src="/icons/arrow-left-feedback.svg"
           width={40}
           height={40}
-          className="w-3 md:w-10"
+          className="h-auto w-2.5 md:w-[27px]"
           alt=""
         />
       </button>
@@ -97,13 +97,13 @@ export default function CarouselFeedbacks(props: Props) {
         type="button"
         aria-label="Ver próximos feedbacks"
         onClick={next}
-        className="absolute -right-5 md:-right-15 top-1/2 -translate-y-1/2 text-white p-3 transition hover:cursor-pointer"
+        className="absolute -right-5 md:-right-12 top-1/2 -translate-y-1/2 text-white p-3 transition hover:cursor-pointer"
       >
         <Image
           src="/icons/arrow-right-feedback.svg"
           width={40}
           height={40}
-          className="w-3 md:w-10"
+          className="h-auto w-2.5 md:w-[27px]"
           alt=""
         />
       </button>

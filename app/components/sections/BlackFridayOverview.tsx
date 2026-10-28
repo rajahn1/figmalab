@@ -89,20 +89,20 @@ export default function BlackFridayOverview() {
           alt="Dois tablets exibindo o conteúdo do FigmaLab ao lado de uma xícara de café"
           width={950}
           height={1197}
+          quality={100}
           sizes="(max-width: 1023px) 92vw, 633px"
-          className="h-auto w-full max-w-[633px] justify-self-center"
+          className="h-auto w-full max-w-[633px] justify-self-center lg:h-full lg:w-auto lg:max-w-none lg:justify-self-end lg:self-stretch"
         />
 
         <div className="w-full max-w-[518px] justify-self-center lg:justify-self-start">
-          <h2 className="font-articulat text-[clamp(3.25rem,7vw,5.9375rem)] leading-[0.85] font-bold tracking-[-0.06em]">
-            <span className="block whitespace-nowrap">
-              Para{" "}
-              <span className="font-windy inline-block translate-y-[0.08em] text-[1.72em] leading-[0.5] font-normal text-[#DF3DA8]">
-                quem
-              </span>{" "}
-              é
-            </span>
-            <span className="block">o FigmaLab?</span>
+          <h2>
+            <Image
+              src="/icons/para-quem-figmalab.svg"
+              alt="Para quem é o FigmaLab?"
+              width={481}
+              height={219}
+              className="h-auto w-full max-w-[481px]"
+            />
           </h2>
 
           <ul className="mt-6 lg:mt-[34px]">
@@ -142,7 +142,10 @@ export default function BlackFridayOverview() {
               key={item.emphasis}
               className="relative mx-auto aspect-square w-full max-w-[251px] rounded-[25px] bg-[#D82099] text-center text-[clamp(1.25rem,2vw,1.743rem)] leading-[0.95] tracking-[-0.04em] lg:h-[250px] lg:aspect-auto"
             >
-              <div className="absolute top-4 left-[21px] flex items-center gap-[3px]" aria-hidden="true">
+              <div
+                className="absolute top-4 left-[21px] flex items-center gap-[3px]"
+                aria-hidden="true"
+              >
                 <span className="size-[5.5px] rounded-full bg-white" />
                 <span className="size-[5.5px] rounded-full bg-white" />
                 <span className="size-[5.5px] rounded-full bg-white" />

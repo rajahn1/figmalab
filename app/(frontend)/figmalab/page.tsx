@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import Footer from "@/app/components/Footer";
 import BlackFridayOverview from "@/app/components/sections/BlackFridayOverview";
+import BlackFridayFooter from "@/app/components/sections/BlackFridayFooter";
 import BlackFridayReleaseSchedule from "@/app/components/sections/BlackFridayReleaseSchedule";
 import CourseModules from "@/app/components/sections/CourseModules";
 import FaqSupport from "@/app/components/sections/FaqSupport";
@@ -37,18 +37,14 @@ export default async function FigmaLabPage() {
   const content = await getLandingPage();
 
   return (
-    <main className="max-w-screen bg-[#D82099] font-articulat text-[#313131]">
+    <main className="black-friday-page max-w-screen bg-[#D82099] font-articulat text-[#313131]">
       <Hero />
       <BlackFridayOverview />
       <BlackFridayReleaseSchedule />
       <CourseModules data={content.modules} />
-      <SocialProofOffer
-        feedback={content.feedback}
-        instructor={content.instructor}
-        settings={content.settings}
-      />
-      <FaqSupport faq={content.faq} support={content.support} settings={content.settings} />
-      <Footer data={content.footer} />
+      <SocialProofOffer feedback={content.feedback} settings={content.settings} />
+      <FaqSupport faq={content.faq} />
+      <BlackFridayFooter settings={content.settings} />
     </main>
   );
 }

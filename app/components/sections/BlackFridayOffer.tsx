@@ -101,10 +101,7 @@ function PriceCard({ settings }: BlackFridayOfferProps) {
 
 export default function BlackFridayOffer({ settings }: BlackFridayOfferProps) {
   return (
-    <section
-      id="oferta"
-      className="overflow-hidden bg-[#201F1F] pt-14 pb-16 text-white lg:pt-20 lg:pb-[109px]"
-    >
+    <section id="oferta" className="overflow-hidden bg-[#201F1F] pt-14 text-white lg:pt-20">
       <div className="mx-auto grid w-full max-w-[1090px] items-center px-5 lg:grid-cols-[450px_668px] lg:px-0">
         <div className="relative z-10 lg:pt-[14px]">
           <h2 className="font-editorial text-[clamp(3.25rem,11vw,4.384rem)] leading-[0.91] font-light tracking-[-0.06em]">
@@ -119,25 +116,30 @@ export default function BlackFridayOffer({ settings }: BlackFridayOfferProps) {
               <span className="relative z-10">valor especial.</span>
               <span
                 aria-hidden="true"
-                className="absolute right-0 bottom-[0.04em] left-0 h-[0.105em] bg-[#DF3DA8]"
+                className="absolute right-0 bottom-[0.12em] left-0 z-0 h-[0.105em] bg-[#DF3DA8]"
               />
             </span>
           </h2>
 
-          <p className="mt-8 max-w-[393px] text-[clamp(1.125rem,4vw,1.608rem)] leading-[1.15] tracking-[-0.02em]">
-            Você não precisa continuar acumulando referências sem saber o que fazer com elas, nem
-            depender de um momento de inspiração para começar seus projetos. O FigmaLab reúne
-            processo criativo, fundamentos do design, domínio da ferramenta e prática em uma única
-            jornada.
-          </p>
+          <div className="mt-8 max-w-[393px] space-y-5 text-[clamp(1.125rem,4vw,1.608rem)] leading-[1.15] tracking-[-0.02em]">
+            <p>
+              Você não precisa continuar acumulando referências sem saber o que fazer com elas, nem
+              depender de um momento de inspiração para começar seus projetos.
+            </p>
+            <p>
+              O FigmaLab reúne processo criativo, fundamentos do design, domínio da ferramenta e
+              prática em uma única jornada.
+            </p>
+          </div>
         </div>
 
         <div className="relative mt-8 w-full max-w-[668px] justify-self-center lg:mt-0 lg:-ml-7 lg:justify-self-start">
           <Image
             src={emiOpportunityImage}
             alt="Emi sentada em uma cesta do Figma com cupons da Black Friday"
-            width={668}
-            height={624}
+            width={1337}
+            height={1250}
+            quality={100}
             sizes="(max-width: 1023px) 94vw, 668px"
             className="h-auto w-full object-contain"
           />
@@ -147,16 +149,14 @@ export default function BlackFridayOffer({ settings }: BlackFridayOfferProps) {
       <div className="mx-auto mt-10 w-[calc(100%-2rem)] max-w-[1721px] rounded-[50px] bg-black px-5 py-12 sm:px-8 lg:mt-[51px] lg:px-0 lg:py-[96px]">
         <div className="mx-auto grid max-w-[1090px] items-center gap-12 lg:grid-cols-[555px_480px] lg:gap-[55px]">
           <div className="flex flex-col items-start">
-            <h2 className="font-articulat text-[clamp(3.5rem,8vw,5rem)] leading-[0.91] font-extrabold tracking-[-0.07em]">
-              <span className="block">Aproveite</span>
-              <span className="block whitespace-nowrap">
-                a Black
-                <span className="font-windy inline-block font-normal tracking-[-0.04em] text-[#DF3DA8]">
-                  Lab
-                </span>
-              </span>
-              <span className="block">para entrar</span>
-              <span className="block whitespace-nowrap">no FigmaLab!</span>
+            <h2 className="w-full max-w-[555px]">
+              <Image
+                src="/icons/aproveite-a-black-lab.svg"
+                alt="Aproveite a BlackLab para entrar no FigmaLab!"
+                width={555}
+                height={341}
+                className="h-auto w-full"
+              />
             </h2>
 
             <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-2 lg:mt-[42px]">

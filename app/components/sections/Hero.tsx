@@ -16,7 +16,7 @@ const navigationLinks = [
 export default function Hero() {
   return (
     <section id="section-hero" className="overflow-hidden bg-[#201F1F] font-articulat text-white">
-      <header className="mx-auto flex max-w-[1062px] flex-col items-center gap-5 px-5 pt-5 sm:flex-row sm:justify-between lg:px-0 lg:pt-[69px]">
+      <header className="mx-auto flex max-w-[1062px] flex-col items-center gap-5 px-5 pt-5 sm:flex-row sm:justify-between lg:px-0 lg:pt-5">
         <a
           href="https://www.instagram.com/studioemi.design/"
           target="_blank"
@@ -49,35 +49,38 @@ export default function Hero() {
         </nav>
       </header>
 
-      <div className="mx-auto grid max-w-[1062px] px-5 pt-10 pb-12 lg:grid-cols-[450px_586px] lg:gap-[26px] lg:px-0 lg:pt-[55px] lg:pb-[71px]">
+      <div className="mx-auto grid max-w-[1062px] px-5 pt-10 pb-12 lg:grid-cols-[450px_586px] lg:gap-[26px] lg:px-0 lg:pt-[52px] lg:pb-[55px]">
         <div className="relative z-10 flex flex-col items-start">
           <div className="w-full">
-            <h1 className="flex h-[clamp(6.4rem,30vw,9.375rem)] items-center whitespace-nowrap leading-[0.92] tracking-[-0.05em]">
-              <span className="text-[clamp(4.5rem,20vw,7.451rem)] font-bold">Black</span>
-              <span className="-ml-[0.16em] translate-y-[-0.03em] font-windy text-[clamp(6rem,27vw,10.175rem)] font-normal text-[#DF3DA8]">
+            <h1 className="flex h-[clamp(6.4rem,30vw,8.75rem)] items-center whitespace-nowrap leading-[0.92] tracking-[-0.05em]">
+              <span className="text-[clamp(4.5rem,20vw,6.723rem)] font-bold">Black</span>
+              <span className="-ml-[0.16em] translate-y-[-0.03em] font-windy text-[clamp(6rem,27vw,9.18rem)] font-normal text-[#DF3DA8]">
                 Lab
               </span>
             </h1>
 
             <div className="mt-[3px] flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-[10px]">
-              <p className="whitespace-nowrap text-[clamp(1.15rem,5vw,1.668rem)] leading-[0.92] tracking-[-0.05em]">
+              <p className="whitespace-nowrap text-[clamp(1.15rem,5vw,1.374rem)] leading-[0.92] tracking-[-0.05em]">
                 DO STUDIO EMI
               </p>
               <BlackFridayDateBadge />
             </div>
           </div>
 
-          <div className="mt-[31px] h-px w-full bg-[#585858]" aria-hidden="true" />
+          <div
+            className="mt-[31px] h-px w-full bg-[#585858] lg:mt-[19px] lg:w-[395px]"
+            aria-hidden="true"
+          />
 
-          <h2 className="mt-[38px] max-w-[441px] font-editorial text-[clamp(3rem,12vw,4.551rem)] leading-[1.04] font-light tracking-[-0.07em]">
+          <h2 className="mt-[38px] max-w-[441px] font-editorial text-[clamp(3rem,12vw,4.106rem)] leading-[1.04] font-light tracking-[-0.07em] lg:mt-[22px] lg:max-w-[398px]">
             Domine o Figma de
             <br />
             uma vez por todas
             <br />
-            com <strong className="font-normal text-[#DF3DA8]">R$70 OFF</strong>!
+            com <strong className="font-normal text-[#DF3DA8]">R$70 OFF</strong> !
           </h2>
 
-          <p className="mt-[25px] max-w-[438px] text-[clamp(1.125rem,5vw,1.732rem)] leading-[1.108] tracking-[-0.01em]">
+          <p className="mt-[25px] max-w-[438px] text-[clamp(1.125rem,5vw,1.464rem)] leading-[1.108] tracking-[-0.01em] lg:mt-[5px] lg:max-w-[431px]">
             Aprenda a dominar o Figma e{" "}
             <strong className="font-bold">
               desenvolver seu processo criativo para criar posts e carrosséis com mais autonomia
@@ -88,7 +91,7 @@ export default function Hero() {
             </strong>
           </p>
 
-          <div className="mt-[31px]">
+          <div className="mt-[31px] lg:mt-6">
             <Button
               label="Eu quero aproveitar!"
               href="https://pay.kiwify.com.br/eADN6hR"
@@ -101,19 +104,20 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative mt-12 h-[430px] w-full max-w-[686px] justify-self-center sm:h-[610px] lg:mt-[81px] lg:h-[748px] lg:w-[686px] lg:max-w-none lg:justify-self-start">
+        <div className="relative mt-12 h-[430px] w-full max-w-[686px] justify-self-center sm:h-[610px] lg:mt-[31px] lg:h-[664px] lg:w-[686px] lg:max-w-none lg:justify-self-start">
           <div
             aria-hidden="true"
-            className="absolute bottom-[4%] left-[1%] h-[13%] w-[96%] rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0)_72%)] lg:bottom-[4.5%]"
+            className="absolute bottom-[4%] left-[1%] h-[13%] w-[96%] rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0)_72%)] lg:bottom-[4.5%] lg:left-[1.75%] lg:w-[85.7%]"
           />
           <Image
             src={`${r2AssetBase}/emi_com_estrelas.webp`}
             alt="Emi sentada, cercada por flores rosas"
-            width={994}
-            height={1123}
+            width={1366}
+            height={1497}
             priority
-            sizes="(max-width: 639px) 92vw, (max-width: 1023px) 620px, 640px"
-            className="absolute top-[2%] left-[8%] h-auto w-[88%] max-w-none drop-shadow-[0_30px_30px_rgba(0,0,0,0.25)] lg:top-[-1%] lg:left-[6.1%] lg:w-[670px]"
+            quality={100}
+            sizes="(max-width: 639px) 92vw, (max-width: 1023px) 620px, 610px"
+            className="absolute top-[2%] left-[8%] h-auto w-[88%] max-w-none drop-shadow-[0_30px_30px_rgba(0,0,0,0.25)] lg:top-0 lg:left-[1.3%] lg:w-[610px]"
           />
           <Image
             src={`${r2AssetBase}/cupom.webp`}
@@ -121,18 +125,22 @@ export default function Hero() {
             width={772}
             height={330}
             priority
-            sizes="(max-width: 639px) 46vw, (max-width: 1023px) 280px, 327px"
-            className="black-friday-float absolute top-[55%] left-0 h-auto w-[48%] max-w-none lg:top-[55.1%] lg:w-[327px]"
+            quality={100}
+            sizes="(max-width: 639px) 46vw, (max-width: 1023px) 280px, 290px"
+            className="black-friday-float absolute top-[55%] left-0 h-auto w-[48%] max-w-none lg:top-[366px] lg:left-[9px] lg:w-[290px]"
           />
-          <Image
-            src={`${r2AssetBase}/icone_figma.webp`}
-            alt="Ícone tridimensional do Figma em rosa"
-            width={402}
-            height={499}
-            priority
-            sizes="(max-width: 639px) 24vw, (max-width: 1023px) 145px, 170px"
-            className="black-friday-float black-friday-float-delayed absolute top-[50%] right-[2%] h-auto w-[25%] max-w-none lg:top-[50.1%] lg:right-[0.7%] lg:w-[170px]"
-          />
+          <div className="black-friday-float black-friday-float-delayed absolute top-[50%] right-[2%] w-[25%] lg:top-[332px] lg:right-auto lg:left-[388px] lg:flex lg:h-[188px] lg:w-[151px] lg:items-center lg:justify-center">
+            <Image
+              src={`${r2AssetBase}/icone_figma.webp`}
+              alt="Ícone tridimensional do Figma em rosa"
+              width={402}
+              height={499}
+              priority
+              quality={100}
+              sizes="(max-width: 639px) 24vw, (max-width: 1023px) 145px, 136px"
+              className="h-auto w-full max-w-none lg:h-[169px] lg:w-[136px] lg:rotate-[10deg]"
+            />
+          </div>
         </div>
       </div>
 

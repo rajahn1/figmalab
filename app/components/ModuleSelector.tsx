@@ -29,7 +29,7 @@ export default function ModuleSelector({ modules }: { modules: CourseModule[] })
               aria-selected={isActive}
               aria-controls="active-module"
               onClick={() => setActiveModule(moduleNumber)}
-              className={`shrink-0 whitespace-nowrap rounded-full px-3 py-1 text-center font-articulat transition hover:cursor-pointer hover:opacity-90 md:px-6 md:py-2 ${isActive ? "bg-[#c9408f] text-white" : "text-[#313131]"}`}
+              className={`shrink-0 whitespace-nowrap rounded-full px-3 py-1 text-center font-articulat font-medium transition hover:cursor-pointer hover:opacity-90 md:px-6 md:py-2 ${isActive ? "bg-[#c9408f] text-white" : "text-[#313131]"}`}
             >
               MÓDULO {moduleNumber}
             </button>
