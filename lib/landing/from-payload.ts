@@ -1,5 +1,6 @@
 import type { LandingPage, Media } from "@/payload-types";
 
+import { fixedLandingImages } from "./fixed-images";
 import type { HeadingSegment, LandingImage, LandingPageContent } from "./types";
 
 function toImage(value: number | Media | null | undefined, field: string): LandingImage {
@@ -74,7 +75,7 @@ export function fromPayloadLandingPage(page: LandingPage): LandingPageContent {
     certificate: {
       heading: toHeading(page.certificate.heading),
       description: page.certificate.description,
-      image: toImage(page.certificate.image, "certificate.image"),
+      image: fixedLandingImages.certificate,
     },
     gallery: {
       heading: page.gallery.heading,
@@ -95,8 +96,8 @@ export function fromPayloadLandingPage(page: LandingPage): LandingPageContent {
     instructor: {
       heading: toHeading(page.instructor.heading),
       paragraphs: toStrings(page.instructor.paragraphs),
-      mobileImage: toImage(page.instructor.mobileImage, "instructor.mobileImage"),
-      desktopImage: toImage(page.instructor.desktopImage, "instructor.desktopImage"),
+      mobileImage: fixedLandingImages.instructorMobile,
+      desktopImage: fixedLandingImages.instructorDesktop,
     },
     faq: {
       heading: toHeading(page.faq.heading),

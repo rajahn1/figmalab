@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { fixedLandingImages } from "@/lib/landing/fixed-images";
 import type { LandingPageContent } from "@/lib/landing/types";
 import Button from "../Button";
 import StyledHeading from "../StyledHeading";
@@ -10,21 +11,23 @@ interface FaqSupportProps {
 }
 
 export default function FaqSupport({ faq, support, settings }: FaqSupportProps) {
+  const lily = fixedLandingImages.lily;
+
   return (
     <section className="deferred-section relative overflow-hidden bg-bg-black py-8 text-white md:py-20">
       <Image
-        alt="lírio"
-        src="/images/lirio.webp"
-        width={129.16}
-        height={134.28}
-        className="absolute -bottom-4 -left-15 xl:-left-40 xl:w-84 2xl:w-100"
+        alt={lily.alt}
+        src={lily.src}
+        width={lily.width}
+        height={lily.height}
+        className="absolute -bottom-4 -left-15 w-[129px] xl:-left-40 xl:w-84 2xl:w-100"
       />
       <Image
-        alt="lírio"
-        src="/images/lirio.webp"
-        width={129.16}
-        height={134.28}
-        className="absolute -right-15 bottom-12 rotate-[-60deg] xl:-right-36 xl:bottom-80 xl:w-84 2xl:w-100"
+        alt={lily.alt}
+        src={lily.src}
+        width={lily.width}
+        height={lily.height}
+        className="absolute -right-15 bottom-12 w-[129px] rotate-[-60deg] xl:-right-36 xl:bottom-80 xl:w-84 2xl:w-100"
       />
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 md:gap-12">
         <h2 className="font-articulat text-4xl font-bold xl:text-8xl 2xl:text-9xl">

@@ -1,4 +1,5 @@
 import type { HeadingSegment, LandingImage, LandingPageContent } from "./types";
+import { fixedLandingImages } from "./fixed-images";
 
 const image = (src: string, alt: string, width: number, height: number): LandingImage => ({
   src,
@@ -235,7 +236,7 @@ export const defaultLandingPage: LandingPageContent = {
     ],
     description:
       "Ao concluir sua jornada no FigmaLab,\nvocê recebe certificado de conclusão\npara registrar sua evolução e tudo o\nque aprendeu ao longo do curso.",
-    image: image("/images/certificado-mock-opt.webp", "Certificado de conclusão", 922, 699),
+    image: fixedLandingImages.certificate,
   },
   gallery: {
     heading: "Veja os carrosséis que você\nvai aprender no curso",
@@ -285,18 +286,8 @@ export const defaultLandingPage: LandingPageContent = {
       "Prazer, eu sou a Emi, designer, fundadora do Studio Emi Design e criadora do FigmaLab. Nos últimos 4 anos desenvolvi projetos para mais de 200 nichos diferentes e uma das maiores lições que aprendi é que designers não travam por falta de criatividade, travam por falta de processo.",
       "Eu também já fiquei perdida na frente da tela, sem saber como transformar referências em layouts criativos e estratégicos. Foi organizando meu processo criativo e dominando o Figma que minha forma de criar mudou completamente. E hoje ensino esse mesmo caminho para outras designers dentro do FigmaLab.",
     ],
-    mobileImage: image(
-      "/images/quem-vai-te-ensinar-mobile.webp",
-      "Emi, criadora do FigmaLab",
-      272,
-      291
-    ),
-    desktopImage: image(
-      "/images/quem-vai-te-ensinar-desktop.webp",
-      "Emi, criadora do FigmaLab",
-      939,
-      986
-    ),
+    mobileImage: fixedLandingImages.instructorMobile,
+    desktopImage: fixedLandingImages.instructorDesktop,
   },
   faq: {
     heading: [{ text: "Perguntas " }, { text: "frequentes", style: "editorialItalic" }],
