@@ -13,7 +13,7 @@ export default function ModuleSelector({ modules }: { modules: CourseModule[] })
   return (
     <div className="flex min-h-[320px] w-full min-w-0 max-w-[320px] flex-row items-stretch gap-2 md:min-h-0 md:max-w-[720px] md:flex-col md:gap-8 lg:max-w-[1000px] 2xl:max-w-[1010.98px]">
       <div
-        className="flex w-auto min-w-0 shrink-0 flex-col justify-center gap-5 overflow-auto rounded-xl bg-bg-white px-2 text-xs text-bg-black md:w-full md:flex-row md:gap-4 md:rounded-full md:px-8 md:py-4 md:text-xl xl:text-sm"
+        className="flex w-auto min-w-0 shrink-0 flex-col justify-center gap-5 overflow-auto rounded-xl bg-white px-2 text-xs text-bg-black md:w-full md:flex-row md:gap-4 md:rounded-full md:px-8 md:py-4 md:text-xl xl:text-sm"
         role="tablist"
         aria-label="Módulos do curso"
       >
