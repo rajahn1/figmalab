@@ -164,7 +164,7 @@ export default function MarketingIntro({
         <picture className="absolute inset-0">
           <source
             media="(min-width: 768px)"
-            srcSet={desktopMethodBackground.srcSet}
+            srcSet={desktopMethodBackground.srcSet ?? desktopMethodBackground.src}
             sizes={desktopMethodBackground.sizes}
           />
           <img
@@ -209,7 +209,7 @@ export default function MarketingIntro({
         <picture className="absolute inset-0">
           <source
             media="(min-width: 1024px)"
-            srcSet={desktopBenefitsBackground.srcSet}
+            srcSet={desktopBenefitsBackground.srcSet ?? desktopBenefitsBackground.src}
             sizes={desktopBenefitsBackground.sizes}
           />
           <img

@@ -39,7 +39,11 @@ export default function Hero({ data, settings }: HeroProps) {
       }
     >
       <picture className="relative block lg:absolute lg:inset-0">
-        <source media="(min-width: 1024px)" srcSet={desktopHero.srcSet} sizes={desktopHero.sizes} />
+        <source
+          media="(min-width: 1024px)"
+          srcSet={desktopHero.srcSet ?? desktopHero.src}
+          sizes={desktopHero.sizes}
+        />
         <img
           {...mobileHero}
           alt={data.mobileImage.alt}
