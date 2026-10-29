@@ -10,37 +10,37 @@ const audienceItems = [
     before: "Para quem está iniciando e quer ",
     emphasis: "dominar o Figma do zero ao avançado.",
     after: "",
-    heightClass: "lg:h-[79px]",
+    heightClass: "lg:h-[67px]",
   },
   {
     before: "Para quem quer ",
     emphasis: "migrar do Canva para o Figma",
     after: " e ter mais possibilidades na criação dos seus projetos.",
-    heightClass: "lg:h-[106px]",
+    heightClass: "lg:h-[90px]",
   },
   {
     before: "Para ",
     emphasis: "designers experientes que querem deixar o Photoshop",
     after: " e experimentar um fluxo de trabalho mais ágil no Figma.",
-    heightClass: "lg:h-[111px]",
+    heightClass: "lg:h-[94px]",
   },
   {
     before: "Para quem ",
     emphasis: "trava na hora de criar",
     after: " e precisa estruturar um processo criativo para saber por onde começar.",
-    heightClass: "lg:h-[106px]",
+    heightClass: "lg:h-[90px]",
   },
   {
     before: "Para quem ",
     emphasis: "depende demais do Pinterest",
     after: " e quer aprender a analisar referências e transformá-las em designs autorais.",
-    heightClass: "lg:h-[108px]",
+    heightClass: "lg:h-[92px]",
   },
   {
     before: "Para quem ",
     emphasis: "sente que seus designs estão sempre iguais",
     after: " e quer ampliar o repertório.",
-    heightClass: "lg:h-[92px]",
+    heightClass: "lg:h-[78px]",
   },
 ];
 
@@ -120,7 +120,7 @@ export default function BlackFridayOverview() {
             {audienceItems.map((item, index) => (
               <li
                 key={item.emphasis}
-                className={`grid grid-cols-[34px_1fr] items-center gap-3 py-3 text-base leading-[1.02] tracking-[-0.04em] lg:grid-cols-[45px_1fr] lg:py-0 lg:text-[1.623rem] lg:leading-[0.96] ${item.heightClass} ${index < audienceItems.length - 1 ? "border-b border-[#515151]" : ""}`}
+                className={`grid grid-cols-[28px_1fr] items-center gap-2.5 py-2.5 text-sm leading-[1.02] tracking-[-0.04em] lg:grid-cols-[38px_1fr] lg:py-0 lg:text-[1.375rem] lg:leading-[0.96] ${item.heightClass} ${index < audienceItems.length - 1 ? "border-b border-[#515151]" : ""}`}
               >
                 <Image
                   src="/icons/icon-pen.svg"
@@ -128,7 +128,7 @@ export default function BlackFridayOverview() {
                   width={45}
                   height={45}
                   aria-hidden="true"
-                  className="size-[34px] shrink-0 lg:size-[45px]"
+                  className="size-7 shrink-0 lg:size-[38px]"
                 />
                 <p>
                   {item.before}

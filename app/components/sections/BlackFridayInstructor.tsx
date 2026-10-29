@@ -14,8 +14,8 @@ export default function BlackFridayInstructor() {
           alt="Emi, fundadora do Studio Emi Design e criadora do FigmaLab"
           width={397}
           height={542}
-          sizes="calc(100vw - 2.5rem)"
-          className="order-2 h-auto w-full max-w-[397px] justify-self-center object-contain lg:hidden"
+          sizes="calc((100vw - 2.5rem) * 0.75)"
+          className="order-2 h-auto w-3/4 max-w-[298px] justify-self-center object-contain lg:hidden"
         />
         <Image
           src={instructorImage}

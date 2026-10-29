@@ -42,8 +42,20 @@ body {
 
 @layer base {
   :where(.black-friday-page) p {
-    text-wrap: pretty;
     word-spacing: normal;
+  }
+
+  @media (max-width: 63.999rem) {
+    :where(.black-friday-page),
+    :where(.black-friday-page) p {
+      text-wrap: balance;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    :where(.black-friday-page) p {
+      text-wrap: pretty;
+    }
   }
 }
 

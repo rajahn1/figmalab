@@ -81,16 +81,35 @@ export default function Hero() {
             com <strong className="font-normal text-[#DF3DA8]">R$70 OFF</strong> !
           </h2>
 
-          <p className="mt-5 max-w-[350px] text-[1rem] leading-[1.18] tracking-[-0.01em] sm:text-[1.125rem] lg:mt-[5px] lg:max-w-[431px] lg:text-[1.464rem] lg:leading-[1.108]">
-            Aprenda a dominar o Figma e{" "}
-            <strong className="font-bold">
-              desenvolver seu processo criativo para criar posts e carrosséis com mais autonomia
-            </strong>{" "}
-            e criatividade. Aproveite a Black Friday para{" "}
-            <strong className="font-bold">
-              entrar no FigmaLab por um valor especial, por tempo limitado!
-            </strong>
-          </p>
+          <div className="mt-5 max-w-[350px] text-[1rem] leading-[1.18] tracking-[-0.01em] sm:text-[1.125rem] lg:mt-[5px] lg:max-w-[431px] lg:text-[1.464rem] lg:leading-[1.108]">
+            <p className="lg:inline">
+              <span className="lg:hidden">
+                <span className="block whitespace-nowrap">Aprenda a dominar o Figma e</span>
+                <strong className="block whitespace-nowrap font-bold">
+                  desenvolver seu processo criativo
+                </strong>
+                <strong className="block whitespace-nowrap font-bold">
+                  para criar posts e carrosséis com
+                </strong>
+                <span className="block whitespace-nowrap">
+                  <strong className="font-bold">mais autonomia</strong> e criatividade.
+                </span>
+              </span>
+              <span className="hidden lg:inline">
+                Aprenda a dominar o Figma e{" "}
+                <strong className="font-bold">
+                  desenvolver seu processo criativo para criar posts e carrosséis com mais autonomia
+                </strong>{" "}
+                e criatividade.
+              </span>
+            </p>{" "}
+            <p className="lg:inline">
+              Aproveite a Black Friday para{" "}
+              <strong className="font-bold">
+                entrar no FigmaLab por um valor especial, por tempo limitado!
+              </strong>
+            </p>
+          </div>
 
           <div className="mt-[31px] lg:mt-6">
             <Button
