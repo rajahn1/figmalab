@@ -302,29 +302,28 @@ export const defaultLandingPage: LandingPageContent = {
     heading: [{ text: "Perguntas " }, { text: "frequentes", style: "editorialItalic" }],
     items: [
       {
-        question: "Isso é um curso de design de post no Figma?",
+        question: "Preciso saber usar o Figma para fazer o curso?",
         answer:
-          "Sim, o FigmaLab usa o Figma como base para ensinar o domínio do processo criativo e do pensamento estratégico aplicado ao design de posts.",
+          "Não! O FigmaLab começa do zero e avança para recursos e técnicas mais elaborados. Também é indicado para quem já utiliza a ferramenta e deseja desenvolver o processo criativo.",
       },
       {
-        question: "É para iniciantes?",
+        question: "Quando recebo acesso às aulas?",
         answer:
-          "Sim. E também para quem já cria, mas sente que falta clareza, criatividade e domínio do Figma.",
+          "Após a confirmação do pagamento, você recebe as informações de acesso por e-mail. Os dois primeiros módulos são liberados de imediato e o restante dos módulos após 7 dias.",
       },
       {
-        question: "Quando vou ter acesso as aulas?",
+        question: "Por quanto tempo tenho acesso?",
         answer:
-          "Acesse os dois primeiros módulos assim que sua inscrição for confirmada. O conteúdo completo será liberado em 7 dias, garantindo que você siga o cronograma ideal para absorver o método.",
+          "O acesso ao FigmaLab é válido por 1 ano, incluindo as atualizações disponibilizadas durante esse período.",
       },
       {
-        question: "Como vou ter acesso ao curso?",
-        answer:
-          "Assim que o pagamento for aprovado, você vai receber um e-mail com todos os dados de acesso à plataforma.",
+        question: "O curso tem certificado?",
+        answer: "Sim! Você recebe um certificado de conclusão ao finalizar o curso.",
       },
       {
-        question: "Quanto tempo terei de acesso?",
+        question: "Até quando posso aproveitar o desconto?",
         answer:
-          "É válido por 12 meses, incluindo todas as atualizações feitas durante esse período. Ao final desse prazo, você poderá renovar o acesso, caso deseje continuar no Lab.",
+          "A BlackLab acontece de 23 a 27 de novembro. Após o encerramento da campanha, a condição especial de R$ 227 deixa de estar disponível.",
       },
     ],
   },

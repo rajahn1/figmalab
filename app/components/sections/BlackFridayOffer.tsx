@@ -13,8 +13,8 @@ interface BlackFridayOfferProps {
 
 function PriceCard({ settings }: BlackFridayOfferProps) {
   return (
-    <div className="relative w-full max-w-[480px] rounded-[26px] border border-[#DF3DA8] bg-[#201F1F] px-5 pt-7 pb-6 font-articulat text-white sm:px-11 sm:pt-[30px] sm:pb-[25px]">
-      <div className="relative mx-auto w-fit text-center text-[clamp(1.75rem,8vw,2.358rem)] leading-[0.668] tracking-[-0.03em] text-[#979090]">
+    <div className="relative w-full max-w-[340px] rounded-[22px] border border-[#DF3DA8] bg-[#201F1F] px-4 pt-6 pb-5 font-articulat text-white sm:max-w-[480px] sm:rounded-[26px] sm:px-11 sm:pt-[30px] sm:pb-[25px]">
+      <div className="relative mx-auto w-fit text-center text-[1.5rem] leading-[0.668] tracking-[-0.03em] text-[#979090] sm:text-[2.358rem]">
         De R$ 297
         <Image
           src="/icons/black-friday-price-strike.svg"
@@ -26,29 +26,29 @@ function PriceCard({ settings }: BlackFridayOfferProps) {
         />
       </div>
 
-      <div className="mt-4 flex items-end justify-center">
-        <div className="mb-[6px] w-[66px] shrink-0 tracking-[-0.05em]">
-          <p className="text-[clamp(0.9rem,4vw,1.142rem)] leading-[0.72] font-medium text-[#585858]">
+      <div className="mt-2 flex items-end justify-center sm:mt-4 lg:mt-6">
+        <div className="mb-[5px] w-[50px] shrink-0 tracking-[-0.05em] sm:mb-[6px] sm:w-[66px]">
+          <p className="text-[0.78rem] leading-[0.78] font-medium text-[#585858] sm:text-[1.142rem] sm:leading-[0.72] lg:leading-[0.92]">
             Por
             <br />
             apenas
             <br />
             12x de
           </p>
-          <p className="mt-3 text-[clamp(2.25rem,10vw,3.291rem)] leading-[0.55] font-semibold text-[#F4EDE8]">
+          <p className="mt-3 text-[2rem] leading-[0.55] font-semibold text-[#F4EDE8] sm:text-[3.291rem]">
             R$
           </p>
         </div>
-        <p className="text-[clamp(5.4rem,25vw,8.388rem)] leading-[0.7] font-extrabold tracking-[-0.07em] text-[#F4EDE8]">
+        <p className="text-[4.6rem] leading-[0.7] font-extrabold tracking-[-0.07em] text-[#F4EDE8] sm:text-[8.388rem]">
           23,48
         </p>
       </div>
 
-      <p className="mt-4 text-center text-[clamp(1.25rem,6vw,1.872rem)] leading-none font-medium tracking-[-0.02em] text-[#585858]">
+      <p className="mt-4 text-center text-[1.1rem] leading-none font-medium tracking-[-0.02em] text-[#585858] sm:text-[1.872rem]">
         ou <strong className="font-bold text-[#F4EDE8]">R$227</strong> à vista
       </p>
 
-      <div className="mt-8 w-full">
+      <div className="mt-6 w-full sm:mt-8">
         <Button
           type="blackFriday"
           size="blackFridayOffer"
@@ -60,7 +60,7 @@ function PriceCard({ settings }: BlackFridayOfferProps) {
         />
       </div>
 
-      <div className="mt-8 grid grid-cols-3 border-t border-[#585858] pt-4 text-center text-[#F4EDE8]">
+      <div className="mt-6 grid grid-cols-3 border-t border-[#585858] pt-3 text-center text-[#F4EDE8] sm:mt-8 sm:pt-4">
         <div className="flex min-h-[54px] flex-col items-center justify-center px-2">
           <strong className="text-[clamp(1.2rem,5vw,1.543rem)] leading-[0.9] tracking-[-0.07em]">
             1 ano
@@ -102,9 +102,9 @@ function PriceCard({ settings }: BlackFridayOfferProps) {
 export default function BlackFridayOffer({ settings }: BlackFridayOfferProps) {
   return (
     <section id="oferta" className="overflow-hidden bg-[#201F1F] pt-14 text-white lg:pt-20">
-      <div className="mx-auto grid w-full max-w-[1090px] items-center px-5 lg:grid-cols-[450px_668px] lg:px-0">
-        <div className="relative z-10 lg:pt-[14px]">
-          <h2 className="font-editorial text-[clamp(3.25rem,11vw,4.384rem)] leading-[0.91] font-light tracking-[-0.06em]">
+      <div className="mx-auto grid w-full max-w-[1090px] items-center px-6 lg:grid-cols-[450px_668px] lg:px-0">
+        <div className="relative z-10 text-center lg:pt-[14px] lg:text-left">
+          <h2 className="mx-auto max-w-[340px] font-editorial text-[2.75rem] leading-[0.94] font-light tracking-[-0.06em] sm:text-[3.25rem] lg:mx-0 lg:w-max lg:max-w-none lg:whitespace-nowrap lg:text-[4.384rem] lg:leading-[0.91]">
             A oportunidade
             <br />
             de investir no seu
@@ -121,7 +121,7 @@ export default function BlackFridayOffer({ settings }: BlackFridayOfferProps) {
             </span>
           </h2>
 
-          <div className="mt-8 max-w-[393px] space-y-5 text-[clamp(1.125rem,4vw,1.608rem)] leading-[1.15] tracking-[-0.02em]">
+          <div className="mx-auto mt-8 max-w-[340px] space-y-5 text-base leading-[1.2] tracking-[-0.02em] lg:mx-0 lg:max-w-[393px] lg:text-[1.608rem] lg:leading-[1.15]">
             <p>
               Você não precisa continuar acumulando referências sem saber o que fazer com elas, nem
               depender de um momento de inspiração para começar seus projetos.
@@ -146,20 +146,27 @@ export default function BlackFridayOffer({ settings }: BlackFridayOfferProps) {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 w-[calc(100%-2rem)] max-w-[1721px] rounded-[50px] bg-black px-5 py-12 sm:px-8 lg:mt-[51px] lg:px-0 lg:py-[96px]">
-        <div className="mx-auto grid max-w-[1090px] items-center gap-12 lg:grid-cols-[555px_480px] lg:gap-[55px]">
-          <div className="flex flex-col items-start">
-            <h2 className="w-full max-w-[555px]">
+      <div className="mx-auto mt-10 w-[calc(100%-2rem)] max-w-[1721px] rounded-[10px] bg-black px-4 py-10 sm:rounded-[50px] sm:px-8 lg:mt-[51px] lg:px-0 lg:py-[96px]">
+        <div className="mx-auto grid max-w-[1090px] items-center gap-8 lg:grid-cols-[555px_480px] lg:gap-[55px]">
+          <div className="flex flex-col items-center lg:items-start">
+            <h2 className="w-full max-w-[272px] sm:max-w-[420px] lg:max-w-[555px]">
+              <Image
+                src="/icons/aproveite-a-black-lab-mobile.svg"
+                alt="Aproveite a BlackLab para entrar no FigmaLab!"
+                width={272}
+                height={168}
+                className="h-auto w-full sm:hidden"
+              />
               <Image
                 src="/icons/aproveite-a-black-lab.svg"
                 alt="Aproveite a BlackLab para entrar no FigmaLab!"
                 width={555}
                 height={341}
-                className="h-auto w-full"
+                className="hidden h-auto w-full sm:block"
               />
             </h2>
 
-            <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-2 lg:mt-[42px]">
+            <div className="mt-10 hidden items-center gap-2 lg:flex">
               <p className="max-w-[156px] text-[clamp(1.4rem,4vw,2.148rem)] leading-[0.92] tracking-[-0.05em] uppercase">
                 Oferta válida de
               </p>
@@ -168,6 +175,14 @@ export default function BlackFridayOffer({ settings }: BlackFridayOfferProps) {
           </div>
 
           <PriceCard settings={settings} />
+
+          <div className="flex items-center justify-center gap-1.5 lg:hidden">
+            <p className="shrink-0 text-left text-[0.72rem] leading-[0.9] tracking-[-0.05em] uppercase">
+              <span className="block">Oferta</span>
+              <span className="block whitespace-nowrap">válida de</span>
+            </p>
+            <BlackFridayDateBadge variant="offer" />
+          </div>
         </div>
       </div>
     </section>

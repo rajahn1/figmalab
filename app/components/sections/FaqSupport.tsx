@@ -1,20 +1,42 @@
 import Image from "next/image";
-import type { LandingPageContent } from "@/lib/landing/types";
 import BlackFridayTicker from "../BlackFridayTicker";
 
-interface FaqSupportProps {
-  faq: LandingPageContent["faq"];
-}
+const faqItems = [
+  {
+    question: "Preciso saber usar o Figma para fazer o curso?",
+    answer:
+      "Não! O FigmaLab começa do zero e avança para recursos e técnicas mais elaborados. Também é indicado para quem já utiliza a ferramenta e deseja desenvolver o processo criativo.",
+  },
+  {
+    question: "Quando recebo acesso às aulas?",
+    answer:
+      "Após a confirmação do pagamento, você recebe as informações de acesso por e-mail. Os dois primeiros módulos são liberados de imediato e o restante dos módulos após 7 dias.",
+  },
+  {
+    question: "Por quanto tempo tenho acesso?",
+    answer:
+      "O acesso ao FigmaLab é válido por 1 ano, incluindo as atualizações disponibilizadas durante esse período.",
+  },
+  {
+    question: "O curso tem certificado?",
+    answer: "Sim! Você recebe um certificado de conclusão ao finalizar o curso.",
+  },
+  {
+    question: "Até quando posso aproveitar o desconto?",
+    answer:
+      "A BlackLab acontece de 23 a 27 de novembro. Após o encerramento da campanha, a condição especial de R$ 227 deixa de estar disponível.",
+  },
+] as const;
 
-export default function FaqSupport({ faq }: FaqSupportProps) {
+export default function FaqSupport() {
   return (
-    <section className="deferred-section relative overflow-hidden bg-[#201F1F] pt-8 text-white md:pt-20">
+    <section className="deferred-section relative overflow-hidden bg-[#201F1F] pt-4 text-white md:pt-10 lg:pt-6">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 md:gap-12">
         <h2 className="whitespace-nowrap font-articulat text-[clamp(1.75rem,7vw,5.9375rem)] font-bold">
           Perguntas <span className="font-articulat text-[#DF3DA8]">frequentes</span>
         </h2>
         <div className="flex w-[88%] flex-col gap-4 md:w-full">
-          {faq.items.map((item) => (
+          {faqItems.map((item) => (
             <details
               key={item.question}
               name="figmalab-faq"

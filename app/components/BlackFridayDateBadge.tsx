@@ -9,10 +9,10 @@ export default function BlackFridayDateBadge({ variant = "hero" }: BlackFridayDa
 
   return (
     <div
-      className={`flex items-center rounded-full border-[#DF3DA8] leading-[0.92] tracking-[-0.05em] text-white ${
+      className={`inline-flex items-center justify-center rounded-full border-[#DF3DA8] leading-none tracking-[-0.05em] text-white lg:justify-start lg:leading-[0.92] ${
         isOffer
-          ? "min-h-12 gap-3 border-[2.5px] px-5 py-2 text-[clamp(1.25rem,4.6vw,2.122rem)] lg:min-h-[58px] lg:w-[386px] lg:gap-[17px] lg:px-[31px]"
-          : "min-h-[41px] gap-3 border-2 px-5 py-1.5 text-[clamp(1rem,4.5vw,1.325rem)] sm:px-[22px] lg:min-h-[38px] lg:gap-[10px] lg:px-[25px] lg:py-1"
+          ? "h-5 gap-1 border px-1.5 py-0 text-[0.625rem] lg:min-h-[58px] lg:w-[386px] lg:gap-[17px] lg:border-[1.6px] lg:px-[31px] lg:py-2 lg:text-[2.122rem]"
+          : "h-5 gap-1 border px-1.5 py-0 text-[0.625rem] lg:min-h-[38px] lg:gap-[10px] lg:border-[1.6px] lg:px-[25px] lg:py-1 lg:text-[1.325rem]"
       }`}
     >
       <Image
@@ -22,10 +22,12 @@ export default function BlackFridayDateBadge({ variant = "hero" }: BlackFridayDa
         height={isOffer ? 29 : 21}
         aria-hidden="true"
         className={
-          isOffer ? "h-[29px] w-7 shrink-0" : "h-[21px] w-5 shrink-0 lg:h-[18px] lg:w-[17px]"
+          isOffer
+            ? "size-[10px] shrink-0 lg:h-[29px] lg:w-7"
+            : "size-[10px] shrink-0 lg:h-[18px] lg:w-[17px]"
         }
       />
-      <span className="whitespace-nowrap">11 a 20 de novembro</span>
+      <span className="inline-flex h-full items-center whitespace-nowrap">11 a 20 de novembro</span>
     </div>
   );
 }

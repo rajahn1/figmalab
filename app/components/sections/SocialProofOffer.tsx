@@ -15,7 +15,7 @@ interface SocialProofOfferProps {
 export default function SocialProofOffer({ feedback, settings }: SocialProofOfferProps) {
   return (
     <>
-      <section className="relative z-10 flex flex-col items-center overflow-visible bg-[#D82099] px-4 pt-20 pb-10 text-white lg:px-0 lg:pt-[63px] lg:pb-[45px]">
+      <section className="relative z-10 flex flex-col items-center overflow-visible bg-[#D82099] px-6 pt-16 pb-10 text-white lg:px-0 lg:pt-[63px] lg:pb-[45px]">
         <div className="absolute top-0 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
           <Button
             label="Quero ser FigmaLover"
@@ -28,7 +28,7 @@ export default function SocialProofOffer({ feedback, settings }: SocialProofOffe
           />
         </div>
 
-        <h2 className="mx-auto w-full max-w-[980px]">
+        <h2 className="mx-auto w-full max-w-[340px] sm:max-w-[520px] lg:max-w-[980px]">
           <Image
             src="/icons/quem-aprende-mao-no-mouse.svg"
             alt="Quem aprende, coloca a mão no mouse e começa a evoluir"
@@ -38,7 +38,7 @@ export default function SocialProofOffer({ feedback, settings }: SocialProofOffe
           />
         </h2>
 
-        <div className="mt-3 w-full">
+        <div className="-mt-1 w-full lg:mt-3">
           <CarouselFeedbacks images={feedback.images} />
         </div>
       </section>

@@ -15,8 +15,9 @@ export default function BlackFridayFooter({ settings }: BlackFridayFooterProps) 
           <Image src="/icons/figmalab-icon.svg" alt="FigmaLab" width={188} height={54} />
 
           <div className="flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row sm:gap-[10px]">
-            <p className="max-w-[201px] text-center text-[clamp(1.25rem,3vw,1.682rem)] leading-[0.91] font-bold tracking-[-0.02em] sm:text-left">
-              Ainda ficou alguma dúvida?
+            <p className="max-w-[201px] text-center text-[1.25rem] leading-[0.95] font-bold tracking-[-0.02em] sm:text-left sm:text-[1.682rem]">
+              <span className="block">Ainda ficou</span>
+              <span className="block">alguma dúvida?</span>
             </p>
             <Button
               label="Fale com o comercial"
@@ -31,16 +32,16 @@ export default function BlackFridayFooter({ settings }: BlackFridayFooterProps) 
 
         <div className="mt-10 h-px w-full bg-[#585858] lg:mt-[49px]" aria-hidden="true" />
 
-        <div className="mt-[7px] flex items-center justify-between gap-6">
-          <p className="text-[clamp(0.75rem,2vw,0.969rem)] leading-[1.25] tracking-[-0.03em]">
-            <strong className="font-extrabold">Studio Emi Design 2026</strong>{" "}
-            <span>Todos os direitos reservados</span>
+        <div className="relative mt-[7px] flex items-center justify-center gap-6 md:justify-between">
+          <p className="text-center text-[clamp(0.75rem,2vw,0.969rem)] leading-[1.25] tracking-[-0.03em] md:text-left">
+            <strong className="block font-extrabold md:inline">Studio Emi Design 2026</strong>{" "}
+            <span className="block md:inline">Todos os direitos reservados</span>
           </p>
 
           <a
             href="#section-hero"
             aria-label="Voltar para o início da página"
-            className="shrink-0 rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#DF3DA8]"
+            className="absolute right-0 shrink-0 rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#DF3DA8] md:static"
           >
             <Image
               src="/icons/icon-arrow-up-black.svg"

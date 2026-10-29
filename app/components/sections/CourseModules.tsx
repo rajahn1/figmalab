@@ -10,9 +10,12 @@ interface CourseModulesProps {
 
 export default function CourseModules({ data }: CourseModulesProps) {
   return (
-    <section id="modulos" className="deferred-section bg-[#212121] px-8 py-8 md:py-20 2xl:py-32">
+    <section
+      id="modulos"
+      className="deferred-section bg-[#212121] px-6 py-10 md:px-8 md:py-20 2xl:py-32"
+    >
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4">
-        <h2 className="w-full max-w-[587px]">
+        <h2 className="w-full max-w-[300px] sm:max-w-[420px] lg:max-w-[587px]">
           <Image
             src="/icons/nossa-trilha-aprendizado.svg"
             alt="Nossa trilha de aprendizado"

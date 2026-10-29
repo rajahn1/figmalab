@@ -43,7 +43,7 @@ export default async function FigmaLabPage() {
       <BlackFridayReleaseSchedule />
       <CourseModules data={content.modules} />
       <SocialProofOffer feedback={content.feedback} settings={content.settings} />
-      <FaqSupport faq={content.faq} />
+      <FaqSupport />
       <BlackFridayFooter settings={content.settings} />
     </main>
   );

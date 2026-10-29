@@ -16,7 +16,7 @@ const navigationLinks = [
 export default function Hero() {
   return (
     <section id="section-hero" className="overflow-hidden bg-[#201F1F] font-articulat text-white">
-      <header className="mx-auto flex max-w-[1062px] flex-col items-center gap-5 px-5 pt-5 sm:flex-row sm:justify-between lg:px-0 lg:pt-5">
+      <header className="mx-auto flex max-w-[1062px] flex-col items-center gap-4 px-5 pt-4 sm:flex-row sm:justify-between lg:px-0 lg:pt-5">
         <a
           href="https://www.instagram.com/studioemi.design/"
           target="_blank"
@@ -29,6 +29,7 @@ export default function Hero() {
             width={33}
             height={33}
             aria-hidden="true"
+            className="size-6 lg:size-[33px]"
           />
           @studioemi.design
         </a>
@@ -49,18 +50,18 @@ export default function Hero() {
         </nav>
       </header>
 
-      <div className="mx-auto grid max-w-[1062px] px-5 pt-10 pb-12 lg:grid-cols-[450px_586px] lg:gap-[26px] lg:px-0 lg:pt-[52px] lg:pb-[55px]">
-        <div className="relative z-10 flex flex-col items-start">
+      <div className="mx-auto grid max-w-[1062px] px-6 pt-6 pb-10 lg:grid-cols-[450px_586px] lg:gap-[26px] lg:px-0 lg:pt-[52px] lg:pb-[55px]">
+        <div className="relative z-10 order-2 flex flex-col items-center text-center lg:order-1 lg:items-start lg:text-left">
           <div className="w-full">
-            <h1 className="flex h-[clamp(6.4rem,30vw,8.75rem)] items-center whitespace-nowrap leading-[0.92] tracking-[-0.05em]">
-              <span className="text-[clamp(4.5rem,20vw,6.723rem)] font-bold">Black</span>
-              <span className="-ml-[0.16em] translate-y-[-0.03em] font-windy text-[clamp(6rem,27vw,9.18rem)] font-normal text-[#DF3DA8]">
+            <h1 className="flex h-[clamp(5.5rem,26vw,8.75rem)] items-center justify-center whitespace-nowrap leading-[0.92] tracking-[-0.05em] lg:justify-start">
+              <span className="text-[clamp(3.8rem,17vw,6.723rem)] font-bold">Black</span>
+              <span className="-ml-[0.16em] translate-y-[-0.03em] font-windy text-[clamp(5rem,23vw,9.18rem)] font-normal text-[#DF3DA8]">
                 Lab
               </span>
             </h1>
 
-            <div className="mt-[3px] flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-[10px]">
-              <p className="whitespace-nowrap text-[clamp(1.15rem,5vw,1.374rem)] leading-[0.92] tracking-[-0.05em]">
+            <div className="mt-1 flex items-center justify-center gap-2 lg:gap-[10px]">
+              <p className="inline-flex h-5 translate-y-px items-center justify-center whitespace-nowrap text-center text-[0.82rem] leading-none tracking-[-0.05em] sm:text-[1rem] lg:h-auto lg:translate-y-0 lg:text-[1.374rem] lg:leading-[0.92]">
                 DO STUDIO EMI
               </p>
               <BlackFridayDateBadge />
@@ -68,11 +69,11 @@ export default function Hero() {
           </div>
 
           <div
-            className="mt-[31px] h-px w-full bg-[#585858] lg:mt-[19px] lg:w-[395px]"
+            className="mt-6 h-px w-[88%] bg-[#585858] lg:mt-[19px] lg:w-[395px]"
             aria-hidden="true"
           />
 
-          <h2 className="mt-[38px] max-w-[441px] font-editorial text-[clamp(3rem,12vw,4.106rem)] leading-[1.04] font-light tracking-[-0.07em] lg:mt-[22px] lg:max-w-[398px]">
+          <h2 className="mt-8 max-w-[350px] font-editorial text-[clamp(2.55rem,11vw,4.106rem)] leading-[1.04] font-light tracking-[-0.07em] lg:mt-[22px] lg:max-w-[398px]">
             Domine o Figma de
             <br />
             uma vez por todas
@@ -80,7 +81,7 @@ export default function Hero() {
             com <strong className="font-normal text-[#DF3DA8]">R$70 OFF</strong> !
           </h2>
 
-          <p className="mt-[25px] max-w-[438px] text-[clamp(1.125rem,5vw,1.464rem)] leading-[1.108] tracking-[-0.01em] lg:mt-[5px] lg:max-w-[431px]">
+          <p className="mt-5 max-w-[350px] text-[1rem] leading-[1.18] tracking-[-0.01em] sm:text-[1.125rem] lg:mt-[5px] lg:max-w-[431px] lg:text-[1.464rem] lg:leading-[1.108]">
             Aprenda a dominar o Figma e{" "}
             <strong className="font-bold">
               desenvolver seu processo criativo para criar posts e carrosséis com mais autonomia
@@ -104,7 +105,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative mt-12 h-[430px] w-full max-w-[686px] justify-self-center sm:h-[610px] lg:mt-[31px] lg:h-[664px] lg:w-[686px] lg:max-w-none lg:justify-self-start">
+        <div className="relative order-1 mt-4 h-[360px] w-full max-w-[420px] justify-self-center sm:h-[520px] sm:max-w-[620px] lg:order-2 lg:mt-[31px] lg:h-[664px] lg:w-[686px] lg:max-w-none lg:justify-self-start">
           <div
             aria-hidden="true"
             className="absolute bottom-[4%] left-[1%] h-[13%] w-[96%] rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0)_72%)] lg:bottom-[4.5%] lg:left-[1.75%] lg:w-[85.7%]"

@@ -57,7 +57,7 @@ export default function CarouselFeedbacks(props: Props) {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="relative w-full 2xl:max-w-6xl xl:max-w-5xl lg:max-w-4xl max-w-[320px] md:mx-auto px-2 py-2">
+    <div className="relative mx-auto w-full max-w-[320px] px-2 py-2 lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {images.map((image) => (
