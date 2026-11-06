@@ -96,11 +96,11 @@ export default function BlackFridayOverview() {
         <Image
           src={cafeTabletImage}
           alt="Dois tablets exibindo o conteúdo do FigmaLab ao lado de uma xícara de café"
-          width={1052}
-          height={1201}
+          width={670.48}
+          height={783.02}
           quality={100}
-          sizes="(min-width: 1024px) 633px, 1px"
-          className="hidden h-full w-auto max-w-none justify-self-end self-stretch lg:block"
+          sizes="(min-width: 1024px) 670.48px, 1px"
+          className="hidden max-w-none justify-self-end lg:block lg:h-[783.02px] lg:w-[670.48px]"
         />
 
         <div className="w-full max-w-[518px] justify-self-center lg:justify-self-start">
