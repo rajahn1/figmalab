@@ -57,7 +57,7 @@ export default function CarouselFeedbacks(props: Props) {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="relative w-full 2xl:max-w-6xl xl:max-w-5xl lg:max-w-4xl max-w-[320px] md:mx-auto px-2 py-2">
+    <div className="relative mx-auto w-full max-w-[320px] px-2 py-2 lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {images.map((image) => (
@@ -71,7 +71,7 @@ export default function CarouselFeedbacks(props: Props) {
                 width={image.width}
                 height={image.height}
                 sizes="(min-width: 1280px) 33vw, 50vw"
-                className="h-auto w-full object-contain"
+                className="h-[280px] w-full object-contain lg:h-[341px]"
               />
             </div>
           ))}
@@ -83,13 +83,13 @@ export default function CarouselFeedbacks(props: Props) {
         type="button"
         aria-label="Ver feedbacks anteriores"
         onClick={prev}
-        className="absolute -left-5 md:-left-15 top-1/2 -translate-y-1/2 text-white p-3 transition hover:cursor-pointer"
+        className="absolute -left-5 md:-left-12 top-1/2 -translate-y-1/2 text-white p-3 transition hover:cursor-pointer"
       >
         <Image
           src="/icons/arrow-left-feedback.svg"
           width={40}
           height={40}
-          className="w-3 md:w-10"
+          className="h-auto w-2.5 md:w-[27px]"
           alt=""
         />
       </button>
@@ -97,13 +97,13 @@ export default function CarouselFeedbacks(props: Props) {
         type="button"
         aria-label="Ver próximos feedbacks"
         onClick={next}
-        className="absolute -right-5 md:-right-15 top-1/2 -translate-y-1/2 text-white p-3 transition hover:cursor-pointer"
+        className="absolute -right-5 md:-right-12 top-1/2 -translate-y-1/2 text-white p-3 transition hover:cursor-pointer"
       >
         <Image
           src="/icons/arrow-right-feedback.svg"
           width={40}
           height={40}
-          className="w-3 md:w-10"
+          className="h-auto w-2.5 md:w-[27px]"
           alt=""
         />
       </button>

@@ -38,13 +38,7 @@ Next.js now serves these files responsively and lazily, so their full source siz
 | `public/images/carrossel-6.webp` |      2.95 MB | Keep 3838×685; WebP/AVIF; target under 700 KB |
 | `public/images/carrossel-7.webp` |      2.78 MB | Keep 3838×685; WebP/AVIF; target under 700 KB |
 | `public/images/carrossel-8.webp` |      2.70 MB | Keep 3838×685; WebP/AVIF; target under 700 KB |
-| `public/images/modulo-2.webp`    |       890 KB | Preserve transparency; target under 300 KB    |
-| `public/images/modulo-3.webp`    |       899 KB | Preserve transparency; target under 300 KB    |
-| `public/images/modulo-4.webp`    |      1.01 MB | Preserve transparency; target under 300 KB    |
-| `public/images/modulo-5.webp`    |       923 KB | Preserve transparency; target under 300 KB    |
-| `public/images/modulo-6.webp`    |       981 KB | Preserve transparency; target under 300 KB    |
-
-Do not flatten transparency on the module cards. Check small text inside the carousel artwork at 2× mobile zoom before accepting a more aggressive export.
+The module cards were replaced by the optimized `modulo01.png` through `modulo07.png` exports. Do not flatten their transparency. Check small text inside the carousel artwork at 2× mobile zoom before accepting a more aggressive export.
 
 Two code-safe optimized replacements were generated during this pass:
 

@@ -1,48 +1,48 @@
 import Image from "next/image";
-import { fixedLandingImages } from "@/lib/landing/fixed-images";
-import type { LandingPageContent } from "@/lib/landing/types";
-import Button from "../Button";
-import StyledHeading from "../StyledHeading";
+import BlackFridayTicker from "../BlackFridayTicker";
 
-interface FaqSupportProps {
-  faq: LandingPageContent["faq"];
-  support: LandingPageContent["support"];
-  settings: LandingPageContent["settings"];
-}
+const faqItems = [
+  {
+    question: "Preciso saber usar o Figma para fazer o curso?",
+    answer:
+      "Não! O FigmaLab começa do zero e avança para recursos e técnicas mais elaborados. Também é indicado para quem já utiliza a ferramenta e deseja desenvolver o processo criativo.",
+  },
+  {
+    question: "Quando recebo acesso às aulas?",
+    answer:
+      "Após a confirmação do pagamento, você recebe as informações de acesso por e-mail. Os dois primeiros módulos são liberados de imediato e o restante dos módulos após 7 dias.",
+  },
+  {
+    question: "Por quanto tempo tenho acesso?",
+    answer:
+      "O acesso ao FigmaLab é válido por 1 ano, incluindo as atualizações disponibilizadas durante esse período.",
+  },
+  {
+    question: "O curso tem certificado?",
+    answer: "Sim! Você recebe um certificado de conclusão ao finalizar o curso.",
+  },
+  {
+    question: "Até quando posso aproveitar o desconto?",
+    answer:
+      "A BlackLab acontece de 23 a 27 de novembro. Após o encerramento da campanha, a condição especial de R$ 227 deixa de estar disponível.",
+  },
+] as const;
 
-export default function FaqSupport({ faq, support, settings }: FaqSupportProps) {
-  const lily = fixedLandingImages.lily;
-
+export default function FaqSupport() {
   return (
-    <section className="deferred-section relative overflow-hidden bg-bg-black py-8 text-white md:py-20">
-      <Image
-        alt={lily.alt}
-        src={lily.src}
-        width={lily.width}
-        height={lily.height}
-        unoptimized
-        className="absolute -bottom-4 -left-15 w-[129px] xl:-left-40 xl:w-84 2xl:w-100"
-      />
-      <Image
-        alt={lily.alt}
-        src={lily.src}
-        width={lily.width}
-        height={lily.height}
-        unoptimized
-        className="absolute -right-15 bottom-12 w-[129px] rotate-[-60deg] xl:-right-36 xl:bottom-80 xl:w-84 2xl:w-100"
-      />
+    <section className="deferred-section relative overflow-hidden bg-[#201F1F] pt-4 text-white md:pt-10 lg:pt-6">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 md:gap-12">
-        <h2 className="font-articulat text-4xl font-bold xl:text-8xl 2xl:text-9xl">
-          <StyledHeading segments={faq.heading} />
+        <h2 className="whitespace-nowrap font-articulat text-[clamp(1.75rem,7vw,5.9375rem)] font-bold">
+          Perguntas <span className="font-articulat text-[#DF3DA8]">frequentes</span>
         </h2>
         <div className="flex w-[88%] flex-col gap-4 md:w-full">
-          {faq.items.map((item) => (
+          {faqItems.map((item) => (
             <details
               key={item.question}
               name="figmalab-faq"
-              className="group overflow-hidden rounded-lg bg-[#403F3F] text-sm font-articulat transition-all lg:text-lg xl:text-xl"
+              className="group overflow-hidden rounded-lg bg-[#403F3F] text-sm font-articulat transition-colors open:bg-transparent lg:text-[20px]"
             >
-              <summary className="flex w-full cursor-pointer list-none items-center justify-between px-4 py-3 text-left hover:bg-white/5 md:px-8 md:py-4 [&::-webkit-details-marker]:hidden">
+              <summary className="flex w-full cursor-pointer list-none items-center justify-between px-4 py-3 text-left transition-colors hover:bg-white/5 group-open:bg-[#D82099] group-open:hover:bg-[#D82099] md:px-8 md:py-4 [&::-webkit-details-marker]:hidden">
                 {item.question}
                 <Image
                   className="w-4 group-open:hidden md:w-8"
@@ -59,48 +59,16 @@ export default function FaqSupport({ faq, support, settings }: FaqSupportProps) 
                   width={32}
                 />
               </summary>
-              <div className="bg-bg-pink p-4 pt-4 leading-4 text-balance text-white xl:leading-6 md:p-8">
+              <div className="bg-transparent p-4 pt-4 leading-4 text-balance text-white md:p-8 lg:leading-6">
                 {item.answer}
               </div>
             </details>
           ))}
         </div>
-        <div className="mt-4 flex aspect-[334.26/171.53] w-94 justify-center gap-2 bg-[url('/images/pasta.png')] bg-cover bg-center bg-no-repeat xl:w-full xl:aspect-[1594/818] xl:items-center xl:gap-16 xl:bg-[url('/images/pasta-desktop.webp')]">
-          <div className="mt-10">
-            <h2 className="font-articulat text-4xl leading-7 font-bold text-[#F4EDE8] xl:text-8xl xl:leading-18">
-              {support.heading.split("\n").map((line, index) => (
-                <span key={`${line}-${index}`}>
-                  {index > 0 ? <br /> : null}
-                  <span
-                    className={
-                      index === support.heading.split("\n").length - 1 ? "text-[#353535]" : ""
-                    }
-                  >
-                    {line}
-                  </span>
-                </span>
-              ))}
-            </h2>
-          </div>
-          <div className="mt-10 flex flex-col gap-2 xl:gap-8">
-            <p className="font-articulat text-xs leading-3 font-normal text-white xl:text-2xl xl:leading-6">
-              Se tiver qualquer dúvida sobre
-              <br /> sua inscrição no FigmaLab, conte
-              <br /> com nosso suporte exclusivo via
-              <br /> WhatsApp. Nossa equipe está
-              <br /> pronta para te atender e tirar
-              <br /> todas as suas dúvidas.
-            </p>
-            <Button
-              label={settings.supportCtaLabel}
-              href={settings.supportUrl}
-              courseName={settings.courseName}
-              type="support"
-              content_name="CTA WhatsApp"
-              size="support"
-            />
-          </div>
-        </div>
+      </div>
+
+      <div className="mt-12 md:mt-20">
+        <BlackFridayTicker />
       </div>
     </section>
   );

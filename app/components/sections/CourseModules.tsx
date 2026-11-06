@@ -1,33 +1,38 @@
-import Button from "../Button";
+import Image from "next/image";
+
 import Carousel from "../Carousel";
 import ModuleSelector from "../ModuleSelector";
-import StyledHeading from "../StyledHeading";
-import type { LandingPageContent } from "@/lib/landing/types";
+import type { LandingImage, LandingPageContent } from "@/lib/landing/types";
+
+const moduleImages: LandingImage[] = Array.from({ length: 7 }, (_, index) => ({
+  src: `/images/modulo${String(index + 1).padStart(2, "0")}.png`,
+  alt: `Capa do módulo ${index + 1}`,
+  width: 338,
+  height: 507,
+}));
 
 interface CourseModulesProps {
   data: LandingPageContent["modules"];
-  settings: LandingPageContent["settings"];
 }
 
-export default function CourseModules({ data, settings }: CourseModulesProps) {
+export default function CourseModules({ data }: CourseModulesProps) {
   return (
-    <section className="deferred-section bg-[#212121] px-8 py-8 md:py-20 2xl:py-32">
+    <section
+      id="modulos"
+      className="deferred-section bg-[#212121] px-6 py-10 md:px-8 md:py-20 2xl:py-32"
+    >
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4">
-        <h2 className="text-center font-articulat text-4xl leading-8 font-bold tracking-[-5%] text-white md:leading-14 lg:text-6xl lg:leading-12 xl:text-5xl xl:leading-11 2xl:text-6xl">
-          <StyledHeading segments={data.heading} />
-        </h2>
-        <Carousel images={data.items.map((module) => module.image)} />
-        <ModuleSelector modules={data.items} />
-        <div className="mt-6">
-          <Button
-            label={settings.defaultCtaLabel}
-            href={settings.checkoutUrl}
-            courseName={settings.courseName}
-            trackingValue={settings.cashPrice}
-            size="xl"
-            content_name="CTA Módulos"
+        <h2 className="w-full max-w-[300px] sm:max-w-[420px] lg:max-w-[587px]">
+          <Image
+            src="/icons/nossa-trilha-aprendizado.svg"
+            alt="Nossa trilha de aprendizado"
+            width={587}
+            height={184}
+            className="h-auto w-full"
           />
-        </div>
+        </h2>
+        <Carousel images={moduleImages} />
+        <ModuleSelector modules={data.items} />
       </div>
     </section>
   );

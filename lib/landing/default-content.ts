@@ -138,7 +138,7 @@ export const defaultLandingPage: LandingPageContent = {
     items: [
       {
         title: "Boas-vindas e o\n seu compromisso\n como designer",
-        image: image("/images/modulo-1.webp", "Capa do módulo 1", 1086, 1628),
+        image: image("/images/modulo01.png", "Capa do módulo 1", 338, 507),
         lessons: [
           "Aula 1: Boas-vindas!",
           "Aula 2: Nossa comunidade de networking",
@@ -149,7 +149,7 @@ export const defaultLandingPage: LandingPageContent = {
       },
       {
         title: "A bússola\n criativa",
-        image: image("/images/modulo-2.webp", "Capa do módulo 2", 1086, 1628),
+        image: image("/images/modulo02.png", "Capa do módulo 2", 338, 507),
         lessons: [
           'Aula 1: A mentira do "dom" da criatividade',
           "Aula 2: Os meus primeiros passos",
@@ -164,7 +164,7 @@ export const defaultLandingPage: LandingPageContent = {
       },
       {
         title: "O básico que\n funciona",
-        image: image("/images/modulo-3.webp", "Capa do módulo 3", 1086, 1628),
+        image: image("/images/modulo03.png", "Capa do módulo 3", 338, 507),
         lessons: [
           "Aula 1: Os fundamentos do design",
           "Aula 2: Estilos de design",
@@ -173,7 +173,7 @@ export const defaultLandingPage: LandingPageContent = {
       },
       {
         title: "Dominando\n o Figma",
-        image: image("/images/modulo-4.webp", "Capa do módulo 4", 1086, 1628),
+        image: image("/images/modulo04.png", "Capa do módulo 4", 338, 507),
         lessons: [
           "Aula 1: Instalando o software",
           "Aula 2: Licença educacional",
@@ -189,7 +189,7 @@ export const defaultLandingPage: LandingPageContent = {
       },
       {
         title: "Técnicas\n avançadas\n no Figma",
-        image: image("/images/modulo-5.webp", "Capa do módulo 5", 1086, 1628),
+        image: image("/images/modulo05.png", "Capa do módulo 5", 338, 507),
         lessons: [
           "Aula 1: Plugins",
           "Aula 2: Máscara de corte",
@@ -209,7 +209,7 @@ export const defaultLandingPage: LandingPageContent = {
       },
       {
         title: "Mão no\n mouse!",
-        image: image("/images/modulo-6.webp", "Capa do módulo 6", 1086, 1628),
+        image: image("/images/modulo06.png", "Capa do módulo 6", 338, 507),
         lessons: [
           "Aula 1: Do briefing ao export: me veja criar do zero!",
           "Aula 2: Carrossel na prática 01",
@@ -221,7 +221,7 @@ export const defaultLandingPage: LandingPageContent = {
       },
       {
         title: "Bônus!",
-        image: image("/images/modulo-7.webp", "Capa do módulo 7", 1086, 1628),
+        image: image("/images/modulo07.png", "Capa do módulo 7", 338, 507),
         lessons: [
           "Aulão de alinhamento visual: Tudo o que você precisa saber para adicionar esse serviço na sua esteira!",
         ],
@@ -293,29 +293,28 @@ export const defaultLandingPage: LandingPageContent = {
     heading: [{ text: "Perguntas " }, { text: "frequentes", style: "editorialItalic" }],
     items: [
       {
-        question: "Isso é um curso de design de post no Figma?",
+        question: "Preciso saber usar o Figma para fazer o curso?",
         answer:
-          "Sim, o FigmaLab usa o Figma como base para ensinar o domínio do processo criativo e do pensamento estratégico aplicado ao design de posts.",
+          "Não! O FigmaLab começa do zero e avança para recursos e técnicas mais elaborados. Também é indicado para quem já utiliza a ferramenta e deseja desenvolver o processo criativo.",
       },
       {
-        question: "É para iniciantes?",
+        question: "Quando recebo acesso às aulas?",
         answer:
-          "Sim. E também para quem já cria, mas sente que falta clareza, criatividade e domínio do Figma.",
+          "Após a confirmação do pagamento, você recebe as informações de acesso por e-mail. Os dois primeiros módulos são liberados de imediato e o restante dos módulos após 7 dias.",
       },
       {
-        question: "Quando vou ter acesso as aulas?",
+        question: "Por quanto tempo tenho acesso?",
         answer:
-          "Acesse os dois primeiros módulos assim que sua inscrição for confirmada. O conteúdo completo será liberado em 7 dias, garantindo que você siga o cronograma ideal para absorver o método.",
+          "O acesso ao FigmaLab é válido por 1 ano, incluindo as atualizações disponibilizadas durante esse período.",
       },
       {
-        question: "Como vou ter acesso ao curso?",
-        answer:
-          "Assim que o pagamento for aprovado, você vai receber um e-mail com todos os dados de acesso à plataforma.",
+        question: "O curso tem certificado?",
+        answer: "Sim! Você recebe um certificado de conclusão ao finalizar o curso.",
       },
       {
-        question: "Quanto tempo terei de acesso?",
+        question: "Até quando posso aproveitar o desconto?",
         answer:
-          "É válido por 12 meses, incluindo todas as atualizações feitas durante esse período. Ao final desse prazo, você poderá renovar o acesso, caso deseje continuar no Lab.",
+          "A BlackLab acontece de 23 a 27 de novembro. Após o encerramento da campanha, a condição especial de R$ 227 deixa de estar disponível.",
       },
     ],
   },
