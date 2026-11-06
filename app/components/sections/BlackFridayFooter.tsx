@@ -14,7 +14,7 @@ export default function BlackFridayFooter({ settings }: BlackFridayFooterProps) 
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:gap-6">
           <Image src="/icons/figmalab-icon.svg" alt="FigmaLab" width={188} height={54} />
 
-          <div className="flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row sm:gap-[10px]">
+          <div className="flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row sm:gap-8">
             <p className="max-w-[201px] text-center text-[1.25rem] leading-[0.95] font-bold tracking-[-0.02em] sm:text-left sm:text-[1.682rem]">
               <span className="block">Ainda ficou</span>
               <span className="block">alguma dúvida?</span>

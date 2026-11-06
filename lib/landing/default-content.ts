@@ -137,7 +137,7 @@ export const defaultLandingPage: LandingPageContent = {
     items: [
       {
         title: "Boas-vindas e o\n seu compromisso\n como designer",
-        image: image("/images/modulo-1.webp", "Capa do módulo 1", 1086, 1628),
+        image: image("/images/modulo01.png", "Capa do módulo 1", 338, 507),
         lessons: [
           "Aula 1: Boas-vindas!",
           "Aula 2: Nossa comunidade de networking",
@@ -148,7 +148,7 @@ export const defaultLandingPage: LandingPageContent = {
       },
       {
         title: "A bússola\n criativa",
-        image: image("/images/modulo-2.webp", "Capa do módulo 2", 1086, 1628),
+        image: image("/images/modulo02.png", "Capa do módulo 2", 338, 507),
         lessons: [
           'Aula 1: A mentira do "dom" da criatividade',
           "Aula 2: Os meus primeiros passos",
@@ -163,7 +163,7 @@ export const defaultLandingPage: LandingPageContent = {
       },
       {
         title: "O básico que\n funciona",
-        image: image("/images/modulo-3.webp", "Capa do módulo 3", 1086, 1628),
+        image: image("/images/modulo03.png", "Capa do módulo 3", 338, 507),
         lessons: [
           "Aula 1: Os fundamentos do design",
           "Aula 2: Estilos de design",
@@ -172,7 +172,7 @@ export const defaultLandingPage: LandingPageContent = {
       },
       {
         title: "Dominando\n o Figma",
-        image: image("/images/modulo-4.webp", "Capa do módulo 4", 1086, 1628),
+        image: image("/images/modulo04.png", "Capa do módulo 4", 338, 507),
         lessons: [
           "Aula 1: Instalando o software",
           "Aula 2: Licença educacional",
@@ -188,7 +188,7 @@ export const defaultLandingPage: LandingPageContent = {
       },
       {
         title: "Técnicas\n avançadas\n no Figma",
-        image: image("/images/modulo-5.webp", "Capa do módulo 5", 1086, 1628),
+        image: image("/images/modulo05.png", "Capa do módulo 5", 338, 507),
         lessons: [
           "Aula 1: Plugins",
           "Aula 2: Máscara de corte",
@@ -208,7 +208,7 @@ export const defaultLandingPage: LandingPageContent = {
       },
       {
         title: "Mão no\n mouse!",
-        image: image("/images/modulo-6.webp", "Capa do módulo 6", 1086, 1628),
+        image: image("/images/modulo06.png", "Capa do módulo 6", 338, 507),
         lessons: [
           "Aula 1: Do briefing ao export: me veja criar do zero!",
           "Aula 2: Carrossel na prática 01",
@@ -220,7 +220,7 @@ export const defaultLandingPage: LandingPageContent = {
       },
       {
         title: "Bônus!",
-        image: image("/images/modulo-7.webp", "Capa do módulo 7", 1086, 1628),
+        image: image("/images/modulo07.png", "Capa do módulo 7", 338, 507),
         lessons: [
           "Aulão de alinhamento visual: Tudo o que você precisa saber para adicionar esse serviço na sua esteira!",
         ],

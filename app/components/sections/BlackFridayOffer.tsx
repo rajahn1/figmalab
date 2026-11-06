@@ -121,7 +121,7 @@ export default function BlackFridayOffer({ settings }: BlackFridayOfferProps) {
             </span>
           </h2>
 
-          <div className="mx-auto mt-8 max-w-[340px] space-y-5 text-base leading-[1.2] tracking-[-0.02em] lg:mx-0 lg:max-w-[393px] lg:text-[1.608rem] lg:leading-[1.15]">
+          <div className="mx-auto mt-8 max-w-[340px] space-y-5 text-base leading-[1.2] tracking-[-0.02em] lg:mx-0 lg:max-w-[393px] lg:text-[20px] lg:leading-[1.15]">
             <p>
               Você não precisa continuar acumulando referências sem saber o que fazer com elas, nem
               depender de um momento de inspiração para começar seus projetos.

@@ -54,7 +54,7 @@ export default function BlackFridayReleaseSchedule() {
               <span className="block whitespace-nowrap">módulos e já começa seu</span>
               <span className="block whitespace-nowrap">processo criativo.</span>
             </p>
-            <p className="mt-[7px] hidden text-[1.3872rem] leading-[0.98] tracking-[-0.03em] lg:block">
+            <p className="mt-[7px] hidden text-[20px] leading-[0.98] tracking-[-0.03em] lg:block">
               Assim que sua compra for confirmada, você terá{" "}
               <strong className="font-bold">acesso aos 2 primeiros módulos do curso</strong> para já
               começar a estruturar seu processo criativo.
@@ -71,7 +71,7 @@ export default function BlackFridayReleaseSchedule() {
               <span className="block whitespace-nowrap">automaticamente para</span>
               <span className="block whitespace-nowrap">concluir sua jornada.</span>
             </p>
-            <p className="mt-[7px] hidden text-[1.3872rem] leading-[0.98] tracking-[-0.03em] lg:block">
+            <p className="mt-[7px] hidden text-[20px] leading-[0.98] tracking-[-0.03em] lg:block">
               O restante das aulas são{" "}
               <strong className="font-bold">liberadas automaticamente após 7 dias</strong>, para
               você concluir sua jornada de aprendizado.

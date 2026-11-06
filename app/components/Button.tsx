@@ -71,7 +71,7 @@ export default function Button({
     terciary: "md:px-16 md:py-5 md:text-4xl text-lg py-2 px-4 xl:px-8 xl:py-2 xl:text-xl",
     support: "px-6 py-2 text-xs xl:text-xl xl:px-12 xl:py-3",
     blackFriday:
-      "min-h-12 px-7 py-2 text-lg sm:h-[3.942rem] sm:min-h-0 sm:px-[1.3125rem] sm:py-0 sm:text-[1.625rem] sm:leading-[2.285rem]",
+      "min-h-12 px-7 py-2 text-lg sm:h-[3.942rem] sm:min-h-0 sm:px-[1.3125rem] sm:py-0 sm:text-[1.625rem] sm:leading-[2.285rem] lg:text-[22px]",
     blackFridayBridge:
       "min-h-10 px-5 py-1.5 text-base sm:min-h-[5.317rem] sm:px-[3.25rem] sm:py-4 sm:text-[2.472rem]",
     blackFridayOffer:

@@ -60,8 +60,8 @@ export default function Hero() {
               </span>
             </h1>
 
-            <div className="mt-1 flex items-center justify-center gap-2 lg:gap-[10px]">
-              <p className="inline-flex h-5 translate-y-px items-center justify-center whitespace-nowrap text-center text-[0.82rem] leading-none tracking-[-0.05em] sm:text-[1rem] lg:h-auto lg:translate-y-0 lg:text-[1.374rem] lg:leading-[0.92]">
+            <div className="flex items-center justify-center gap-2 lg:justify-start lg:gap-[10px]">
+              <p className="inline-flex h-7 translate-y-px items-center justify-center whitespace-nowrap text-center text-base leading-none tracking-[-0.05em] lg:h-auto lg:translate-y-0 lg:text-[20px] lg:leading-[0.92]">
                 DO STUDIO EMI
               </p>
               <BlackFridayDateBadge />
@@ -81,7 +81,7 @@ export default function Hero() {
             com <strong className="font-normal text-[#DF3DA8]">R$70 OFF</strong> !
           </h2>
 
-          <div className="mt-5 max-w-[350px] text-[1rem] leading-[1.18] tracking-[-0.01em] sm:text-[1.125rem] lg:mt-[5px] lg:max-w-[431px] lg:text-[1.464rem] lg:leading-[1.108]">
+          <div className="mt-5 max-w-[350px] text-[1rem] leading-[1.18] tracking-[-0.01em] sm:text-[1.125rem] lg:mt-[5px] lg:max-w-[431px] lg:text-[20px] lg:leading-[1.108]">
             <p className="lg:inline">
               <span className="lg:hidden">
                 <span className="block whitespace-nowrap">Aprenda a dominar o Figma e</span>
@@ -104,10 +104,21 @@ export default function Hero() {
               </span>
             </p>{" "}
             <p className="lg:inline">
-              Aproveite a Black Friday para{" "}
-              <strong className="font-bold">
-                entrar no FigmaLab por um valor especial, por tempo limitado!
-              </strong>
+              <span className="lg:hidden">
+                <span className="block whitespace-nowrap">Aproveite a Black Friday para</span>
+                <strong className="block whitespace-nowrap font-bold">
+                  entrar no FigmaLab por um valor
+                </strong>
+                <strong className="block whitespace-nowrap font-bold">
+                  especial, por tempo limitado!
+                </strong>
+              </span>
+              <span className="hidden lg:inline">
+                Aproveite a Black Friday para{" "}
+                <strong className="font-bold">
+                  entrar no FigmaLab por um valor especial, por tempo limitado!
+                </strong>
+              </span>
             </p>
           </div>
 

@@ -1,9 +1,7 @@
 import Image from "next/image";
 
-const cafeTabletUrl =
-  "https://pub-d51033f4b865409099cb79bce79a2581.r2.dev/figmalab/cafe_tablet.webp";
-const cafeTabletMobileUrl =
-  "https://pub-d51033f4b865409099cb79bce79a2581.r2.dev/figmalab/cafe_tablet_mobile.webp";
+const cafeTabletImage = "/images/cafe-tablet-cafe.png";
+const cafeTabletMobileImage = "/images/cafe-tablet-cafe-mobile.png";
 
 const audienceItems = [
   {
@@ -87,19 +85,19 @@ export default function BlackFridayOverview() {
         className="mx-auto grid max-w-[1264px] items-start gap-0 px-6 pt-12 pb-20 lg:grid-cols-[633px_518px] lg:gap-[11px] lg:px-0 lg:pt-[54px] lg:pb-[111px]"
       >
         <Image
-          src={cafeTabletMobileUrl}
+          src={cafeTabletMobileImage}
           alt="Dois tablets exibindo o conteúdo do FigmaLab ao lado de uma xícara de café"
-          width={950}
-          height={1197}
+          width={477}
+          height={384}
           quality={100}
           sizes="(max-width: 1023px) 88vw, 1px"
           className="h-auto w-full max-w-[520px] justify-self-center lg:hidden"
         />
         <Image
-          src={cafeTabletUrl}
+          src={cafeTabletImage}
           alt="Dois tablets exibindo o conteúdo do FigmaLab ao lado de uma xícara de café"
-          width={950}
-          height={1197}
+          width={1052}
+          height={1201}
           quality={100}
           sizes="(min-width: 1024px) 633px, 1px"
           className="hidden h-full w-auto max-w-none justify-self-end self-stretch lg:block"
@@ -120,7 +118,7 @@ export default function BlackFridayOverview() {
             {audienceItems.map((item, index) => (
               <li
                 key={item.emphasis}
-                className={`grid grid-cols-[28px_1fr] items-center gap-2.5 py-2.5 text-sm leading-[1.02] tracking-[-0.04em] lg:grid-cols-[38px_1fr] lg:py-0 lg:text-[1.375rem] lg:leading-[0.96] ${item.heightClass} ${index < audienceItems.length - 1 ? "border-b border-[#515151]" : ""}`}
+                className={`grid grid-cols-[28px_1fr] items-center gap-2.5 py-2.5 text-sm leading-[1.02] tracking-[-0.04em] lg:grid-cols-[38px_1fr] lg:py-0 lg:text-[20px] lg:leading-[0.96] ${item.heightClass} ${index < audienceItems.length - 1 ? "border-b border-[#515151]" : ""}`}
               >
                 <Image
                   src="/icons/icon-pen.svg"
@@ -153,7 +151,7 @@ export default function BlackFridayOverview() {
           {benefitItems.map((item, index) => (
             <article
               key={item.emphasis}
-              className="relative mx-auto aspect-square w-full max-w-[251px] rounded-[18px] bg-[#D82099] text-center text-[clamp(0.82rem,3.6vw,1rem)] leading-[0.98] tracking-[-0.04em] sm:rounded-[25px] sm:text-[1.25rem] lg:h-[250px] lg:aspect-auto lg:text-[1.743rem] lg:leading-[0.95]"
+              className="relative mx-auto aspect-square w-full max-w-[251px] rounded-[18px] bg-[#D82099] text-center text-[clamp(0.82rem,3.6vw,1rem)] leading-[0.98] tracking-[-0.04em] sm:rounded-[25px] sm:text-[1.25rem] lg:h-[250px] lg:aspect-auto lg:text-[20px] lg:leading-[0.95]"
             >
               <div
                 className="absolute top-3 left-4 flex items-center gap-[3px] sm:top-4 sm:left-[21px]"

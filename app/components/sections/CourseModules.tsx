@@ -2,7 +2,14 @@ import Image from "next/image";
 
 import Carousel from "../Carousel";
 import ModuleSelector from "../ModuleSelector";
-import type { LandingPageContent } from "@/lib/landing/types";
+import type { LandingImage, LandingPageContent } from "@/lib/landing/types";
+
+const moduleImages: LandingImage[] = Array.from({ length: 7 }, (_, index) => ({
+  src: `/images/modulo${String(index + 1).padStart(2, "0")}.png`,
+  alt: `Capa do módulo ${index + 1}`,
+  width: 338,
+  height: 507,
+}));
 
 interface CourseModulesProps {
   data: LandingPageContent["modules"];
@@ -24,7 +31,7 @@ export default function CourseModules({ data }: CourseModulesProps) {
             className="h-auto w-full"
           />
         </h2>
-        <Carousel images={data.items.map((module) => module.image)} />
+        <Carousel images={moduleImages} />
         <ModuleSelector modules={data.items} />
       </div>
     </section>

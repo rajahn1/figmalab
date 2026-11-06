@@ -36,14 +36,14 @@ export default function BlackFridayInstructor() {
             </span>
           </h2>
 
-          <div className="mt-8 space-y-6 font-articulat text-base leading-[1.2] tracking-[-0.02em] lg:space-y-8 lg:text-[1.608rem] lg:leading-[1.15]">
-            <p>
+          <div className="mt-8 space-y-6 font-articulat text-base leading-[1.2] tracking-[-0.02em] lg:space-y-8 lg:text-[20px] lg:leading-[1.15]">
+            <p className="lg:max-w-[400px] lg:text-balance">
               Sou designer há 5 anos, fundadora do Studio Emi Design e criadora do FigmaLab. Ao
               longo da minha trajetória, desenvolvi meu próprio processo criativo trabalhando com
               projetos reais para marcas de diferentes nichos.
             </p>
 
-            <p>
+            <p className="lg:max-w-[375px] lg:text-balance">
               <strong className="font-bold">
                 Foi a partir dessa experiência que criei o FigmaLab:
               </strong>{" "}
@@ -51,7 +51,7 @@ export default function BlackFridayInstructor() {
               tomar decisões para construir designs com mais intenção.
             </p>
 
-            <p>
+            <p className="lg:max-w-[340px] lg:text-balance">
               Hoje, já{" "}
               <strong className="font-bold text-[#DF3DA8]">
                 são mais de 350 designers na comunidade
