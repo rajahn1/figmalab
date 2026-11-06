@@ -1,4 +1,4 @@
-import Image from "../BlackFridayImage";
+import Image from "next/image";
 
 export default function BlackFridayReleaseSchedule() {
   return (

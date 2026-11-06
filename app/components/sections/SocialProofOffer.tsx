@@ -1,4 +1,4 @@
-import Image from "../BlackFridayImage";
+import Image from "next/image";
 
 import type { LandingPageContent } from "@/lib/landing/types";
 import BlackFridayTicker from "../BlackFridayTicker";

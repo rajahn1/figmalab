@@ -2,7 +2,7 @@
 
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import Image from "./BlackFridayImage";
+import Image from "next/image";
 import type { LandingImage } from "@/lib/landing/types";
 
 export interface Props {

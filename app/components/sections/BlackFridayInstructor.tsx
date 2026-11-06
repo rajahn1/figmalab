@@ -1,4 +1,4 @@
-import Image from "../BlackFridayImage";
+import Image from "next/image";
 
 const instructorImage =
   "https://pub-d51033f4b865409099cb79bce79a2581.r2.dev/figmalab/foto_prazer_sou_emi.webp";

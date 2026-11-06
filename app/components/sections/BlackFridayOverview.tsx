@@ -1,4 +1,4 @@
-import Image from "../BlackFridayImage";
+import Image from "next/image";
 
 const cafeTabletImage = "/images/cafe-tablet-cafe.png";
 const cafeTabletMobileImage = "/images/cafe-tablet-cafe-mobile.png";

@@ -9,6 +9,7 @@ const blackFridayAssetHostname = "pub-d51033f4b865409099cb79bce79a2581.r2.dev";
 const nextConfig: NextConfig = {
   allowedDevOrigins: ["192.168.3.75"],
   images: {
+    unoptimized: true,
     qualities: [75, 76, 78, 100],
     remotePatterns: [
       {

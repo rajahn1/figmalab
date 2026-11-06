@@ -1,4 +1,4 @@
-import Image from "../BlackFridayImage";
+import Image from "next/image";
 
 import BlackFridayDateBadge from "../BlackFridayDateBadge";
 import BlackFridayTicker from "../BlackFridayTicker";
