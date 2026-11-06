@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "./BlackFridayImage";
 
 interface BlackFridayDateBadgeProps {
   variant?: "hero" | "offer";

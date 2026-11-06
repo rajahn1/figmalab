@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "../BlackFridayImage";
 
 import Carousel from "../Carousel";
 import ModuleSelector from "../ModuleSelector";

@@ -3,7 +3,7 @@ export interface Props {
   title: string;
   classes: readonly string[];
 }
-import Image from "next/image";
+import Image from "./BlackFridayImage";
 export default function ModuleCard(props: Props) {
   const { classes, module, title } = props;
   const classText = module === 1 ? "xl:text-4xl lg:text-3xl" : "xl:text-5xl lg:text-4xl";

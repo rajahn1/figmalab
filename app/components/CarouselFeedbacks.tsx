@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import Image from "next/image";
+import Image from "./BlackFridayImage";
 import type { LandingImage } from "@/lib/landing/types";
 
 export interface Props {
