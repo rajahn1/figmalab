@@ -42,7 +42,7 @@ export default function BlackFridayReleaseSchedule() {
 
         <div className="mt-6 grid auto-rows-fr grid-cols-2 items-stretch gap-6 lg:gap-0">
           <article className="grid h-full max-w-[360px] grid-rows-[auto_1fr] text-left lg:grid-rows-none">
-            <h3 className="text-base leading-[0.92] font-bold tracking-[-0.05em] lg:text-[2.5229rem]">
+            <h3 className="text-base leading-[0.92] font-bold tracking-[-0.05em] lg:w-[352.174px] lg:text-[2.5229rem]">
               <span className="block whitespace-nowrap lg:inline lg:whitespace-normal">
                 2 módulos liberados
               </span>{" "}
@@ -54,7 +54,7 @@ export default function BlackFridayReleaseSchedule() {
               <span className="block whitespace-nowrap">módulos e já começa seu</span>
               <span className="block whitespace-nowrap">processo criativo.</span>
             </p>
-            <p className="mt-[7px] hidden text-[20px] leading-[0.98] tracking-[-0.03em] lg:block">
+            <p className="mt-[7px] hidden text-[20px] leading-[0.98] tracking-[-0.03em] lg:block lg:text-[22.195px]">
               Assim que sua compra for confirmada, você terá{" "}
               <strong className="font-bold">acesso aos 2 primeiros módulos do curso</strong> para já
               começar a estruturar seu processo criativo.
@@ -62,7 +62,7 @@ export default function BlackFridayReleaseSchedule() {
           </article>
 
           <article className="ml-auto grid h-full max-w-[291px] grid-rows-[auto_1fr] text-right lg:grid-rows-none">
-            <h3 className="text-[1.1rem] leading-[0.92] font-bold tracking-[-0.05em] lg:text-[2.5229rem]">
+            <h3 className="text-[1.1rem] leading-[0.92] font-bold tracking-[-0.05em] lg:ml-auto lg:w-[277px] lg:text-[2.5229rem]">
               Curso completo liberado!
             </h3>
             <p className="mt-0.5 text-[0.7rem] leading-[1.05] tracking-[-0.03em] lg:hidden">
@@ -71,7 +71,7 @@ export default function BlackFridayReleaseSchedule() {
               <span className="block whitespace-nowrap">automaticamente para</span>
               <span className="block whitespace-nowrap">concluir sua jornada.</span>
             </p>
-            <p className="mt-[7px] hidden text-[20px] leading-[0.98] tracking-[-0.03em] lg:block">
+            <p className="mt-[7px] hidden text-[20px] leading-[0.98] tracking-[-0.03em] lg:block lg:text-[22.195px]">
               O restante das aulas são{" "}
               <strong className="font-bold">liberadas automaticamente após 7 dias</strong>, para
               você concluir sua jornada de aprendizado.

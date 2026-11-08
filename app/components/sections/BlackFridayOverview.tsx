@@ -46,34 +46,42 @@ const benefitItems = [
   {
     emphasis: "Curso completo de Figma:",
     text: " do zero aos recursos e técnicas mais avançadas.",
+    desktopWidthClass: "lg:w-[200.842px]",
   },
   {
     emphasis: "Processo criativo:",
     text: " aprenda a analisar briefings, explorar referências e tomar decisões visuais.",
+    desktopWidthClass: "lg:w-[220.368px]",
   },
   {
     emphasis: "Aulas práticas:",
     text: " acompanhe a criação de carrosséis do zero e aplique o que aprendeu.",
+    desktopWidthClass: "lg:w-[202.702px]",
   },
   {
     emphasis: "Técnicas criativas:",
     text: " explore filtros, máscaras, mockups e outros recursos para seus projetos.",
+    desktopWidthClass: "lg:w-[212px]",
   },
   {
     emphasis: "Bônus Aulão de Alinhamento Visual:",
     text: " conheça as etapas desse serviço e como estruturá-lo no seu estúdio.",
+    desktopWidthClass: "lg:w-[200.842px]",
   },
   {
     emphasis: "Materiais de apoio:",
     text: " modelo de briefing e PDF com curadoria de sites para referências e recursos visuais.",
+    desktopWidthClass: "lg:w-[220.368px]",
   },
   {
     emphasis: "Comunidade no WhatsApp:",
     text: " conecte-se com outras designers e troque experiências.",
+    desktopWidthClass: "lg:w-[202.702px]",
   },
   {
     emphasis: "Certificado de conclusão e 1 ano de acesso",
     text: " ao curso.",
+    desktopWidthClass: "lg:w-[172px]",
   },
 ];
 
@@ -151,7 +159,7 @@ export default function BlackFridayOverview() {
           {benefitItems.map((item, index) => (
             <article
               key={item.emphasis}
-              className="relative mx-auto aspect-square w-full max-w-[251px] rounded-[18px] bg-[#D82099] text-center text-[clamp(0.82rem,3.6vw,1rem)] leading-[0.98] tracking-[-0.04em] sm:rounded-[25px] sm:text-[1.25rem] lg:h-[250px] lg:aspect-auto lg:text-[20px] lg:leading-[0.95]"
+              className="relative mx-auto aspect-square w-full max-w-[251px] rounded-[18px] bg-[#D82099] text-center text-[clamp(0.82rem,3.6vw,1rem)] leading-[0.98] tracking-[-0.04em] sm:rounded-[25px] sm:text-[1.25rem] lg:h-[250px] lg:aspect-auto lg:text-[24px] lg:leading-[0.95]"
             >
               <div
                 className="absolute top-3 left-4 flex items-center gap-[3px] sm:top-4 sm:left-[21px]"
@@ -170,7 +178,7 @@ export default function BlackFridayOverview() {
                 className="absolute top-3 right-4 size-5 sm:top-4 sm:right-[21px] sm:size-[26px]"
               />
               <p
-                className={`absolute right-2.5 left-2.5 sm:right-[15px] sm:left-[15px] ${index < 4 ? "top-11 sm:top-[56px]" : "top-10 sm:top-[51px]"}`}
+                className={`absolute right-2.5 left-2.5 sm:right-[15px] sm:left-[15px] lg:top-[56px] lg:right-auto lg:left-1/2 lg:-translate-x-1/2 ${item.desktopWidthClass} ${index < 4 ? "top-11 sm:top-[56px]" : "top-10 sm:top-[51px]"}`}
               >
                 <strong className="font-bold">{item.emphasis}</strong>
                 {item.text}
