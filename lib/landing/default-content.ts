@@ -314,7 +314,7 @@ export const defaultLandingPage: LandingPageContent = {
       {
         question: "Até quando posso aproveitar o desconto?",
         answer:
-          "A BlackLab acontece de 23 a 27 de novembro. Após o encerramento da campanha, a condição especial de R$ 227 deixa de estar disponível.",
+          "A BlackLab acontece de 11 a 20 de novembro. Após o encerramento da campanha, a condição especial de R$ 227 deixa de estar disponível.",
       },
     ],
   },

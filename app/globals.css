@@ -302,12 +302,8 @@ body {
 }
 
 .black-friday-float {
-  animation: black-friday-float 3.4s ease-in-out infinite alternate;
+  animation: black-friday-float 2s ease-in-out infinite alternate;
   will-change: transform;
-}
-
-.black-friday-float-delayed {
-  animation-delay: -1.7s;
 }
 
 .black-friday-ticker {

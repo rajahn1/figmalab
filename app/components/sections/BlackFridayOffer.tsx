@@ -121,7 +121,7 @@ export default function BlackFridayOffer({ settings }: BlackFridayOfferProps) {
             </span>
           </h2>
 
-          <div className="mx-auto mt-8 max-w-[340px] space-y-5 text-base leading-[1.2] tracking-[-0.02em] lg:mx-0 lg:max-w-[393px] lg:text-[20px] lg:leading-[1.15]">
+          <div className="mx-auto mt-4 max-w-[340px] space-y-5 text-base leading-[1.2] tracking-[-0.02em] lg:mx-0 lg:mt-8 lg:max-w-[393px] lg:text-[20px] lg:leading-[1.15]">
             <p>
               Você não precisa continuar acumulando referências sem saber o que fazer com elas, nem
               depender de um momento de inspiração para começar seus projetos.
@@ -133,7 +133,7 @@ export default function BlackFridayOffer({ settings }: BlackFridayOfferProps) {
           </div>
         </div>
 
-        <div className="relative mt-8 w-full max-w-[668px] justify-self-center lg:mt-0 lg:-ml-7 lg:justify-self-start">
+        <div className="relative mt-3 w-full max-w-[668px] justify-self-center lg:mt-0 lg:-ml-7 lg:justify-self-start">
           <Image
             src={emiOpportunityImage}
             alt="Emi sentada em uma cesta do Figma com cupons da Black Friday"

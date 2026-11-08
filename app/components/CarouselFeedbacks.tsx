@@ -71,7 +71,7 @@ export default function CarouselFeedbacks(props: Props) {
                 width={image.width}
                 height={image.height}
                 sizes="(min-width: 1280px) 33vw, 50vw"
-                className="h-[280px] w-full object-contain lg:h-[341px]"
+                className="h-[240px] w-full object-contain lg:h-[341px]"
               />
             </div>
           ))}
@@ -109,7 +109,7 @@ export default function CarouselFeedbacks(props: Props) {
       </button>
 
       {/* --- PAGINAÇÃO (BOLINHAS) --- */}
-      <div className="flex justify-center lg:gap-2 gap-1 mt-4 lg:mt-8">
+      <div className="mt-1 flex justify-center gap-1 lg:mt-8 lg:gap-2">
         {scrollSnaps.map((_, index) => (
           <button
             type="button"

@@ -135,11 +135,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative order-1 mt-4 h-[360px] w-full max-w-[420px] justify-self-center sm:h-[520px] sm:max-w-[620px] lg:order-2 lg:mt-[31px] lg:h-[664px] lg:w-[686px] lg:max-w-none lg:justify-self-start">
-          <div
-            aria-hidden="true"
-            className="absolute bottom-[4%] left-[1%] h-[13%] w-[96%] rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0)_72%)] lg:bottom-[4.5%] lg:left-[1.75%] lg:w-[85.7%]"
-          />
+        <div className="relative order-1 mt-4 h-[330px] w-full max-w-[420px] justify-self-center sm:h-[520px] sm:max-w-[620px] lg:order-2 lg:mt-[31px] lg:h-[664px] lg:w-[686px] lg:max-w-none lg:justify-self-start">
           <Image
             src={`${r2AssetBase}/emi_com_estrelas.webp`}
             alt="Emi sentada, cercada por flores rosas"
@@ -160,7 +156,7 @@ export default function Hero() {
             sizes="(max-width: 639px) 46vw, (max-width: 1023px) 280px, 290px"
             className="black-friday-float absolute top-[55%] left-0 h-auto w-[48%] max-w-none lg:top-[366px] lg:left-[9px] lg:w-[290px]"
           />
-          <div className="black-friday-float black-friday-float-delayed absolute top-[50%] right-[2%] w-[25%] lg:top-[332px] lg:right-auto lg:left-[388px] lg:flex lg:h-[188px] lg:w-[151px] lg:items-center lg:justify-center">
+          <div className="black-friday-float absolute top-[50%] right-[2%] w-[25%] lg:top-[332px] lg:right-auto lg:left-[388px] lg:flex lg:h-[188px] lg:w-[151px] lg:items-center lg:justify-center">
             <Image
               src={`${r2AssetBase}/icone_figma.webp`}
               alt="Ícone tridimensional do Figma em rosa"

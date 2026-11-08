@@ -19,7 +19,7 @@ export default function BlackFridayReleaseSchedule() {
             className="size-12 shrink-0 lg:size-[72px]"
           />
 
-          <span className="h-1 min-w-4 flex-1 bg-white" aria-hidden="true" />
+          <span className="h-0.5 min-w-4 flex-1 bg-white lg:h-1" aria-hidden="true" />
 
           <span className="mx-3 shrink-0 text-center text-[clamp(1.5rem,3vw,2.4605rem)] leading-[0.92] tracking-[-0.05em] lg:mx-[29px] lg:w-[89px]">
             7 dias
