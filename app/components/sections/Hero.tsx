@@ -156,7 +156,7 @@ export default function Hero() {
             sizes="(max-width: 639px) 46vw, (max-width: 1023px) 280px, 290px"
             className="black-friday-float absolute top-[55%] left-0 h-auto w-[48%] max-w-none lg:top-[366px] lg:left-[9px] lg:w-[290px]"
           />
-          <div className="black-friday-float absolute top-[50%] right-[2%] w-[25%] lg:top-[332px] lg:right-auto lg:left-[388px] lg:flex lg:h-[188px] lg:w-[151px] lg:items-center lg:justify-center">
+          <div className="black-friday-float absolute top-[50%] right-[5%] w-[25%] sm:right-[2%] lg:top-[332px] lg:right-auto lg:left-[388px] lg:flex lg:h-[188px] lg:w-[151px] lg:items-center lg:justify-center">
             <Image
               src={`${r2AssetBase}/icone_figma.webp`}
               alt="Ícone tridimensional do Figma em rosa"

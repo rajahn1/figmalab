@@ -40,7 +40,7 @@ export default function BlackFridayReleaseSchedule() {
           />
         </div>
 
-        <div className="mt-6 grid auto-rows-fr grid-cols-2 items-stretch gap-6 lg:gap-0">
+        <div className="mt-6 grid auto-rows-fr grid-cols-2 items-stretch gap-2 lg:gap-0">
           <article className="grid h-full max-w-[360px] grid-rows-[auto_1fr] text-left lg:grid-rows-none">
             <h3 className="text-base leading-[0.92] font-bold tracking-[-0.05em] lg:w-[352.174px] lg:text-[2.5229rem]">
               <span className="block whitespace-nowrap lg:inline lg:whitespace-normal">
@@ -48,11 +48,11 @@ export default function BlackFridayReleaseSchedule() {
               </span>{" "}
               <span className="block lg:inline">de imediato!</span>
             </h3>
-            <p className="mt-0.5 text-[0.7rem] leading-[1.05] tracking-[-0.03em] lg:hidden">
-              <span className="block whitespace-nowrap">Compra confirmada: você</span>
-              <span className="block whitespace-nowrap">recebe os 2 primeiros</span>
-              <span className="block whitespace-nowrap">módulos e já começa seu</span>
-              <span className="block whitespace-nowrap">processo criativo.</span>
+            <p className="mt-0.5 text-[clamp(0.45rem,2.15vw,0.7rem)] leading-[1.05] tracking-[-0.03em] lg:hidden">
+              <span className="block whitespace-nowrap">Assim que sua compra for confirmada, </span>
+              <span className="block whitespace-nowrap">você terá acesso aos 2 primeiros </span>
+              <span className="block whitespace-nowrap">módulos do curso para já começar a </span>
+              <span className="block whitespace-nowrap">estruturar seu processo criativo.</span>
             </p>
             <p className="mt-[7px] hidden text-[20px] leading-[0.98] tracking-[-0.03em] lg:block lg:text-[22.195px]">
               Assim que sua compra for confirmada, você terá{" "}
@@ -65,11 +65,11 @@ export default function BlackFridayReleaseSchedule() {
             <h3 className="text-[1.1rem] leading-[0.92] font-bold tracking-[-0.05em] lg:ml-auto lg:w-[277px] lg:text-[2.5229rem]">
               Curso completo liberado!
             </h3>
-            <p className="mt-0.5 text-[0.7rem] leading-[1.05] tracking-[-0.03em] lg:hidden">
-              <span className="block whitespace-nowrap">Após 7 dias, as aulas</span>
-              <span className="block whitespace-nowrap">restantes são liberadas</span>
-              <span className="block whitespace-nowrap">automaticamente para</span>
-              <span className="block whitespace-nowrap">concluir sua jornada.</span>
+            <p className="mt-0.5 text-[clamp(0.45rem,2.15vw,0.7rem)] leading-[1.05] tracking-[-0.03em] lg:hidden">
+              <span className="block whitespace-nowrap">O restante das aulas são </span>
+              <span className="block whitespace-nowrap">liberadas automaticamente </span>
+              <span className="block whitespace-nowrap">após 7 dias, para você concluir </span>
+              <span className="block whitespace-nowrap">sua jornada de aprendizado.</span>
             </p>
             <p className="mt-[7px] hidden text-[20px] leading-[0.98] tracking-[-0.03em] lg:block lg:text-[22.195px]">
               O restante das aulas são{" "}
